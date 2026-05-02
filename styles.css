@@ -1103,6 +1103,95 @@ section.tight { padding: 4rem 0; }
   background: var(--lavender-deep);
 }
 
+/* FAQ (contact page) */
+.faq-groups { display: grid; gap: 3rem; }
+.faq-group-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-variation-settings: 'SOFT' 50;
+  color: var(--space-cadet);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.faq-list { display: grid; gap: 0; }
+.faq-item { border-bottom: 1px solid var(--rule-soft); }
+.faq-item:last-child { border-bottom: 0; }
+.faq-question {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  color: var(--space-cadet);
+  cursor: pointer;
+  padding: 1.3rem 2.4rem 1.3rem 0;
+  position: relative;
+  list-style: none;
+  transition: color 0.25s ease;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.5;
+}
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 1.15rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  color: var(--lavender-deep);
+  font-weight: 300;
+  line-height: 1;
+}
+.faq-item[open] > .faq-question::after { content: '−'; }
+.faq-question:hover { color: var(--lavender-deep); }
+.faq-answer {
+  padding: 0 2rem 1.4rem 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .faq-groups { gap: 2rem; }
+  .faq-question { font-size: 1rem; padding: 1rem 1.8rem 1rem 0; }
+  .faq-answer { font-size: 0.92rem; padding: 0 0 1.1rem; }
+  .faq-question::after { top: 0.9rem; font-size: 1.4rem; }
+  .faq-group-title { font-size: 1.2rem; }
+}
+
+/* Contact note (gentle reminder block on contact page) */
+.contact-note {
+  margin-top: 2rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--rule-soft);
+  border-left: 3px solid var(--lavender-deep);
+  border-radius: 4px;
+}
+.contact-note-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lavender-deep);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.contact-note-text {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  font-weight: 300;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .contact-note { padding: 1.1rem 1.2rem; margin-top: 1.5rem; }
+  .contact-note-text { font-size: 0.95rem; }
+}
+
 /* Video embed (responsive 16:9) */
 .video-embed {
   position: relative;
