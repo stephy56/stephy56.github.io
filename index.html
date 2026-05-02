@@ -8,13 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30;0,9..144,300..700,80;1,9..144,300..600,30&family=Manrope:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <nav>
     <div class="container">
-      <a href="index.html" class="nav-mark">Stephy <em>Hsu</em></a>
+      <a href="index.html" class="nav-mark"><img src="images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -43,21 +45,33 @@
     <div class="hero-blob"></div>
     <div class="container">
       <div class="home-hero-content">
-        <div class="hero-eyebrow">Art Therapist · Artist · Founder</div>
-        <h1>Stephy <em>Hsu</em></h1>
-        <div class="hero-zh">徐 一 瑄</div>
-        <p class="hero-tagline">
-          Bridging art, psychology, and culture — exploring how creative expression heals across languages, generations, and traditions.
-        </p>
-        <div class="hero-credentials">
-          <span class="credential">ATR-BC #24-538</span>
-          <span class="credential">LCAT #003071</span>
-          <span class="credential">Psy.D Candidate</span>
+        <div class="home-hero-text">
+          <div class="hero-eyebrow">Art Therapist · Artist · Founder</div>
+          <h1>Stephy <em>Hsu</em></h1>
+          <div class="hero-zh">徐 一 瑄</div>
+          <p class="hero-tagline">
+            Bridging art, psychology, spirituality, and culture — using creative expression as a language for healing, memory, and transformation.
+          </p>
+          <div class="hero-credentials">
+            <span class="credential">ATR-BC #24-538</span>
+            <span class="credential">LCAT #003071</span>
+            <span class="credential">Doctoral Student in Clinical Psychology</span>
+          </div>
+          <div class="hero-cta">
+            <a href="contact.html" class="btn btn-primary btn-arrow">Book a session</a>
+            <a href="artworks.html" class="btn btn-secondary">View artworks</a>
+          </div>
         </div>
-        <div class="hero-cta">
-          <a href="contact.html" class="btn btn-primary btn-arrow">Book a session</a>
-          <a href="artworks.html" class="btn btn-secondary">View artworks</a>
-        </div>
+
+        <figure class="home-hero-artwork">
+          <img src="images/attachment.jpg" alt="Attachment — oil painting by Stephy Hsu, 2025">
+          <figcaption>
+            <div class="artwork-name">Attachment <em>· 執念</em></div>
+            <div class="artwork-medium">Oil on canvas · 2025</div>
+            <p class="artwork-poem zh">來世的、前世的、過去的、現在的執念，釋懷便可見性。受傷的、痛苦的、憤怒的，鬆手便會解脫。說來簡單卻也不易，即便嗅過彼岸花的香氣，飲下夢婆湯，印記依然深深烙刻，伴隨著我們來到今生。雖然玉碎，但也是轉化與重生。讓六耳盤長結提醒著我們走向心物合一。</p>
+            <p class="artwork-poem en">The attachments of lives to come, of lives passed, of what was and what is — when released, the true self becomes visible. The wounded, the aching, the angry — when we loosen our grip, freedom arrives. Simply said, yet not easily done. Even after breathing the scent of the bianhua and drinking Meng Po's soup of forgetting, the imprints remain deeply etched, traveling with us into this life. Though the jade may shatter, even that is transformation and rebirth. Let the six-eared pan chang knot remind us — toward the union of mind and matter.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </header>
@@ -67,46 +81,56 @@
       <div class="section-header">
         <div><div class="section-number">— I.</div></div>
         <div>
-          <h2 class="section-title">Selected <em>artworks</em></h2>
-          <p class="section-intro">A glimpse into recent exhibitions across New York, Hangzhou, and beyond.</p>
+          <h2 class="section-title">Creative spaces for <em>reflection</em></h2>
+          <p class="section-intro">Through workshops, lectures, and group sessions, I hope to create gentle spaces where art can support self-understanding, conversation, and connection.</p>
         </div>
       </div>
-      <div class="artwork-grid">
-        <a href="artworks.html" class="artwork-card">
-          <span class="artwork-placeholder">image →</span>
-          <div class="artwork-meta">
-            <div class="artwork-year">2025</div>
-            <div class="artwork-title">How Carbon Is Forgotten</div>
-            <div class="artwork-venue">Shang Art Museum · Hangzhou</div>
+      <div class="workshop-feature-grid">
+        <a href="workshops.html" class="workshop-feature-card">
+          <img src="images/workshops/workshop-lecture-nyu.jpg" alt="Guest lecture and demonstration in a university setting">
+          <div class="workshop-feature-meta">
+            <div class="workshop-feature-loc">New York</div>
+            <div class="workshop-feature-title">University guest lecture</div>
           </div>
         </a>
-        <a href="artworks.html" class="artwork-card">
-          <span class="artwork-placeholder">image →</span>
-          <div class="artwork-meta">
-            <div class="artwork-year">2023</div>
-            <div class="artwork-title">Art Affect</div>
-            <div class="artwork-venue">NYU Barney Building · New York</div>
+        <a href="workshops.html" class="workshop-feature-card">
+          <img src="images/workshops/workshop-classroom-china.jpg" alt="Multi-day workshop in a classroom in mainland China">
+          <div class="workshop-feature-meta">
+            <div class="workshop-feature-loc">Kunming · China</div>
+            <div class="workshop-feature-title">Multi-day classroom workshop</div>
           </div>
         </a>
-        <a href="artworks.html" class="artwork-card">
-          <span class="artwork-placeholder">image →</span>
-          <div class="artwork-meta">
-            <div class="artwork-year">2022</div>
-            <div class="artwork-title">Liminality</div>
-            <div class="artwork-venue">Wukong Media · NY & LA</div>
+        <a href="workshops.html" class="workshop-feature-card">
+          <img src="images/workshops/workshop-gallery-circle.jpg" alt="Gallery sit-circle with shared canvas and group reflection">
+          <div class="workshop-feature-meta">
+            <div class="workshop-feature-loc">New York</div>
+            <div class="workshop-feature-title">Gallery sit-circle</div>
           </div>
         </a>
-        <a href="artworks.html" class="artwork-card">
-          <span class="artwork-placeholder">image →</span>
-          <div class="artwork-meta">
-            <div class="artwork-year">2020</div>
-            <div class="artwork-title">BFA Fine Arts Exhibition</div>
-            <div class="artwork-venue">Parsons SJDC Gallery · NY</div>
+        <a href="workshops.html" class="workshop-feature-card">
+          <img src="images/workshops/workshop-mask-group.jpg" alt="Group portrait of participants holding their finished masks">
+          <div class="workshop-feature-meta">
+            <div class="workshop-feature-loc">Cohort portrait</div>
+            <div class="workshop-feature-title">Mask-making · identity & emotion</div>
+          </div>
+        </a>
+        <a href="workshops.html" class="workshop-feature-card">
+          <img src="images/workshops/workshop-collaborative-drawing.jpg" alt="Top-down view of a collaborative radial drawing">
+          <div class="workshop-feature-meta">
+            <div class="workshop-feature-loc">Group session</div>
+            <div class="workshop-feature-title">Collaborative radial drawing</div>
+          </div>
+        </a>
+        <a href="workshops.html" class="workshop-feature-card">
+          <img src="images/workshops/workshop-clay-presenting.jpg" alt="Presenting clay artwork in front of ink paintings on the wall">
+          <div class="workshop-feature-meta">
+            <div class="workshop-feature-loc">Kunming · China</div>
+            <div class="workshop-feature-title">Artwork presentation</div>
           </div>
         </a>
       </div>
       <div style="text-align: center; margin-top: 4rem;">
-        <a href="artworks.html" class="btn btn-secondary btn-arrow">See all exhibitions</a>
+        <a href="workshops.html" class="btn btn-secondary btn-arrow">See all workshops</a>
       </div>
     </div>
   </section>
@@ -149,7 +173,6 @@
       <div class="booking-content">
         <div>
           <h2>Make an <em>appointment</em></h2>
-          <p>I work with clients across time zones — in person in Vancouver, and remotely with clients in Taipei, New York, and beyond. Reach out to schedule a session or inquire about workshops.</p>
         </div>
         <div class="booking-actions">
           <div class="booking-row">
@@ -174,7 +197,11 @@
 
   <footer>
     <div class="container">
-      <div class="footer-mark">Stephy <em>Hsu</em> · 徐一瑄</div>
+      <div class="footer-mark"><img src="images/logo.png" alt="" class="footer-mark-logo"><span>Stephy <em>Hsu</em> · 徐一瑄</span></div>
+      <a href="https://instagram.com/stephy_art_therapy" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+        <span>@stephy_art_therapy</span>
+      </a>
       <div class="footer-meta">© 2026 · made with care</div>
     </div>
   </footer>

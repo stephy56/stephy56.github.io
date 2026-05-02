@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+._*
+
+# Claude Code local state
+.claude/
+
+# Editor / OS
+*.swp
+Thumbs.db
