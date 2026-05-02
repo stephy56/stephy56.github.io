@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artworks — Stephy Hsu</title>
+  <title data-en-title="Artworks — Stephy Hsu" data-zh-title="作品 — 徐一瑄">Artworks — Stephy Hsu</title>
   <meta name="description" content="Artworks and exhibitions by Stephy Hsu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,26 +18,32 @@
     <div class="container">
       <a href="index.html" class="nav-mark"><img src="images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="artworks.html" class="active">Artworks</a></li>
-        <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="psychology.html">Psychology</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="artworks.html" class="active" data-en="Artworks" data-zh="作品">Artworks</a></li>
+        <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+        <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="artworks.html">Artworks</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-      <li><a href="psychology.html">Psychology</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+      <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
     </ul>
   </div>
 
@@ -46,9 +52,9 @@
     <div class="container">
       <div class="page-hero-grid">
         <div class="page-hero-text">
-          <div class="page-hero-eyebrow">Artworks · 作品</div>
-          <h1>Marks of <em>memory,</em><br>traces of feeling</h1>
-          <p class="page-hero-tagline">
+          <div class="page-hero-eyebrow" data-en="Artworks · 作品" data-zh="作品 · Artworks">Artworks · 作品</div>
+          <h1 data-en-html="Marks of <em>memory,</em><br>traces of feeling" data-zh-html="<em>記憶</em>的痕跡,<br>情感的軌跡">Marks of <em>memory,</em><br>traces of feeling</h1>
+          <p class="page-hero-tagline" data-en="My visual practice spans drawing, painting, surrealism, and Chinese ink, tracing my ongoing journey of self-exploration, inner reflection, and transformation. Through art, I have used surreal imagery to give form to the unseen parts of life: dreams, memories, the unconscious, and the questions that emerge around death, destiny, growth, and becoming." data-zh="我的視覺創作涵蓋素描、繪畫、超現實主義與中國水墨,持續追尋自我探索、內在反思與蛻變的旅程。透過藝術,我以超現實的意象為夢境、記憶、潛意識,以及與死亡、命運、成長和成為相關的問題,賦予可見的形體。">
             My visual practice spans drawing, painting, surrealism, and Chinese ink, tracing my ongoing journey of self-exploration, inner reflection, and transformation. Through art, I have used surreal imagery to give form to the unseen parts of life: dreams, memories, the unconscious, and the questions that emerge around death, destiny, growth, and becoming.
           </p>
         </div>
@@ -56,9 +62,9 @@
           <figure>
             <img src="images/childrens-book/cover.jpg" alt="Never Left — illustrated children's book cover">
             <figcaption>
-              <span class="aside-eyebrow">Children's book</span>
-              <span class="aside-title"><em>Never</em> Left</span>
-              <span class="aside-cta">Read the book →</span>
+              <span class="aside-eyebrow" data-en="Children's book" data-zh="繪本">Children's book</span>
+              <span class="aside-title" data-en-html="<em>Never</em> Left" data-zh-html="<em>從未</em>離開"><em>Never</em> Left</span>
+              <span class="aside-cta" data-en="Read the book →" data-zh="閱讀繪本 →">Read the book →</span>
             </figcaption>
           </figure>
         </a>
@@ -69,10 +75,10 @@
   <section>
     <div class="container-narrow">
       <div class="prose-body">
-        <p class="dropcap">
+        <p class="dropcap" data-en="My artistic practice has always existed alongside my clinical path. Through automatic drawing, surrealist exploration, and the slow, meditative discipline of Chinese ink and calligraphy, I have come to understand art-making as both a personal language and a pathway for healing. Art has been a form of sublimation for me — a way to transform inner experiences into images, symbols, and meaning." data-zh="我的藝術創作始終與臨床工作並行。透過自動繪畫、超現實探索以及中國水墨與書法那緩慢冥想般的修持,我逐漸理解創作既是個人的語言,也是療癒的途徑。藝術對我而言是一種昇華——將內在經驗轉化為圖像、象徵與意義。">
           My artistic practice has always existed alongside my clinical path. Through automatic drawing, surrealist exploration, and the slow, meditative discipline of Chinese ink and calligraphy, I have come to understand art-making as both a personal language and a pathway for healing. Art has been a form of sublimation for me — a way to transform inner experiences into images, symbols, and meaning.
         </p>
-        <p>
+        <p data-en="This personal relationship with art is also what led me to art therapy. I believe in art therapy because I have experienced how art can hold what words cannot yet express, and how images can become bridges toward self-understanding, reflection, and change. My own growth through art continues to shape the way I understand its clinical potential: as a way to support others in making contact with themselves, their stories, and their capacity for transformation." data-zh="這份與藝術的個人關係,也帶領我走向藝術治療。我相信藝術治療,因為我親身經歷過藝術如何承接那些尚未能言說的事物,以及圖像如何成為通往自我理解、反思與改變的橋樑。我自己透過藝術所走過的成長,也持續形塑著我對其臨床潛力的理解——它能支持他人與自己、自己的故事,以及自身蛻變的能力連結。">
           This personal relationship with art is also what led me to art therapy. I believe in art therapy because I have experienced how art can hold what words cannot yet express, and how images can become bridges toward self-understanding, reflection, and change. My own growth through art continues to shape the way I understand its clinical potential: as a way to support others in making contact with themselves, their stories, and their capacity for transformation.
         </p>
       </div>
@@ -84,8 +90,8 @@
       <div class="section-header">
         <div><div class="section-number">— I.</div></div>
         <div>
-          <h2 class="section-title">Transformation <em>through art</em></h2>
-          <p class="section-intro">A visual journey of memory, reflection, and becoming.</p>
+          <h2 class="section-title" data-en-html="Transformation <em>through art</em>" data-zh-html="<em>透過藝術</em>的蛻變">Transformation <em>through art</em></h2>
+          <p class="section-intro" data-en="A visual journey of memory, reflection, and becoming." data-zh="一段以視覺記錄記憶、反思與成為的旅程。">A visual journey of memory, reflection, and becoming.</p>
         </div>
       </div>
 
@@ -207,8 +213,8 @@
       <div class="section-header">
         <div><div class="section-number">— II.</div></div>
         <div>
-          <h2 class="section-title">Exhibitions <em>& shows</em></h2>
-          <p class="section-intro">Group and solo exhibitions across New York, Hangzhou, and Los Angeles, from early training through recent collaborative shows.</p>
+          <h2 class="section-title" data-en-html="Exhibitions <em>& shows</em>" data-zh-html="<em>展覽</em>與展出">Exhibitions <em>&amp; shows</em></h2>
+          <p class="section-intro" data-en="Group and solo exhibitions across New York, Hangzhou, and Los Angeles, from early training through recent collaborative shows." data-zh="自早期訓練至近期合作展覽,於紐約、杭州與洛杉磯舉辦的個展與聯展。">Group and solo exhibitions across New York, Hangzhou, and Los Angeles, from early training through recent collaborative shows.</p>
         </div>
       </div>
       <div class="workshop-list">
@@ -261,7 +267,7 @@
       <div class="section-header">
         <div><div class="section-number">— III.</div></div>
         <div>
-          <h2 class="section-title">Awards & <em>recognition</em></h2>
+          <h2 class="section-title" data-en-html="Awards & <em>recognition</em>" data-zh-html="獎項與<em>肯定</em>">Awards &amp; <em>recognition</em></h2>
         </div>
       </div>
       <div class="workshop-list">
@@ -290,10 +296,10 @@
   </section>
 
   <section class="cta-section">
-    <h2>Interested in <em>commissioning</em> work?</h2>
-    <p class="subtitle">I take select commissions for portraits, ink works, and collaborative projects. Reach out to discuss.</p>
+    <h2 data-en-html="Interested in <em>commissioning</em> work?" data-zh-html="想<em>委託</em>創作嗎?">Interested in <em>commissioning</em> work?</h2>
+    <p class="subtitle" data-en="I take select commissions for portraits, ink works, and collaborative projects. Reach out to discuss." data-zh="我接受精選委託,包含肖像、水墨作品與合作型計畫。歡迎聯繫進一步討論。">I take select commissions for portraits, ink works, and collaborative projects. Reach out to discuss.</p>
     <div class="actions">
-      <a href="contact.html" class="btn btn-primary btn-arrow">Inquire about a commission</a>
+      <a href="contact.html" class="btn btn-primary btn-arrow" data-en="Inquire about a commission" data-zh="洽詢委託">Inquire about a commission</a>
     </div>
   </section>
 
@@ -304,9 +310,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
         <span>@stephy_art_therapy</span>
       </a>
-      <div class="footer-meta">© 2026 · made with care</div>
+      <div class="footer-meta" data-en="© 2026 · made with care" data-zh="© 2026 · 以心意製作">© 2026 · made with care</div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>

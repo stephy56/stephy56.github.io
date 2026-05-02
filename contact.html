@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Stephy Hsu</title>
+  <title data-en-title="Contact — Stephy Hsu" data-zh-title="聯繫 — 徐一瑄">Contact — Stephy Hsu</title>
   <meta name="description" content="Get in touch with Stephy Hsu — for sessions, workshops, lectures, or collaboration.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,26 +18,32 @@
     <div class="container">
       <a href="index.html" class="nav-mark"><img src="images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="artworks.html">Artworks</a></li>
-        <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="psychology.html">Psychology</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+        <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+        <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+        <li><a href="contact.html" class="active" data-en="Contact" data-zh="聯繫">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="artworks.html">Artworks</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-      <li><a href="psychology.html">Psychology</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+      <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
     </ul>
   </div>
 
@@ -46,9 +52,9 @@
     <div class="container">
       <div class="page-hero-grid">
         <div class="page-hero-text">
-          <div class="page-hero-eyebrow">Contact · 聯繫</div>
-          <h1>Let's <em>connect</em></h1>
-          <p class="page-hero-tagline">
+          <div class="page-hero-eyebrow" data-en="Contact · 聯繫" data-zh="聯繫 · Contact">Contact · 聯繫</div>
+          <h1 data-en-html="Let's <em>connect</em>" data-zh-html="讓我們<em>連結</em>">Let's <em>connect</em></h1>
+          <p class="page-hero-tagline" data-en="For therapy inquiries, workshop bookings, lectures, commissions, or collaboration — I'd love to hear from you." data-zh="無論是治療諮詢、工作坊預約、講座、委託創作或合作機會,都歡迎與我聯繫。">
             For therapy inquiries, workshop bookings, lectures, commissions, or collaboration — I'd love to hear from you.
           </p>
         </div>
@@ -66,16 +72,16 @@
         <div>
           <div class="section-header" style="grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 2.5rem;">
             <div class="section-number">— I.</div>
-            <h2 class="section-title" style="font-size: 2.2rem;">Direct <em>contact</em></h2>
+            <h2 class="section-title" style="font-size: 2.2rem;" data-en-html="Direct <em>contact</em>" data-zh-html="直接<em>聯繫</em>">Direct <em>contact</em></h2>
           </div>
 
           <div class="booking-actions">
             <div class="booking-row" style="border-color: var(--rule-soft);">
-              <div class="booking-label" style="color: var(--lavender-deep);">Email</div>
+              <div class="booking-label" style="color: var(--lavender-deep);" data-en="Email" data-zh="電子郵件">Email</div>
               <div class="booking-value" style="color: var(--space-cadet);"><a href="mailto:starstephy56@gmail.com" style="color: var(--space-cadet);">starstephy56@gmail.com</a></div>
             </div>
             <div class="booking-row" style="border-color: var(--rule-soft);">
-              <div class="booking-label" style="color: var(--lavender-deep);">Academic</div>
+              <div class="booking-label" style="color: var(--lavender-deep);" data-en="Academic" data-zh="學術用">Academic</div>
               <div class="booking-value" style="color: var(--space-cadet);"><a href="mailto:shsu@adler.edu" style="color: var(--space-cadet);">shsu@adler.edu</a></div>
             </div>
           </div>
@@ -84,31 +90,31 @@
         <div>
           <div class="section-header" style="grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 2.5rem;">
             <div class="section-number">— II.</div>
-            <h2 class="section-title" style="font-size: 2.2rem;">Send a <em>message</em></h2>
+            <h2 class="section-title" style="font-size: 2.2rem;" data-en-html="Send a <em>message</em>" data-zh-html="傳送<em>訊息</em>">Send a <em>message</em></h2>
           </div>
 
           <form class="contact-form" action="mailto:starstephy56@gmail.com" method="post" enctype="text/plain">
             <div class="form-row">
-              <label for="name">Your name</label>
+              <label for="name" data-en="Your name" data-zh="姓名">Your name</label>
               <input type="text" id="name" name="name" required>
             </div>
             <div class="form-row">
-              <label for="email">Email</label>
+              <label for="email" data-en="Email" data-zh="電子郵件">Email</label>
               <input type="email" id="email" name="email" required>
             </div>
             <div class="form-row">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Therapy inquiry · Workshop · Commission · Other">
+              <label for="subject" data-en="Subject" data-zh="主旨">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Therapy inquiry · Workshop · Commission · Other" data-en-placeholder="Therapy inquiry · Workshop · Commission · Other" data-zh-placeholder="治療諮詢 · 工作坊 · 委託創作 · 其他">
             </div>
             <div class="form-row">
-              <label for="message">Message</label>
+              <label for="message" data-en="Message" data-zh="訊息">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
             <div>
-              <button type="submit" class="btn btn-primary btn-arrow">Send message</button>
+              <button type="submit" class="btn btn-primary btn-arrow" data-en="Send message" data-zh="傳送訊息">Send message</button>
             </div>
           </form>
-          <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--ink-muted); font-style: italic; line-height: 1.6;">
+          <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--ink-muted); font-style: italic; line-height: 1.6;" data-en-html="This form opens your email app with the message pre-filled. If it doesn't work, please email <a href=&quot;mailto:starstephy56@gmail.com&quot; style=&quot;color: var(--lavender-deep);&quot;>starstephy56@gmail.com</a> directly." data-zh-html="此表單會開啟您的電子郵件 App 並預先填入訊息。如果沒有作用,請直接寫信至 <a href=&quot;mailto:starstephy56@gmail.com&quot; style=&quot;color: var(--lavender-deep);&quot;>starstephy56@gmail.com</a>。">
             This form opens your email app with the message pre-filled. If it doesn't work, please email <a href="mailto:starstephy56@gmail.com" style="color: var(--lavender-deep);">starstephy56@gmail.com</a> directly.
           </p>
         </div>
@@ -122,35 +128,35 @@
       <div class="section-header">
         <div><div class="section-number">— III.</div></div>
         <div>
-          <h2 class="section-title">How can I <em>help?</em></h2>
-          <p class="section-intro">Choose what fits — each link below opens a new email with the right subject line, so I can respond quickly.</p>
+          <h2 class="section-title" data-en-html="How can I <em>help?</em>" data-zh-html="我能如何<em>幫助你?</em>">How can I <em>help?</em></h2>
+          <p class="section-intro" data-en="Choose what fits — each link below opens a new email with the right subject line, so I can respond quickly." data-zh="請選擇最符合你需求的項目——每個連結都會自動開啟一封帶有對應主旨的電子郵件,讓我能更快回覆你。">Choose what fits — each link below opens a new email with the right subject line, so I can respond quickly.</p>
         </div>
       </div>
 
       <div class="featured-grid featured-grid--four">
         <a href="mailto:starstephy56@gmail.com?subject=Therapy%20Consultation" class="feature-card">
-          <div class="feature-card-eyebrow">Therapy</div>
-          <h3 class="feature-card-title">Book a therapy consultation</h3>
-          <p class="feature-card-desc">Free 15-minute introductory call to discuss whether we'd be a good fit. Bilingual sessions available.</p>
-          <div class="feature-card-arrow">Email me →</div>
+          <div class="feature-card-eyebrow" data-en="Therapy" data-zh="治療">Therapy</div>
+          <h3 class="feature-card-title" data-en="Book a therapy consultation" data-zh="預約治療諮詢">Book a therapy consultation</h3>
+          <p class="feature-card-desc" data-en="Free 15-minute introductory call to discuss whether we'd be a good fit. Bilingual sessions available." data-zh="免費 15 分鐘首談,了解我們是否合適。提供雙語晤談。">Free 15-minute introductory call to discuss whether we'd be a good fit. Bilingual sessions available.</p>
+          <div class="feature-card-arrow" data-en="Email me →" data-zh="寫信給我 →">Email me →</div>
         </a>
         <a href="mailto:starstephy56@gmail.com?subject=Workshop%20Inquiry" class="feature-card">
-          <div class="feature-card-eyebrow">Workshops</div>
-          <h3 class="feature-card-title">Book a workshop or lecture</h3>
-          <p class="feature-card-desc">Group workshops, guest lectures, and corporate wellness — in person or online, English or Mandarin.</p>
-          <div class="feature-card-arrow">Email me →</div>
+          <div class="feature-card-eyebrow" data-en="Workshops" data-zh="工作坊">Workshops</div>
+          <h3 class="feature-card-title" data-en="Book a workshop or lecture" data-zh="預約工作坊或講座">Book a workshop or lecture</h3>
+          <p class="feature-card-desc" data-en="Group workshops, guest lectures, and corporate wellness — in person or online, English or Mandarin." data-zh="團體工作坊、客座講座與企業福祉方案——實體或線上、中英文皆可。">Group workshops, guest lectures, and corporate wellness — in person or online, English or Mandarin.</p>
+          <div class="feature-card-arrow" data-en="Email me →" data-zh="寫信給我 →">Email me →</div>
         </a>
         <a href="mailto:starstephy56@gmail.com?subject=Art%20Commission" class="feature-card">
-          <div class="feature-card-eyebrow">Artwork</div>
-          <h3 class="feature-card-title">Commission artwork</h3>
-          <p class="feature-card-desc">I take select commissions for portraits, ink works, and collaborative artistic projects.</p>
-          <div class="feature-card-arrow">Email me →</div>
+          <div class="feature-card-eyebrow" data-en="Artwork" data-zh="作品">Artwork</div>
+          <h3 class="feature-card-title" data-en="Commission artwork" data-zh="委託創作">Commission artwork</h3>
+          <p class="feature-card-desc" data-en="I take select commissions for portraits, ink works, and collaborative artistic projects." data-zh="接受精選委託,包括肖像、水墨作品與合作型藝術計畫。">I take select commissions for portraits, ink works, and collaborative artistic projects.</p>
+          <div class="feature-card-arrow" data-en="Email me →" data-zh="寫信給我 →">Email me →</div>
         </a>
         <a href="mailto:starstephy56@gmail.com?subject=Collaboration" class="feature-card">
-          <div class="feature-card-eyebrow">Collaboration</div>
-          <h3 class="feature-card-title">Press, research, or partnership</h3>
-          <p class="feature-card-desc">Open to interviews, research collaborations, and partnerships in mental health, art therapy, or community wellness.</p>
-          <div class="feature-card-arrow">Email me →</div>
+          <div class="feature-card-eyebrow" data-en="Collaboration" data-zh="合作">Collaboration</div>
+          <h3 class="feature-card-title" data-en="Press, research, or partnership" data-zh="媒體、研究或合作">Press, research, or partnership</h3>
+          <p class="feature-card-desc" data-en="Open to interviews, research collaborations, and partnerships in mental health, art therapy, or community wellness." data-zh="歡迎採訪、研究合作與心理健康、藝術治療或社區福祉相關的夥伴關係。">Open to interviews, research collaborations, and partnerships in mental health, art therapy, or community wellness.</p>
+          <div class="feature-card-arrow" data-en="Email me →" data-zh="寫信給我 →">Email me →</div>
         </a>
       </div>
     </div>
@@ -163,9 +169,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
         <span>@stephy_art_therapy</span>
       </a>
-      <div class="footer-meta">© 2026 · made with care</div>
+      <div class="footer-meta" data-en="© 2026 · made with care" data-zh="© 2026 · 以心意製作">© 2026 · made with care</div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>

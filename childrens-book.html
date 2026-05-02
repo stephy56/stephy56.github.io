@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Never Left — Children's Book by Stephy Hsu</title>
+  <title data-en-title="Never Left — Children's Book by Stephy Hsu" data-zh-title="從未離開 — 徐一瑄的繪本">Never Left — Children's Book by Stephy Hsu</title>
   <meta name="description" content="Never Left — an illustrated children's book by Stephy Hsu, created during her MA in Art Therapy at NYU.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,35 +18,41 @@
     <div class="container">
       <a href="index.html" class="nav-mark"><img src="images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="artworks.html" class="active">Artworks</a></li>
-        <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="psychology.html">Psychology</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="artworks.html" class="active" data-en="Artworks" data-zh="作品">Artworks</a></li>
+        <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+        <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="artworks.html">Artworks</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-      <li><a href="psychology.html">Psychology</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+      <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
     </ul>
   </div>
 
   <header class="page-hero">
     <div class="hero-blob"></div>
     <div class="container">
-      <div class="page-hero-eyebrow">Children's Book · 繪本</div>
-      <h1><em>Never</em> Left</h1>
-      <p class="page-hero-tagline">
+      <div class="page-hero-eyebrow" data-en="Children's Book · 繪本" data-zh="繪本 · Children's Book">Children's Book · 繪本</div>
+      <h1 data-en-html="<em>Never</em> Left" data-zh-html="<em>從未</em>離開"><em>Never</em> Left</h1>
+      <p class="page-hero-tagline" data-en="An illustrated story written and drawn during my MA in Art Therapy at NYU — about love, memory, and the people who stay with us long after they are gone." data-zh="一本於我在 NYU 藝術治療碩士期間創作的繪本——關於愛、記憶,以及那些即使離去仍長存於我們心中的人。">
         An illustrated story written and drawn during my MA in Art Therapy at NYU — about love, memory, and the people who stay with us long after they are gone.
       </p>
     </div>
@@ -55,14 +61,14 @@
   <section>
     <div class="container-narrow">
       <div class="prose-body">
-        <p class="dropcap">
+        <p class="dropcap" data-en-html="<em>Never Left</em> follows a young girl named Merad as she moves through the quiet rhythms of family life — bubbles in the garden, evenings at home — and the slow shape of loss. The book was developed for an Art Therapy with Children course (NYU, Spring 2022) as a tool clinicians can read with young clients learning to hold grief, separation, and the lasting presence of those they love." data-zh-html="《<em>從未離開</em>》講述一位名為 Merad 的小女孩,在家庭生活的安靜節奏中——花園裡的泡泡、家中的傍晚——以及失落的緩慢形貌中前行。這本繪本是於 NYU 藝術治療兒童課程(2022 年春)中創作的,作為一個臨床工作者可與年幼個案共讀的工具,陪伴他們承接哀傷、分離與深愛之人持續的存在。">
           <em>Never Left</em> follows a young girl named Merad as she moves through the quiet rhythms of family life — bubbles in the garden, evenings at home — and the slow shape of loss. The book was developed for an Art Therapy with Children course (NYU, Spring 2022) as a tool clinicians can read with young clients learning to hold grief, separation, and the lasting presence of those they love.
         </p>
-        <p>
+        <p data-en="The story below is presented page by page. A full PDF is available to download." data-zh="以下故事以一頁一頁的方式呈現。也提供完整 PDF 供下載。">
           The story below is presented page by page. A full PDF is available to download.
         </p>
         <p style="margin-top: 1.5rem;">
-          <a href="images/childrens-book/never-left.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">Download the full book (PDF)</a>
+          <a href="images/childrens-book/never-left.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-arrow" data-en="Download the full book (PDF)" data-zh="下載完整繪本 (PDF)">Download the full book (PDF)</a>
         </p>
       </div>
     </div>
@@ -99,7 +105,7 @@
       <div class="section-header">
         <div><div class="section-number">— Notes.</div></div>
         <div>
-          <h2 class="section-title">Hidden symbols in my <em>children's book</em></h2>
+          <h2 class="section-title" data-en-html="Hidden symbols in my <em>children's book</em>" data-zh-html="繪本中的<em>隱藏符號</em>">Hidden symbols in my <em>children's book</em></h2>
         </div>
       </div>
       <div class="prose-body">
@@ -150,11 +156,11 @@
   </section>
 
   <section class="cta-section">
-    <h2>Back to the <em>artworks</em></h2>
-    <p class="subtitle">Return to the gallery, or get in touch about commissions, collaborations, or further reading.</p>
+    <h2 data-en-html="Back to the <em>artworks</em>" data-zh-html="回到<em>作品</em>">Back to the <em>artworks</em></h2>
+    <p class="subtitle" data-en="Return to the gallery, or get in touch about commissions, collaborations, or further reading." data-zh="回到作品集,或聯繫我洽談委託、合作或延伸閱讀。">Return to the gallery, or get in touch about commissions, collaborations, or further reading.</p>
     <div class="actions">
-      <a href="artworks.html" class="btn btn-secondary">All artworks</a>
-      <a href="contact.html" class="btn btn-primary btn-arrow">Get in touch</a>
+      <a href="artworks.html" class="btn btn-secondary" data-en="All artworks" data-zh="全部作品">All artworks</a>
+      <a href="contact.html" class="btn btn-primary btn-arrow" data-en="Get in touch" data-zh="聯繫我">Get in touch</a>
     </div>
   </section>
 
@@ -165,9 +171,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
         <span>@stephy_art_therapy</span>
       </a>
-      <div class="footer-meta">© 2026 · made with care</div>
+      <div class="footer-meta" data-en="© 2026 · made with care" data-zh="© 2026 · 以心意製作">© 2026 · made with care</div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>

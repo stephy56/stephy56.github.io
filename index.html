@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stephy Hsu — Art Therapist · Artist · Founder</title>
+  <title data-en-title="Stephy Hsu — Art Therapist · Artist · Founder" data-zh-title="徐一瑄 — 藝術治療師 · 藝術家 · 創辦人">Stephy Hsu — Art Therapist · Artist · Founder</title>
   <meta name="description" content="Stephy (Yi-Hsuan) Hsu, ATR-BC, LCAT — Bridging art, psychology, and culture.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,26 +18,32 @@
     <div class="container">
       <a href="index.html" class="nav-mark"><img src="images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="artworks.html">Artworks</a></li>
-        <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="psychology.html">Psychology</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" class="active" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+        <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+        <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="artworks.html">Artworks</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-      <li><a href="psychology.html">Psychology</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+      <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
     </ul>
   </div>
 
@@ -46,20 +52,20 @@
     <div class="container">
       <div class="home-hero-content">
         <div class="home-hero-text">
-          <div class="hero-eyebrow">Art Therapist · Artist · Founder</div>
-          <h1>Stephy <em>Hsu</em></h1>
+          <div class="hero-eyebrow" data-en="Art Therapist · Artist · Founder" data-zh="藝術治療師 · 藝術家 · 創辦人">Art Therapist · Artist · Founder</div>
+          <h1 data-en-html="Stephy <em>Hsu</em>" data-zh-html="Stephy <em>Hsu</em>">Stephy <em>Hsu</em></h1>
           <div class="hero-zh">徐 一 瑄</div>
-          <p class="hero-tagline">
+          <p class="hero-tagline" data-en="Bridging art, psychology, spirituality, and culture — using creative expression as a language for healing, memory, and transformation." data-zh="以藝術、心理學、靈性與文化交織為橋——讓創意表達成為療癒、記憶與蛻變的語言。">
             Bridging art, psychology, spirituality, and culture — using creative expression as a language for healing, memory, and transformation.
           </p>
           <div class="hero-credentials">
             <span class="credential">ATR-BC #24-538</span>
             <span class="credential">LCAT #003071</span>
-            <span class="credential">Doctoral Student in Clinical Psychology</span>
+            <span class="credential" data-en="Doctoral Student in Clinical Psychology" data-zh="臨床心理學博士生">Doctoral Student in Clinical Psychology</span>
           </div>
           <div class="hero-cta">
-            <a href="contact.html" class="btn btn-primary btn-arrow">Book a session</a>
-            <a href="artworks.html" class="btn btn-secondary">View artworks</a>
+            <a href="contact.html" class="btn btn-primary btn-arrow" data-en="Book a session" data-zh="預約晤談">Book a session</a>
+            <a href="artworks.html" class="btn btn-secondary" data-en="View artworks" data-zh="查看作品">View artworks</a>
           </div>
         </div>
 
@@ -67,9 +73,9 @@
           <img src="images/attachment.jpg" alt="Attachment — oil painting by Stephy Hsu, 2025">
           <figcaption>
             <div class="artwork-name">Attachment <em>· 執念</em></div>
-            <div class="artwork-medium">Oil on canvas · 2025</div>
-            <p class="artwork-poem zh">來世的、前世的、過去的、現在的執念，釋懷便可見性。受傷的、痛苦的、憤怒的，鬆手便會解脫。說來簡單卻也不易，即便嗅過彼岸花的香氣，飲下夢婆湯，印記依然深深烙刻，伴隨著我們來到今生。雖然玉碎，但也是轉化與重生。讓六耳盤長結提醒著我們走向心物合一。</p>
-            <p class="artwork-poem en">The attachments of lives to come, of lives passed, of what was and what is — when released, the true self becomes visible. The wounded, the aching, the angry — when we loosen our grip, freedom arrives. Simply said, yet not easily done. Even after breathing the scent of the bianhua and drinking Meng Po's soup of forgetting, the imprints remain deeply etched, traveling with us into this life. Though the jade may shatter, even that is transformation and rebirth. Let the six-eared pan chang knot remind us — toward the union of mind and matter.</p>
+            <div class="artwork-medium" data-en="Oil on canvas · 2025" data-zh="油畫 · 2025">Oil on canvas · 2025</div>
+            <p class="artwork-poem zh">來世的、前世的、過去的、現在的執念,釋懷便可見性。受傷的、痛苦的、憤怒的,鬆手便會解脫。說來簡單卻也不易,即便嗅過彼岸花的香氣,飲下夢婆湯,印記依然深深烙刻,伴隨著我們來到今生。雖然玉碎,但也是轉化與重生。讓六耳盤長結提醒著我們走向心物合一。</p>
+            <p class="artwork-poem en" data-en="The attachments of lives to come, of lives passed, of what was and what is — when released, the true self becomes visible. The wounded, the aching, the angry — when we loosen our grip, freedom arrives. Simply said, yet not easily done. Even after breathing the scent of the bianhua and drinking Meng Po's soup of forgetting, the imprints remain deeply etched, traveling with us into this life. Though the jade may shatter, even that is transformation and rebirth. Let the six-eared pan chang knot remind us — toward the union of mind and matter." data-zh="來世的、前世的、過去的、現在的執念,釋懷便可見性。受傷的、痛苦的、憤怒的,鬆手便會解脫。">The attachments of lives to come, of lives passed, of what was and what is — when released, the true self becomes visible. The wounded, the aching, the angry — when we loosen our grip, freedom arrives. Simply said, yet not easily done. Even after breathing the scent of the bianhua and drinking Meng Po's soup of forgetting, the imprints remain deeply etched, traveling with us into this life. Though the jade may shatter, even that is transformation and rebirth. Let the six-eared pan chang knot remind us — toward the union of mind and matter.</p>
           </figcaption>
         </figure>
       </div>
@@ -81,56 +87,56 @@
       <div class="section-header">
         <div><div class="section-number">— I.</div></div>
         <div>
-          <h2 class="section-title">Creative spaces for <em>reflection</em></h2>
-          <p class="section-intro">Through workshops, lectures, and group sessions, I hope to create gentle spaces where art can support self-understanding, conversation, and connection.</p>
+          <h2 class="section-title" data-en-html="Creative spaces for <em>reflection</em>" data-zh-html="提供<em>反思</em>的創意空間">Creative spaces for <em>reflection</em></h2>
+          <p class="section-intro" data-en="Through workshops, lectures, and group sessions, I hope to create gentle spaces where art can support self-understanding, conversation, and connection." data-zh="透過工作坊、講座與團體活動,我希望創造溫柔的空間,讓藝術成為自我理解、對話與連結的橋樑。">Through workshops, lectures, and group sessions, I hope to create gentle spaces where art can support self-understanding, conversation, and connection.</p>
         </div>
       </div>
       <div class="workshop-feature-grid">
         <a href="workshops.html" class="workshop-feature-card">
           <img src="images/workshops/workshop-lecture-nyu.jpg" alt="Guest lecture and demonstration in a university setting">
           <div class="workshop-feature-meta">
-            <div class="workshop-feature-loc">New York</div>
-            <div class="workshop-feature-title">University guest lecture</div>
+            <div class="workshop-feature-loc" data-en="New York" data-zh="紐約">New York</div>
+            <div class="workshop-feature-title" data-en="University guest lecture" data-zh="大學客座講座">University guest lecture</div>
           </div>
         </a>
         <a href="workshops.html" class="workshop-feature-card">
           <img src="images/workshops/workshop-classroom-china.jpg" alt="Multi-day workshop in a classroom in mainland China">
           <div class="workshop-feature-meta">
-            <div class="workshop-feature-loc">Kunming · China</div>
-            <div class="workshop-feature-title">Multi-day classroom workshop</div>
+            <div class="workshop-feature-loc" data-en="Kunming · China" data-zh="中國昆明">Kunming · China</div>
+            <div class="workshop-feature-title" data-en="Multi-day classroom workshop" data-zh="多日課堂工作坊">Multi-day classroom workshop</div>
           </div>
         </a>
         <a href="workshops.html" class="workshop-feature-card">
           <img src="images/workshops/workshop-gallery-circle.jpg" alt="Gallery sit-circle with shared canvas and group reflection">
           <div class="workshop-feature-meta">
-            <div class="workshop-feature-loc">New York</div>
-            <div class="workshop-feature-title">Gallery sit-circle</div>
+            <div class="workshop-feature-loc" data-en="New York" data-zh="紐約">New York</div>
+            <div class="workshop-feature-title" data-en="Gallery sit-circle" data-zh="畫廊圍坐分享">Gallery sit-circle</div>
           </div>
         </a>
         <a href="workshops.html" class="workshop-feature-card">
           <img src="images/workshops/workshop-mask-group.jpg" alt="Group portrait of participants holding their finished masks">
           <div class="workshop-feature-meta">
-            <div class="workshop-feature-loc">Cohort portrait</div>
-            <div class="workshop-feature-title">Mask-making · identity & emotion</div>
+            <div class="workshop-feature-loc" data-en="Cohort portrait" data-zh="團體合影">Cohort portrait</div>
+            <div class="workshop-feature-title" data-en="Mask-making · identity & emotion" data-zh="面具創作 · 身份與情緒">Mask-making · identity &amp; emotion</div>
           </div>
         </a>
         <a href="workshops.html" class="workshop-feature-card">
           <img src="images/workshops/workshop-collaborative-drawing.jpg" alt="Top-down view of a collaborative radial drawing">
           <div class="workshop-feature-meta">
-            <div class="workshop-feature-loc">Group session</div>
-            <div class="workshop-feature-title">Collaborative radial drawing</div>
+            <div class="workshop-feature-loc" data-en="Group session" data-zh="團體活動">Group session</div>
+            <div class="workshop-feature-title" data-en="Collaborative radial drawing" data-zh="放射狀共同創作">Collaborative radial drawing</div>
           </div>
         </a>
         <a href="workshops.html" class="workshop-feature-card">
           <img src="images/workshops/workshop-clay-presenting.jpg" alt="Presenting clay artwork in front of ink paintings on the wall">
           <div class="workshop-feature-meta">
-            <div class="workshop-feature-loc">Kunming · China</div>
-            <div class="workshop-feature-title">Artwork presentation</div>
+            <div class="workshop-feature-loc" data-en="Kunming · China" data-zh="中國昆明">Kunming · China</div>
+            <div class="workshop-feature-title" data-en="Artwork presentation" data-zh="作品分享">Artwork presentation</div>
           </div>
         </a>
       </div>
       <div style="text-align: center; margin-top: 4rem;">
-        <a href="workshops.html" class="btn btn-secondary btn-arrow">See all workshops</a>
+        <a href="workshops.html" class="btn btn-secondary btn-arrow" data-en="See all workshops" data-zh="查看所有工作坊">See all workshops</a>
       </div>
     </div>
   </section>
@@ -140,28 +146,28 @@
       <div class="section-header">
         <div><div class="section-number">— II.</div></div>
         <div>
-          <h2 class="section-title">What I <em>offer</em></h2>
-          <p class="section-intro">From intimate one-on-one sessions to large-scale workshops in art therapy and emotional wellbeing.</p>
+          <h2 class="section-title" data-en-html="What I <em>offer</em>" data-zh-html="我所<em>提供的</em>">What I <em>offer</em></h2>
+          <p class="section-intro" data-en="From intimate one-on-one sessions to large-scale workshops in art therapy and emotional wellbeing." data-zh="從一對一的個別晤談,到大型藝術治療與情緒健康工作坊。">From intimate one-on-one sessions to large-scale workshops in art therapy and emotional wellbeing.</p>
         </div>
       </div>
       <div class="featured-grid">
         <a href="psychology.html" class="feature-card">
-          <div class="feature-card-eyebrow">Clinical</div>
-          <h3 class="feature-card-title">Individual & family<br>art therapy</h3>
-          <p class="feature-card-desc">Bilingual (Mandarin/English) sessions integrating DBT, IPT, and trauma-informed art therapy for adults, mothers, and families.</p>
-          <div class="feature-card-arrow">Learn more →</div>
+          <div class="feature-card-eyebrow" data-en="Clinical" data-zh="臨床">Clinical</div>
+          <h3 class="feature-card-title" data-en-html="Individual & family<br>art therapy" data-zh-html="個別與家庭<br>藝術治療">Individual &amp; family<br>art therapy</h3>
+          <p class="feature-card-desc" data-en="Bilingual (Mandarin/English) sessions integrating DBT, IPT, and trauma-informed art therapy for adults, mothers, and families." data-zh="提供中英雙語晤談,整合 DBT、IPT 與創傷知情藝術治療,服務成人、母親與家庭。">Bilingual (Mandarin/English) sessions integrating DBT, IPT, and trauma-informed art therapy for adults, mothers, and families.</p>
+          <div class="feature-card-arrow" data-en="Learn more →" data-zh="了解更多 →">Learn more →</div>
         </a>
         <a href="workshops.html" class="feature-card">
-          <div class="feature-card-eyebrow">Workshops</div>
-          <h3 class="feature-card-title">Group & community<br>workshops</h3>
-          <p class="feature-card-desc">Art-as-therapy workshops in person and online — from public lectures to multi-day immersives across Asia and North America.</p>
-          <div class="feature-card-arrow">View offerings →</div>
+          <div class="feature-card-eyebrow" data-en="Workshops" data-zh="工作坊">Workshops</div>
+          <h3 class="feature-card-title" data-en-html="Group & community<br>workshops" data-zh-html="團體與社區<br>工作坊">Group &amp; community<br>workshops</h3>
+          <p class="feature-card-desc" data-en="Art-as-therapy workshops in person and online — from public lectures to multi-day immersives across Asia and North America." data-zh="實體與線上藝術治療工作坊,涵蓋公開講座至多日沉浸式體驗,於亞洲與北美舉辦。">Art-as-therapy workshops in person and online — from public lectures to multi-day immersives across Asia and North America.</p>
+          <div class="feature-card-arrow" data-en="View offerings →" data-zh="查看內容 →">View offerings →</div>
         </a>
         <a href="psychology.html" class="feature-card">
-          <div class="feature-card-eyebrow">Education</div>
-          <h3 class="feature-card-title">Lectures & training<br>in art therapy</h3>
-          <p class="feature-card-desc">Guest lectures, professional training, and study-abroad mentorship for emerging therapists and graduate students.</p>
-          <div class="feature-card-arrow">Get in touch →</div>
+          <div class="feature-card-eyebrow" data-en="Education" data-zh="教育">Education</div>
+          <h3 class="feature-card-title" data-en-html="Lectures & training<br>in art therapy" data-zh-html="藝術治療<br>講座與訓練">Lectures &amp; training<br>in art therapy</h3>
+          <p class="feature-card-desc" data-en="Guest lectures, professional training, and study-abroad mentorship for emerging therapists and graduate students." data-zh="提供客座講座、專業訓練與留學指導,陪伴新進治療師與研究生。">Guest lectures, professional training, and study-abroad mentorship for emerging therapists and graduate students.</p>
+          <div class="feature-card-arrow" data-en="Get in touch →" data-zh="聯繫我 →">Get in touch →</div>
         </a>
       </div>
     </div>
@@ -172,23 +178,23 @@
     <div class="container">
       <div class="booking-content">
         <div>
-          <h2>Make an <em>appointment</em></h2>
+          <h2 data-en-html="Make an <em>appointment</em>" data-zh-html="預約<em>晤談</em>">Make an <em>appointment</em></h2>
         </div>
         <div class="booking-actions">
           <div class="booking-row">
-            <div class="booking-label">Email</div>
+            <div class="booking-label" data-en="Email" data-zh="電子郵件">Email</div>
             <div class="booking-value"><a href="mailto:starstephy56@gmail.com?subject=Appointment%20Inquiry">starstephy56@gmail.com</a></div>
           </div>
           <div class="booking-row">
-            <div class="booking-label">Sessions</div>
-            <div class="booking-value">Individual · Family · Couples</div>
+            <div class="booking-label" data-en="Sessions" data-zh="晤談類型">Sessions</div>
+            <div class="booking-value" data-en="Individual · Family · Couples" data-zh="個別 · 家庭 · 伴侶">Individual · Family · Couples</div>
           </div>
           <div class="booking-row">
-            <div class="booking-label">Languages</div>
-            <div class="booking-value">English · 國語</div>
+            <div class="booking-label" data-en="Languages" data-zh="語言">Languages</div>
+            <div class="booking-value" data-en="English · 國語" data-zh="國語 · English">English · 國語</div>
           </div>
           <div style="margin-top: 1.5rem;">
-            <a href="contact.html" class="btn btn-primary btn-arrow">Send a message</a>
+            <a href="contact.html" class="btn btn-primary btn-arrow" data-en="Send a message" data-zh="傳送訊息">Send a message</a>
           </div>
         </div>
       </div>
@@ -202,9 +208,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
         <span>@stephy_art_therapy</span>
       </a>
-      <div class="footer-meta">© 2026 · made with care</div>
+      <div class="footer-meta" data-en="© 2026 · made with care" data-zh="© 2026 · 以心意製作">© 2026 · made with care</div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>

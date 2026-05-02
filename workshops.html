@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workshops — Stephy Hsu</title>
+  <title data-en-title="Workshops — Stephy Hsu" data-zh-title="工作坊 — 徐一瑄">Workshops — Stephy Hsu</title>
   <meta name="description" content="Art therapy workshops, lectures, and group sessions by Stephy Hsu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,35 +18,41 @@
     <div class="container">
       <a href="index.html" class="nav-mark"><img src="images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="artworks.html">Artworks</a></li>
-        <li><a href="workshops.html" class="active">Workshops</a></li>
-        <li><a href="psychology.html">Psychology</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+        <li><a href="workshops.html" class="active" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+        <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="artworks.html">Artworks</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-      <li><a href="psychology.html">Psychology</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+      <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
     </ul>
   </div>
 
   <header class="page-hero">
     <div class="hero-blob"></div>
     <div class="container">
-      <div class="page-hero-eyebrow">Workshops · 工作坊</div>
-      <h1>Art as a <em>shared</em><br>practice of healing</h1>
-      <p class="page-hero-tagline">
+      <div class="page-hero-eyebrow" data-en="Workshops · 工作坊" data-zh="工作坊 · Workshops">Workshops · 工作坊</div>
+      <h1 data-en-html="Art as a <em>shared</em><br>practice of healing" data-zh-html="藝術作為一種<br><em>共享</em>的療癒實踐">Art as a <em>shared</em><br>practice of healing</h1>
+      <p class="page-hero-tagline" data-en="I lead workshops and lectures across Asia and North America — bringing art therapy into communities, classrooms, museums, and gallery spaces." data-zh="我於亞洲與北美各地帶領工作坊與講座——將藝術治療帶進社區、教室、美術館與畫廊空間。">
         I lead workshops and lectures across Asia and North America — bringing art therapy into communities, classrooms, museums, and gallery spaces.
       </p>
     </div>
@@ -57,41 +63,41 @@
       <div class="section-header">
         <div><div class="section-number">— I.</div></div>
         <div>
-          <h2 class="section-title">Workshop <em>offerings</em></h2>
-          <p class="section-intro">Each workshop is tailored to the needs of its participants — whether a corporate team, a graduate cohort, or a community group. Both English and Mandarin sessions available.</p>
+          <h2 class="section-title" data-en-html="Workshop <em>offerings</em>" data-zh-html="<em>工作坊</em>類型">Workshop <em>offerings</em></h2>
+          <p class="section-intro" data-en="Each workshop is tailored to the needs of its participants — whether a corporate team, a graduate cohort, or a community group. Both English and Mandarin sessions available." data-zh="每場工作坊都會依據參與者的需求量身設計——無論是企業團隊、研究生群組或社區團體。提供中英雙語活動。">Each workshop is tailored to the needs of its participants — whether a corporate team, a graduate cohort, or a community group. Both English and Mandarin sessions available.</p>
         </div>
       </div>
 
       <div class="featured-grid">
         <div class="feature-card">
-          <div class="feature-card-eyebrow">Public · Group</div>
-          <h3 class="feature-card-title">Art-as-therapy<br>group workshops</h3>
-          <p class="feature-card-desc">Themed group experiences exploring emotion, identity, and creative expression. No artistic background required — only curiosity. Suitable for community groups and corporate wellness programs.</p>
+          <div class="feature-card-eyebrow" data-en="Public · Group" data-zh="公開 · 團體">Public · Group</div>
+          <h3 class="feature-card-title" data-en-html="Art-as-therapy<br>group workshops" data-zh-html="藝術治療<br>團體工作坊">Art-as-therapy<br>group workshops</h3>
+          <p class="feature-card-desc" data-en="Themed group experiences exploring emotion, identity, and creative expression. No artistic background required — only curiosity. Suitable for community groups and corporate wellness programs." data-zh="以主題式團體探索情緒、身份與創意表達。不需藝術背景,只需要好奇心。適合社區團體與企業福祉方案。">Themed group experiences exploring emotion, identity, and creative expression. No artistic background required — only curiosity. Suitable for community groups and corporate wellness programs.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card-eyebrow">Online · Bilingual</div>
-          <h3 class="feature-card-title">Online lectures<br>& workshops</h3>
-          <p class="feature-card-desc">Live online sessions accessible across time zones. Past topics include "Ethics in Art Therapy," "Healing Through Art," and "Journey Through the Darkness." Available in both English and Mandarin.</p>
+          <div class="feature-card-eyebrow" data-en="Online · Bilingual" data-zh="線上 · 雙語">Online · Bilingual</div>
+          <h3 class="feature-card-title" data-en-html="Online lectures<br>& workshops" data-zh-html="線上講座<br>與工作坊">Online lectures<br>&amp; workshops</h3>
+          <p class="feature-card-desc" data-en='Live online sessions accessible across time zones. Past topics include "Ethics in Art Therapy," "Healing Through Art," and "Journey Through the Darkness." Available in both English and Mandarin.' data-zh="跨時區的線上即時活動。過去主題包括「藝術治療倫理」、「透過藝術療癒」與「穿越黑暗的旅程」。提供中英雙語。">Live online sessions accessible across time zones. Past topics include "Ethics in Art Therapy," "Healing Through Art," and "Journey Through the Darkness." Available in both English and Mandarin.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card-eyebrow">Academic · Training</div>
-          <h3 class="feature-card-title">Lectures &<br>guest teaching</h3>
-          <p class="feature-card-desc">Guest lectures and training sessions for university programs, professional associations, and graduate cohorts in art therapy, counseling, and clinical psychology.</p>
+          <div class="feature-card-eyebrow" data-en="Academic · Training" data-zh="學術 · 訓練">Academic · Training</div>
+          <h3 class="feature-card-title" data-en-html="Lectures &<br>guest teaching" data-zh-html="講座與<br>客座教學">Lectures &amp;<br>guest teaching</h3>
+          <p class="feature-card-desc" data-en="Guest lectures and training sessions for university programs, professional associations, and graduate cohorts in art therapy, counseling, and clinical psychology." data-zh="為大學課程、專業協會與藝術治療、諮商與臨床心理學研究所提供客座講座與訓練。">Guest lectures and training sessions for university programs, professional associations, and graduate cohorts in art therapy, counseling, and clinical psychology.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card-eyebrow">Immersive</div>
-          <h3 class="feature-card-title">Multi-day<br>in-person retreats</h3>
-          <p class="feature-card-desc">Intensive multi-day workshops combining art-making, reflection, and somatic practice. Past locations include Kunming, Kaohsiung, and New York.</p>
+          <div class="feature-card-eyebrow" data-en="Immersive" data-zh="沉浸式">Immersive</div>
+          <h3 class="feature-card-title" data-en-html="Multi-day<br>in-person retreats" data-zh-html="多日<br>實體沉浸營">Multi-day<br>in-person retreats</h3>
+          <p class="feature-card-desc" data-en="Intensive multi-day workshops combining art-making, reflection, and somatic practice. Past locations include Kunming, Kaohsiung, and New York." data-zh="結合藝術創作、反思與身體實踐的密集多日工作坊。過去舉辦地點包括昆明、高雄與紐約。">Intensive multi-day workshops combining art-making, reflection, and somatic practice. Past locations include Kunming, Kaohsiung, and New York.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card-eyebrow">Corporate · Team</div>
-          <h3 class="feature-card-title">Team-building<br>workshops</h3>
-          <p class="feature-card-desc">Art-based experiences designed to strengthen trust, communication, and creative collaboration within teams. Useful for company offsites, leadership retreats, and interdisciplinary cohorts.</p>
+          <div class="feature-card-eyebrow" data-en="Corporate · Team" data-zh="企業 · 團隊">Corporate · Team</div>
+          <h3 class="feature-card-title" data-en-html="Team-building<br>workshops" data-zh-html="團隊建立<br>工作坊">Team-building<br>workshops</h3>
+          <p class="feature-card-desc" data-en="Art-based experiences designed to strengthen trust, communication, and creative collaboration within teams. Useful for company offsites, leadership retreats, and interdisciplinary cohorts." data-zh="以藝術為基礎的體驗,強化團隊信任、溝通與創意合作。適合企業活動、領導者退修與跨領域團隊。">Art-based experiences designed to strengthen trust, communication, and creative collaboration within teams. Useful for company offsites, leadership retreats, and interdisciplinary cohorts.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card-eyebrow">Community · Event</div>
-          <h3 class="feature-card-title">Social event<br>workshops</h3>
-          <p class="feature-card-desc">Bespoke creative activities for gatherings, brand events, and community celebrations — bringing reflective art-making into birthdays, openings, panels, and pop-up programming.</p>
+          <div class="feature-card-eyebrow" data-en="Community · Event" data-zh="社區 · 活動">Community · Event</div>
+          <h3 class="feature-card-title" data-en-html="Social event<br>workshops" data-zh-html="社交活動<br>工作坊">Social event<br>workshops</h3>
+          <p class="feature-card-desc" data-en="Bespoke creative activities for gatherings, brand events, and community celebrations — bringing reflective art-making into birthdays, openings, panels, and pop-up programming." data-zh="為聚會、品牌活動與社區慶典量身設計的創意活動——將具反思性的創作帶入生日、開幕、論壇與快閃節目。">Bespoke creative activities for gatherings, brand events, and community celebrations — bringing reflective art-making into birthdays, openings, panels, and pop-up programming.</p>
         </div>
       </div>
     </div>
@@ -102,8 +108,8 @@
       <div class="section-header">
         <div><div class="section-number">— II.</div></div>
         <div>
-          <h2 class="section-title">From the <em>field</em></h2>
-          <p class="section-intro">Moments from recent workshops and lectures across New York, Taiwan, and mainland China — group activities, collaborative drawing, mask-making, and public talks.</p>
+          <h2 class="section-title" data-en-html="From the <em>field</em>" data-zh-html="<em>現場</em>紀實">From the <em>field</em></h2>
+          <p class="section-intro" data-en="Moments from recent workshops and lectures across New York, Taiwan, and mainland China — group activities, collaborative drawing, mask-making, and public talks." data-zh="於紐約、台灣與中國大陸近期工作坊與講座的片段——團體活動、共同繪畫、面具創作與公開演講。">Moments from recent workshops and lectures across New York, Taiwan, and mainland China — group activities, collaborative drawing, mask-making, and public talks.</p>
         </div>
       </div>
 
@@ -229,8 +235,8 @@
       <div class="section-header">
         <div><div class="section-number">— III.</div></div>
         <div>
-          <h2 class="section-title">Past <em>workshops</em></h2>
-          <p class="section-intro">A selection of workshops, panels, and lectures delivered between 2023 and 2025.</p>
+          <h2 class="section-title" data-en-html="Past <em>workshops</em>" data-zh-html="<em>過往</em>工作坊">Past <em>workshops</em></h2>
+          <p class="section-intro" data-en="A selection of workshops, panels, and lectures delivered between 2023 and 2025." data-zh="2023 至 2025 年間舉辦的部分工作坊、座談與講座。">A selection of workshops, panels, and lectures delivered between 2023 and 2025.</p>
         </div>
       </div>
 
@@ -314,24 +320,24 @@
     <div class="container">
       <div class="booking-content">
         <div>
-          <h2>Bring a workshop to <em>your</em> community</h2>
-          <p>I'm available for guest lectures, professional trainings, group workshops, and corporate wellness programs. Sessions can be in English, Mandarin, or bilingual format.</p>
+          <h2 data-en-html="Bring a workshop to <em>your</em> community" data-zh-html="把工作坊帶到<em>你的</em>社群">Bring a workshop to <em>your</em> community</h2>
+          <p data-en="I'm available for guest lectures, professional trainings, group workshops, and corporate wellness programs. Sessions can be in English, Mandarin, or bilingual format." data-zh="我提供客座講座、專業訓練、團體工作坊與企業福祉方案,可採英語、國語或雙語形式進行。">I'm available for guest lectures, professional trainings, group workshops, and corporate wellness programs. Sessions can be in English, Mandarin, or bilingual format.</p>
         </div>
         <div class="booking-actions">
           <div class="booking-row">
-            <div class="booking-label">Format</div>
-            <div class="booking-value">In-person · Online · Hybrid</div>
+            <div class="booking-label" data-en="Format" data-zh="形式">Format</div>
+            <div class="booking-value" data-en="In-person · Online · Hybrid" data-zh="實體 · 線上 · 混合">In-person · Online · Hybrid</div>
           </div>
           <div class="booking-row">
-            <div class="booking-label">Duration</div>
-            <div class="booking-value">90 min · half-day · multi-day</div>
+            <div class="booking-label" data-en="Duration" data-zh="時長">Duration</div>
+            <div class="booking-value" data-en="90 min · half-day · multi-day" data-zh="90 分鐘 · 半日 · 多日">90 min · half-day · multi-day</div>
           </div>
           <div class="booking-row">
-            <div class="booking-label">Languages</div>
-            <div class="booking-value">English · 國語</div>
+            <div class="booking-label" data-en="Languages" data-zh="語言">Languages</div>
+            <div class="booking-value" data-en="English · 國語" data-zh="國語 · English">English · 國語</div>
           </div>
           <div style="margin-top: 1.5rem;">
-            <a href="mailto:starstephy56@gmail.com?subject=Workshop%20Inquiry" class="btn btn-primary btn-arrow">Inquire about a workshop</a>
+            <a href="mailto:starstephy56@gmail.com?subject=Workshop%20Inquiry" class="btn btn-primary btn-arrow" data-en="Inquire about a workshop" data-zh="洽詢工作坊">Inquire about a workshop</a>
           </div>
         </div>
       </div>
@@ -345,9 +351,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
         <span>@stephy_art_therapy</span>
       </a>
-      <div class="footer-meta">© 2026 · made with care</div>
+      <div class="footer-meta" data-en="© 2026 · made with care" data-zh="© 2026 · 以心意製作">© 2026 · made with care</div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>

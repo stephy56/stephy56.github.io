@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Stephy Hsu</title>
+  <title data-en-title="About — Stephy Hsu" data-zh-title="關於 — 徐一瑄">About — Stephy Hsu</title>
   <meta name="description" content="About Stephy Hsu — biography and full curriculum vitae.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,35 +18,41 @@
     <div class="container">
       <a href="index.html" class="nav-mark"><img src="images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="artworks.html">Artworks</a></li>
-        <li><a href="workshops.html">Workshops</a></li>
-        <li><a href="psychology.html">Psychology</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="about.html" class="active" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+        <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+        <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+        <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="artworks.html">Artworks</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-      <li><a href="psychology.html">Psychology</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li><a href="psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+      <li><a href="contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
     </ul>
   </div>
 
   <header class="page-hero">
     <div class="hero-blob"></div>
     <div class="container">
-      <div class="page-hero-eyebrow">About · 關於</div>
-      <h1>A practice rooted in<br><em>art, healing, and culture</em></h1>
-      <p class="page-hero-tagline">
+      <div class="page-hero-eyebrow" data-en="About · 關於" data-zh="關於 · About">About · 關於</div>
+      <h1 data-en-html="A practice rooted in<br><em>art, healing, and culture</em>" data-zh-html="紮根於<em>藝術、療癒與文化</em>的實踐">A practice rooted in<br><em>art, healing, and culture</em></h1>
+      <p class="page-hero-tagline" data-en="I am a board-certified art therapist, artist, and founder working at the intersection of creative expression and clinical psychology." data-zh="我是一位美國認證藝術治療師、藝術家與創辦人,在創意表達與臨床心理學的交會處工作。">
         I am a board-certified art therapist, artist, and founder working at the intersection of creative expression and clinical psychology.
       </p>
     </div>
@@ -60,16 +66,16 @@
           <figcaption>Stephy Hsu · 徐一瑄</figcaption>
         </figure>
         <div class="prose-body">
-        <p class="dropcap">
+        <p class="dropcap" data-en="My work begins with the belief that art can offer a language for experiences that are difficult to put into words. Across clinical, artistic, and research settings, I have continued to learn how creative expression can support reflection, healing, and meaning-making." data-zh="我的工作始於一個信念:藝術能為那些難以言說的經驗提供一種語言。在臨床、藝術與研究的場域中,我持續學習創意表達如何支持反思、療癒與意義的形成。">
           My work begins with the belief that art can offer a language for experiences that are difficult to put into words. Across clinical, artistic, and research settings, I have continued to learn how creative expression can support reflection, healing, and meaning-making.
         </p>
-        <p>
+        <p data-en-html="I trained in fine arts, art therapy, and clinical psychology at <em>Parsons</em>, <em>New York University</em>, <em>Teachers College, Columbia University</em>, and <em>Adler University</em>, where I am currently pursuing a Psy.D. in Clinical Psychology. My work often explores the intersections of psychology, spirituality, culture, and art, including Chinese ink painting, calligraphy, automatic drawing, and symbolic expression." data-zh-html="我曾於 <em>帕森斯設計學院</em>、<em>紐約大學</em>、<em>哥倫比亞大學師範學院</em> 接受純藝術、藝術治療與臨床心理學的訓練,目前於 <em>阿德勒大學</em> 攻讀臨床心理學博士。我的工作常探索心理學、靈性、文化與藝術的交會,包括中國水墨、書法、自動繪畫與象徵表達。">
           I trained in fine arts, art therapy, and clinical psychology at <em>Parsons</em>, <em>New York University</em>, <em>Teachers College, Columbia University</em>, and <em>Adler University</em>, where I am currently pursuing a Psy.D. in Clinical Psychology. My work often explores the intersections of psychology, spirituality, culture, and art, including Chinese ink painting, calligraphy, automatic drawing, and symbolic expression.
         </p>
-        <p>
+        <p data-en="Clinically, I am a board-certified art therapist and licensed creative arts therapist in New York. My approach is trauma-informed, culturally responsive, and attentive to how culture, language, and lived experience shape each person's healing process." data-zh="臨床上,我是美國認證藝術治療師(ATR-BC),也是紐約州持證創意藝術治療師(LCAT)。我的取向以創傷知情、文化回應為基礎,並深入關注文化、語言與生命經驗如何形塑每個人的療癒歷程。">
           Clinically, I am a board-certified art therapist and licensed creative arts therapist in New York. My approach is trauma-informed, culturally responsive, and attentive to how culture, language, and lived experience shape each person's healing process.
         </p>
-        <p>
+        <p data-en-html="As the founder of <strong>Soulverse 心球覺啟</strong>, I am working to bridge the gap in mental wellness and mental health through art, creativity, and culturally responsive tools for reflection and connection." data-zh-html="作為 <strong>Soulverse 心球覺啟</strong> 的創辦人,我致力於透過藝術、創造力與具文化敏感度的反思與連結工具,搭起心理健康與心靈成長之間的橋樑。">
           As the founder of <strong>Soulverse 心球覺啟</strong>, I am working to bridge the gap in mental wellness and mental health through art, creativity, and culturally responsive tools for reflection and connection.
         </p>
         </div>
@@ -80,694 +86,835 @@
   <section>
     <div class="container">
       <div class="section-header">
-        <div><div class="section-number">— CV.</div></div>
-        <h2 class="section-title">Curriculum <em>vitae</em></h2>
+        <div><div class="section-number" data-en="— CV." data-zh="— 履歷">— CV.</div></div>
+        <h2 class="section-title" data-en-html="Curriculum <em>vitae</em>" data-zh-html="完整<em>履歷</em>">Curriculum <em>vitae</em></h2>
+      </div>
+
+      <div class="cv-download">
+        <div class="cv-download-text" data-en="Download my full CV in Word format." data-zh="下載 Word 格式的完整履歷。">Download my full CV in Word format.</div>
+        <a href="cv/Stephy-Hsu-CV.docx" class="btn btn-primary btn-arrow" download data-en="Download CV (.docx)" data-zh="下載履歷 (.docx)">Download CV (.docx)</a>
       </div>
 
       <div class="cv-grid">
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Education<em>academic training</em></h3>
+          <h3 class="cv-block-title" data-en-html="Education<em>academic training</em>" data-zh-html="教育<em>學術訓練</em>">Education<em>academic training</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Psy.D, Clinical Psychology</div>
-                <div class="cv-entry-date">Sep 2025 — Present</div>
+                <div class="cv-entry-title" data-en="Psy.D, Clinical Psychology" data-zh="臨床心理學博士 (Psy.D)">Psy.D, Clinical Psychology</div>
+                <div class="cv-entry-date" data-en="Sep 2025 — Present" data-zh="2025年9月 — 至今">Sep 2025 — Present</div>
               </div>
-              <div class="cv-entry-org">Adler University, Vancouver, BC</div>
+              <div class="cv-entry-org" data-en="Adler University, Vancouver, BC" data-zh="阿德勒大學,加拿大溫哥華">Adler University, Vancouver, BC</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">MA, Clinical and Counseling Psychology</div>
-                <div class="cv-entry-date">Sep 2024 — Oct 2025</div>
+                <div class="cv-entry-title" data-en="MA, Clinical and Counseling Psychology" data-zh="臨床與諮商心理學碩士">MA, Clinical and Counseling Psychology</div>
+                <div class="cv-entry-date" data-en="Sep 2024 — Oct 2025" data-zh="2024年9月 — 2025年10月">Sep 2024 — Oct 2025</div>
               </div>
-              <div class="cv-entry-org">Teachers College, Columbia University, New York, NY</div>
-              <div class="cv-entry-detail">Thesis: <em>Projection as a Pathway to Self-Understanding — Exploring the Intersections of Psychology, Spirituality and Art</em></div>
+              <div class="cv-entry-org" data-en="Teachers College, Columbia University, New York, NY" data-zh="哥倫比亞大學師範學院,紐約">Teachers College, Columbia University, New York, NY</div>
+              <div class="cv-entry-detail" data-en-html="Thesis: <em>Projection as a Pathway to Self-Understanding — Exploring the Intersections of Psychology, Spirituality and Art</em>" data-zh-html="論文:<em>投射作為自我理解的路徑 — 探索心理學、靈性與藝術的交會</em>">Thesis: <em>Projection as a Pathway to Self-Understanding — Exploring the Intersections of Psychology, Spirituality and Art</em></div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">MA, Art Therapy</div>
-                <div class="cv-entry-date">Sep 2021 — May 2023</div>
+                <div class="cv-entry-title" data-en="MA, Art Therapy" data-zh="藝術治療碩士">MA, Art Therapy</div>
+                <div class="cv-entry-date" data-en="Sep 2021 — May 2023" data-zh="2021年9月 — 2023年5月">Sep 2021 — May 2023</div>
               </div>
-              <div class="cv-entry-org">New York University, New York, NY</div>
-              <div class="cv-entry-detail">Thesis: <em>Chinese Ink Painting and Calligraphy in Correctional Settings</em></div>
+              <div class="cv-entry-org" data-en="New York University, New York, NY" data-zh="紐約大學,紐約">New York University, New York, NY</div>
+              <div class="cv-entry-detail" data-en-html="Thesis: <em>Chinese Ink Painting and Calligraphy in Correctional Settings</em>" data-zh-html="論文:<em>中國水墨與書法在矯正機構中的應用</em>">Thesis: <em>Chinese Ink Painting and Calligraphy in Correctional Settings</em></div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">BFA, Fine Arts</div>
-                <div class="cv-entry-date">Sep 2017 — May 2021</div>
+                <div class="cv-entry-title" data-en="BFA, Fine Arts" data-zh="純藝術學士 (BFA)">BFA, Fine Arts</div>
+                <div class="cv-entry-date" data-en="Sep 2017 — May 2021" data-zh="2017年9月 — 2021年5月">Sep 2017 — May 2021</div>
               </div>
-              <div class="cv-entry-org">Parsons The New School, New York, NY</div>
-              <div class="cv-entry-detail">Minor in Psychology and Creative Entrepreneurship. Thesis: <em>To what extent does automatic drawing have the power of healing and improve mental health in art therapy?</em></div>
+              <div class="cv-entry-org" data-en="Parsons The New School, New York, NY" data-zh="帕森斯設計學院,紐約">Parsons The New School, New York, NY</div>
+              <div class="cv-entry-detail" data-en-html="Minor in Psychology and Creative Entrepreneurship. Thesis: <em>To what extent does automatic drawing have the power of healing and improve mental health in art therapy?</em>" data-zh-html="副修心理學與創意創業。論文:<em>自動繪畫在藝術治療中,能在多大程度上具有療癒力量並改善心理健康?</em>">Minor in Psychology and Creative Entrepreneurship. Thesis: <em>To what extent does automatic drawing have the power of healing and improve mental health in art therapy?</em></div>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Licensure & Certifications<em>credentials</em></h3>
+          <h3 class="cv-block-title" data-en-html="Licensure & Certifications<em>credentials</em>" data-zh-html="證照與認證<em>專業資格</em>">Licensure &amp; Certifications<em>credentials</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
-              <div class="cv-entry-title">Board Certified Registered Art Therapist (ATR-BC #24-538)</div>
-              <div class="cv-entry-org">Art Therapy Credentials Board, USA — Current</div>
+              <div class="cv-entry-title" data-en="Board Certified Registered Art Therapist (ATR-BC #24-538)" data-zh="美國認證藝術治療師 (ATR-BC #24-538)">Board Certified Registered Art Therapist (ATR-BC #24-538)</div>
+              <div class="cv-entry-org" data-en="Art Therapy Credentials Board, USA — Current" data-zh="美國藝術治療認證委員會 — 現任">Art Therapy Credentials Board, USA — Current</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Licensed Creative Arts Therapist (LCAT #003071)</div>
-              <div class="cv-entry-org">New York State Education Department — Current</div>
+              <div class="cv-entry-title" data-en="Licensed Creative Arts Therapist (LCAT #003071)" data-zh="紐約州持證創意藝術治療師 (LCAT #003071)">Licensed Creative Arts Therapist (LCAT #003071)</div>
+              <div class="cv-entry-org" data-en="New York State Education Department — Current" data-zh="紐約州教育部 — 現任">New York State Education Department — Current</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Interpersonal Psychotherapy (IPT) — Level A Certificate</div>
+              <div class="cv-entry-title" data-en="Interpersonal Psychotherapy (IPT) — Level A Certificate" data-zh="人際心理治療 (IPT) — A 級認證">Interpersonal Psychotherapy (IPT) — Level A Certificate</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Practical Resources for Effective Postpartum Parenting Certificate</div>
-              <div class="cv-entry-org">Columbia University Medical Center</div>
+              <div class="cv-entry-title" data-en="Practical Resources for Effective Postpartum Parenting Certificate" data-zh="產後親職實務資源認證">Practical Resources for Effective Postpartum Parenting Certificate</div>
+              <div class="cv-entry-org" data-en="Columbia University Medical Center" data-zh="哥倫比亞大學醫學中心">Columbia University Medical Center</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Certified Circle of Security Parenting Facilitator</div>
-              <div class="cv-entry-org">Circle of Security International</div>
+              <div class="cv-entry-title" data-en="Certified Circle of Security Parenting Facilitator" data-zh="安全圈親職帶領者認證 (Circle of Security)">Certified Circle of Security Parenting Facilitator</div>
+              <div class="cv-entry-org" data-en="Circle of Security International" data-zh="安全圈國際組織">Circle of Security International</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Bright Beginning Certificate</div>
-              <div class="cv-entry-org">Ackerman Institute for the Family</div>
+              <div class="cv-entry-title" data-en="Bright Beginning Certificate" data-zh="Bright Beginning 親職方案認證">Bright Beginning Certificate</div>
+              <div class="cv-entry-org" data-en="Ackerman Institute for the Family" data-zh="阿克曼家庭研究所">Ackerman Institute for the Family</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Personal Best Certificate</div>
-              <div class="cv-entry-org">Ackerman Institute for the Family</div>
+              <div class="cv-entry-title" data-en="Personal Best Certificate" data-zh="Personal Best 認證">Personal Best Certificate</div>
+              <div class="cv-entry-org" data-en="Ackerman Institute for the Family" data-zh="阿克曼家庭研究所">Ackerman Institute for the Family</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Foundations in Health and Safety Certificate</div>
-              <div class="cv-entry-org">Office of Children and Family Services</div>
+              <div class="cv-entry-title" data-en="Foundations in Health and Safety Certificate" data-zh="健康與安全基礎認證">Foundations in Health and Safety Certificate</div>
+              <div class="cv-entry-org" data-en="Office of Children and Family Services" data-zh="紐約州兒童與家庭服務辦公室">Office of Children and Family Services</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Emergency Preparedness Certificate</div>
-              <div class="cv-entry-org">Office of Children and Family Services</div>
+              <div class="cv-entry-title" data-en="Emergency Preparedness Certificate" data-zh="緊急應變認證">Emergency Preparedness Certificate</div>
+              <div class="cv-entry-org" data-en="Office of Children and Family Services" data-zh="紐約州兒童與家庭服務辦公室">Office of Children and Family Services</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Family Engagement Certificate</div>
-              <div class="cv-entry-org">Office of Children and Family Services</div>
+              <div class="cv-entry-title" data-en="Family Engagement Certificate" data-zh="家庭參與認證">Family Engagement Certificate</div>
+              <div class="cv-entry-org" data-en="Office of Children and Family Services" data-zh="紐約州兒童與家庭服務辦公室">Office of Children and Family Services</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Preventing Sudden Infant Death Syndrome and Promoting Safe Sleeping Certificate</div>
-              <div class="cv-entry-org">Office of Children and Family Services</div>
+              <div class="cv-entry-title" data-en="Preventing Sudden Infant Death Syndrome and Promoting Safe Sleeping Certificate" data-zh="嬰兒猝死症預防與安全睡眠促進認證">Preventing Sudden Infant Death Syndrome and Promoting Safe Sleeping Certificate</div>
+              <div class="cv-entry-org" data-en="Office of Children and Family Services" data-zh="紐約州兒童與家庭服務辦公室">Office of Children and Family Services</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Prevention and Identification of Brain Injuries, including Abusive Head Trauma (AHT) Certificate</div>
-              <div class="cv-entry-org">Office of Children and Family Services</div>
+              <div class="cv-entry-title" data-en="Prevention and Identification of Brain Injuries, including Abusive Head Trauma (AHT) Certificate" data-zh="腦傷(含受虐性頭部創傷)預防與辨識認證">Prevention and Identification of Brain Injuries, including Abusive Head Trauma (AHT) Certificate</div>
+              <div class="cv-entry-org" data-en="Office of Children and Family Services" data-zh="紐約州兒童與家庭服務辦公室">Office of Children and Family Services</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Supervision of Children Certificate</div>
-              <div class="cv-entry-org">Office of Children and Family Services</div>
+              <div class="cv-entry-title" data-en="Supervision of Children Certificate" data-zh="兒童監護認證">Supervision of Children Certificate</div>
+              <div class="cv-entry-org" data-en="Office of Children and Family Services" data-zh="紐約州兒童與家庭服務辦公室">Office of Children and Family Services</div>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Clinical Experience<em>practice</em></h3>
+          <h3 class="cv-block-title" data-en-html="Clinical Experience<em>practice</em>" data-zh-html="臨床經驗<em>實務工作</em>">Clinical Experience<em>practice</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapist / Master Social Worker</div>
-                <div class="cv-entry-date">Jun 2023 — Jul 2025</div>
+                <div class="cv-entry-title" data-en="Art Therapist / Master Social Worker" data-zh="藝術治療師 / 社工碩士">Art Therapist / Master Social Worker</div>
+                <div class="cv-entry-date" data-en="Jun 2023 — Jul 2025" data-zh="2023年6月 — 2025年7月">Jun 2023 — Jul 2025</div>
               </div>
-              <div class="cv-entry-org">The Child Center of NY, New York, USA</div>
-              <div class="cv-entry-detail">Facilitated Intensive Outpatient Program (IOP) art therapy groups for mothers experiencing postpartum depression and co-occurring psychiatric conditions including bipolar disorder, major depression, anxiety, schizophrenia, PTSD, and substance use disorders, integrating art therapy, DBT, and IPT to foster emotional regulation, insight, and maternal identity reconstruction in a trauma-informed group setting. Provided individual, family, and couples art therapy for women aged 19–44 with perinatal and postpartum depression, integrating DBT, REBT, IPT, and psychoeducational approaches in a trauma-informed and culturally responsive framework. Facilitated bilingual (Mandarin/English) groups including Art Therapy, Circle of Security, Bright Beginnings, Personal Best, and psychoeducation focused on emotional regulation, attachment, and parenting skills. Conducted intake interviews, comprehensive diagnostic assessments, and treatment planning for mothers, infants, and families. Provided case management and advocacy support, helping mothers access housing, SNAP, childcare, and government benefits. Developed and led staff art therapy and self-care workshops fostering resilience, creative reflection, and team cohesion. Organized client art exhibitions before discharge to celebrate therapeutic progress and creative growth.</div>
+              <div class="cv-entry-org" data-en="The Child Center of NY, New York, USA" data-zh="紐約兒童中心,美國紐約">The Child Center of NY, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Led IOP art therapy groups for mothers with postpartum depression and co-occurring conditions (bipolar, MDD, anxiety, schizophrenia, PTSD, SUD)" data-zh="帶領加強型門診(IOP)藝術治療團體,服務產後憂鬱及合併雙相、重度憂鬱、焦慮、思覺失調、PTSD、物質使用等共病的母親">Led IOP art therapy groups for mothers with postpartum depression and co-occurring conditions (bipolar, MDD, anxiety, schizophrenia, PTSD, SUD)</li>
+                <li data-en="Integrated DBT, IPT, and trauma-informed art therapy to support emotional regulation and maternal identity reconstruction" data-zh="整合 DBT、IPT 與創傷知情藝術治療,支持情緒調節與母親身份的重建">Integrated DBT, IPT, and trauma-informed art therapy to support emotional regulation and maternal identity reconstruction</li>
+                <li data-en="Provided individual, family, and couples art therapy for women aged 19–44 with perinatal/postpartum depression" data-zh="為 19–44 歲、有周產期或產後憂鬱的女性提供個別、家庭與伴侶藝術治療">Provided individual, family, and couples art therapy for women aged 19–44 with perinatal/postpartum depression</li>
+                <li data-en="Facilitated bilingual (Mandarin/English) groups: Art Therapy, Circle of Security, Bright Beginnings, Personal Best, psychoeducation" data-zh="帶領中英雙語團體:藝術治療、安全圈、Bright Beginnings、Personal Best、心理教育">Facilitated bilingual (Mandarin/English) groups: Art Therapy, Circle of Security, Bright Beginnings, Personal Best, psychoeducation</li>
+                <li data-en="Conducted intake interviews, diagnostic assessments, and treatment planning for mothers, infants, and families" data-zh="執行接案會談、診斷評估與治療計劃,服務母親、嬰兒及家庭">Conducted intake interviews, diagnostic assessments, and treatment planning for mothers, infants, and families</li>
+                <li data-en="Provided case management — helping mothers access housing, SNAP, childcare, and government benefits" data-zh="提供個案管理,協助母親申請住房、糧食券(SNAP)、托育與政府福利資源">Provided case management — helping mothers access housing, SNAP, childcare, and government benefits</li>
+                <li data-en="Developed staff art therapy and self-care workshops fostering team resilience and cohesion" data-zh="設計並帶領員工藝術治療與自我照顧工作坊,促進團隊韌性與凝聚力">Developed staff art therapy and self-care workshops fostering team resilience and cohesion</li>
+                <li data-en="Organized client art exhibitions before discharge to celebrate therapeutic progress" data-zh="於個案結案前籌辦作品展覽,慶祝其治療歷程與創作成長">Organized client art exhibitions before discharge to celebrate therapeutic progress</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapist — Part-time (Remote)</div>
-                <div class="cv-entry-date">Nov 2023 — Present</div>
+                <div class="cv-entry-title" data-en="Art Therapist — Part-time (Remote)" data-zh="藝術治療師 — 兼職(遠距)">Art Therapist — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Nov 2023 — Present" data-zh="2023年11月 — 至今">Nov 2023 — Present</div>
               </div>
-              <div class="cv-entry-org">Heal You 聊心茶室, Taipei, Taiwan</div>
-              <div class="cv-entry-detail">Provide mental health and art therapy services to Mandarin-speaking clients across diverse age groups and emotional needs. Conduct intake assessments and clinical interviews to gather psychological, familial, and cultural information for diagnostic understanding. Facilitate individual and family art therapy sessions using IPT, REBT, DBT, psychoeducation, and client-centered techniques. Support clients' emotional regulation, trauma processing, and self-expression through the therapeutic use of art materials and symbolism.</div>
+              <div class="cv-entry-org" data-en="Heal You 聊心茶室, Taipei, Taiwan" data-zh="聊心茶室 Heal You,台灣台北">Heal You 聊心茶室, Taipei, Taiwan</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Provide mental health and art therapy services to Mandarin-speaking clients across diverse age groups" data-zh="提供中文心理健康與藝術治療服務,服務跨年齡層的個案">Provide mental health and art therapy services to Mandarin-speaking clients across diverse age groups</li>
+                <li data-en="Conduct intake assessments and clinical interviews gathering psychological, familial, and cultural information" data-zh="進行接案評估與臨床會談,蒐集心理、家庭與文化背景資訊以協助診斷">Conduct intake assessments and clinical interviews gathering psychological, familial, and cultural information</li>
+                <li data-en="Facilitate individual and family art therapy using IPT, REBT, DBT, psychoeducation, and client-centered techniques" data-zh="帶領個別與家庭藝術治療,運用 IPT、REBT、DBT、心理教育與個案中心取向">Facilitate individual and family art therapy using IPT, REBT, DBT, psychoeducation, and client-centered techniques</li>
+                <li data-en="Support emotional regulation, trauma processing, and self-expression through art materials and symbolism" data-zh="透過藝術媒材與象徵,支持情緒調節、創傷處理與自我表達">Support emotional regulation, trauma processing, and self-expression through art materials and symbolism</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapist — Part-time</div>
-                <div class="cv-entry-date">Aug 2023 — Jul 2025</div>
+                <div class="cv-entry-title" data-en="Art Therapist — Part-time" data-zh="藝術治療師 — 兼職">Art Therapist — Part-time</div>
+                <div class="cv-entry-date" data-en="Aug 2023 — Jul 2025" data-zh="2023年8月 — 2025年7月">Aug 2023 — Jul 2025</div>
               </div>
-              <div class="cv-entry-org">Utopia, New York, USA</div>
-              <div class="cv-entry-detail">Organized and led art-as-therapy workshops for the general public, developing creative themes responsive to participants' emotional needs and personal interests. Facilitated art therapy sessions during gallery exhibitions, supporting visitors' emotional reflection and connection to exhibited works through guided creative processes. Collaborated with the design and curation team to plan art events that merge artistic expression with mental health awareness. Created marketing and social media materials promoting community engagement, public education, and accessibility of art therapy programming.</div>
+              <div class="cv-entry-org" data-en="Utopia, New York, USA" data-zh="Utopia,美國紐約">Utopia, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Organized and led art-as-therapy workshops for the general public" data-zh="籌辦並帶領面向大眾的藝術治療工作坊">Organized and led art-as-therapy workshops for the general public</li>
+                <li data-en="Facilitated art therapy sessions during gallery exhibitions, supporting visitors' emotional reflection" data-zh="於畫廊展覽期間帶領藝術治療活動,支持觀眾的情緒反思與作品連結">Facilitated art therapy sessions during gallery exhibitions, supporting visitors' emotional reflection</li>
+                <li data-en="Collaborated with the design and curation team to plan art events merging expression and mental health awareness" data-zh="與設計與策展團隊合作,規劃結合藝術表達與心理健康倡議的活動">Collaborated with the design and curation team to plan art events merging expression and mental health awareness</li>
+                <li data-en="Created marketing and social media materials promoting community engagement and accessibility" data-zh="製作行銷與社群媒體素材,推廣社區參與與藝術治療的可及性">Created marketing and social media materials promoting community engagement and accessibility</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Practicum Experience<em>training placements</em></h3>
+          <h3 class="cv-block-title" data-en-html="Practicum Experience<em>training placements</em>" data-zh-html="實習經驗<em>訓練實習</em>">Practicum Experience<em>training placements</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Social Justice Practicum Student / Program Outreach Assistant</div>
-                <div class="cv-entry-date">Oct 2025 — Present</div>
+                <div class="cv-entry-title" data-en="Social Justice Practicum Student / Program Outreach Assistant" data-zh="社會正義實習生 / 方案推廣助理">Social Justice Practicum Student / Program Outreach Assistant</div>
+                <div class="cv-entry-date" data-en="Oct 2025 — Present" data-zh="2025年10月 — 至今">Oct 2025 — Present</div>
               </div>
-              <div class="cv-entry-org">BC Bereavement Hotline, Vancouver, Canada</div>
-              <div class="cv-entry-detail">Supporting the implementation and evaluation of grief support initiatives serving diverse communities across British Columbia. Assisting the Executive Director and Project Manager in coordinating virtual and in-person grief education programs and community outreach events. Contributing to program development and internal process improvement, including CRM management, volunteer coordination, and resource creation. Researching best practices in grief support and nonprofit operations. Applying trauma-informed and culturally sensitive communication with individuals experiencing grief and loss. Supporting Truth and Reconciliation initiatives by promoting Indigenous perspectives in grief education and outreach.</div>
+              <div class="cv-entry-org" data-en="BC Bereavement Hotline, Vancouver, Canada" data-zh="卑詩省哀傷支持熱線,加拿大溫哥華">BC Bereavement Hotline, Vancouver, Canada</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Support implementation and evaluation of grief support initiatives serving diverse BC communities" data-zh="協助執行與評估卑詩省多元社區的哀傷支持方案">Support implementation and evaluation of grief support initiatives serving diverse BC communities</li>
+                <li data-en="Coordinate virtual and in-person grief education programs and community outreach events" data-zh="協調線上與實體的哀傷教育課程及社區推廣活動">Coordinate virtual and in-person grief education programs and community outreach events</li>
+                <li data-en="Contribute to CRM management, volunteer coordination, and resource creation" data-zh="協助 CRM 管理、志工協調與資源製作">Contribute to CRM management, volunteer coordination, and resource creation</li>
+                <li data-en="Research best practices in grief support and nonprofit operations" data-zh="研究哀傷支持與非營利組織運作的最佳實務">Research best practices in grief support and nonprofit operations</li>
+                <li data-en="Apply trauma-informed and culturally sensitive communication with grieving individuals" data-zh="以創傷知情與文化敏感方式陪伴經歷失落的個人">Apply trauma-informed and culturally sensitive communication with grieving individuals</li>
+                <li data-en="Support Truth and Reconciliation initiatives by promoting Indigenous perspectives in grief education" data-zh="支持真相與和解倡議,於哀傷教育中推廣原住民觀點">Support Truth and Reconciliation initiatives by promoting Indigenous perspectives in grief education</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Intern</div>
-                <div class="cv-entry-date">Sep 2022 — May 2023</div>
+                <div class="cv-entry-title" data-en="Art Therapy Intern" data-zh="藝術治療實習生">Art Therapy Intern</div>
+                <div class="cv-entry-date" data-en="Sep 2022 — May 2023" data-zh="2022年9月 — 2023年5月">Sep 2022 — May 2023</div>
               </div>
-              <div class="cv-entry-org">The Child Center of NY, New York, USA</div>
-              <div class="cv-entry-detail">Facilitated evidence-based art therapy and psychotherapy groups using DBT-, REBT-, and IPT-informed interventions to enhance emotional regulation, self-expression, and interpersonal awareness. Co-facilitated IOP art therapy groups for mothers with postpartum depression and co-occurring psychiatric conditions. Conducted individual and family art therapy sessions for children referred from schools, addressing behavioral and emotional challenges and strengthening family communication. Collaborated with a multidisciplinary team (psychologists, social workers, psychiatrists) to deliver trauma-informed and culturally responsive care. Maintained comprehensive clinical documentation including progress notes, treatment plans, and outcome tracking.</div>
+              <div class="cv-entry-org" data-en="The Child Center of NY, New York, USA" data-zh="紐約兒童中心,美國紐約">The Child Center of NY, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Facilitated DBT-, REBT-, IPT-informed art therapy and psychotherapy groups" data-zh="帶領以 DBT、REBT、IPT 為基礎的藝術治療與心理治療團體">Facilitated DBT-, REBT-, IPT-informed art therapy and psychotherapy groups</li>
+                <li data-en="Co-facilitated IOP art therapy groups for mothers with postpartum depression and co-occurring conditions" data-zh="協同帶領加強型門診(IOP)團體,服務有產後憂鬱及共病的母親">Co-facilitated IOP art therapy groups for mothers with postpartum depression and co-occurring conditions</li>
+                <li data-en="Conducted individual and family art therapy for children referred from schools" data-zh="為學校轉介的兒童提供個別與家庭藝術治療">Conducted individual and family art therapy for children referred from schools</li>
+                <li data-en="Collaborated with multidisciplinary team (psychologists, social workers, psychiatrists) for trauma-informed care" data-zh="與心理師、社工、精神科醫師組成的跨專業團隊合作,提供創傷知情照護">Collaborated with multidisciplinary team (psychologists, social workers, psychiatrists) for trauma-informed care</li>
+                <li data-en="Maintained comprehensive clinical documentation: progress notes, treatment plans, outcome tracking" data-zh="維護完整臨床紀錄:進展紀錄、治療計劃與成效追蹤">Maintained comprehensive clinical documentation: progress notes, treatment plans, outcome tracking</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Intern</div>
-                <div class="cv-entry-date">Sep 2021 — May 2022</div>
+                <div class="cv-entry-title" data-en="Art Therapy Intern" data-zh="藝術治療實習生">Art Therapy Intern</div>
+                <div class="cv-entry-date" data-en="Sep 2021 — May 2022" data-zh="2021年9月 — 2022年5月">Sep 2021 — May 2022</div>
               </div>
-              <div class="cv-entry-org">Riker's Island Correctional Facility, New York, USA</div>
-              <div class="cv-entry-detail">Provided individual and group art therapy to incarcerated women, men, and LGBTQ+ individuals in the Mental Health (MI) and PACE units for intensive psychiatric treatment. Worked with clients diagnosed with personality disorders, intellectual disabilities, psychosis-spectrum disorders, bipolar I and II, major depressive and anxiety disorders, PTSD, and paraphilic disorders. Facilitated art-based exploration of trauma, identity, and self-expression to promote emotional regulation, psychological resilience, and insight in a secure environment. Collaborated closely with psychiatrists, psychologists, social workers, nurses, and correctional officers to integrate art therapy goals into interdisciplinary treatment and rehabilitation plans. Participated in weekly multidisciplinary treatment meetings, contributing observations to inform case formulation, progress evaluation, and discharge planning.</div>
+              <div class="cv-entry-org" data-en="Riker's Island Correctional Facility, New York, USA" data-zh="萊克斯島矯正機構,美國紐約">Riker's Island Correctional Facility, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Provided individual and group art therapy to incarcerated women, men, and LGBTQ+ individuals" data-zh="為受刑女性、男性與 LGBTQ+ 族群提供個別與團體藝術治療">Provided individual and group art therapy to incarcerated women, men, and LGBTQ+ individuals</li>
+                <li data-en="Worked in Mental Health (MI) and PACE units providing intensive psychiatric treatment" data-zh="於心理健康(MI)與 PACE 單位工作,提供加強型精神科治療">Worked in Mental Health (MI) and PACE units providing intensive psychiatric treatment</li>
+                <li data-en="Served clients with personality disorders, intellectual disabilities, psychosis, bipolar I/II, MDD, anxiety, PTSD, paraphilias" data-zh="服務人格障礙、智能障礙、精神病、雙相 I/II、重度憂鬱、焦慮、PTSD、性偏好障礙等個案">Served clients with personality disorders, intellectual disabilities, psychosis, bipolar I/II, MDD, anxiety, PTSD, paraphilias</li>
+                <li data-en="Used art-based exploration of trauma, identity, and self-expression to promote regulation and resilience" data-zh="透過藝術探索創傷、身份與自我表達,促進情緒調節與心理韌性">Used art-based exploration of trauma, identity, and self-expression to promote regulation and resilience</li>
+                <li data-en="Collaborated with psychiatrists, psychologists, social workers, nurses, correctional officers" data-zh="與精神科醫師、心理師、社工、護理師與矯正人員密切合作">Collaborated with psychiatrists, psychologists, social workers, nurses, correctional officers</li>
+                <li data-en="Participated in weekly multidisciplinary treatment meetings, contributing to case formulation and discharge planning" data-zh="每週參與跨專業治療會議,協助個案概念化、進展評估與出院規劃">Participated in weekly multidisciplinary treatment meetings, contributing to case formulation and discharge planning</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Intern</div>
-                <div class="cv-entry-date">Mar — May 2022</div>
+                <div class="cv-entry-title" data-en="Art Therapy Intern" data-zh="藝術治療實習生">Art Therapy Intern</div>
+                <div class="cv-entry-date" data-en="Mar — May 2022" data-zh="2022年3月 — 5月">Mar — May 2022</div>
               </div>
-              <div class="cv-entry-org">Rubin Museum: Healing Through Art, New York, USA</div>
-              <div class="cv-entry-detail">Facilitated art therapy groups within the <em>Healing Through Art</em> exhibition, promoting emotional well-being, self-expression, and reflection through creative engagement. Designed and implemented art-based interventions for diverse visitors — children, adults, and seniors — tailored to varying emotional and cognitive readiness. Collaborated with museum staff and volunteers to integrate therapeutic activities into exhibition programming. Provided psychoeducation on the psychological benefits of creativity and artmaking.</div>
+              <div class="cv-entry-org" data-en="Rubin Museum: Healing Through Art, New York, USA" data-zh="魯賓美術館:藝術中的療癒,美國紐約">Rubin Museum: Healing Through Art, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en-html="Facilitated art therapy groups within the <em>Healing Through Art</em> exhibition" data-zh-html="於《<em>藝術中的療癒</em>》展覽內帶領藝術治療團體">Facilitated art therapy groups within the <em>Healing Through Art</em> exhibition</li>
+                <li data-en="Designed art-based interventions for children, adults, and seniors with varying readiness" data-zh="設計適合兒童、成人與長者的藝術介入,因應不同情緒與認知準備度">Designed art-based interventions for children, adults, and seniors with varying readiness</li>
+                <li data-en="Collaborated with museum staff and volunteers to integrate therapeutic activities into programming" data-zh="與美術館工作人員與志工合作,將治療性活動融入展覽節目">Collaborated with museum staff and volunteers to integrate therapeutic activities into programming</li>
+                <li data-en="Provided psychoeducation on the psychological benefits of creativity and artmaking" data-zh="提供關於創作與藝術對心理健康益處的心理教育">Provided psychoeducation on the psychological benefits of creativity and artmaking</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Intern</div>
-                <div class="cv-entry-date">Jul 2022</div>
+                <div class="cv-entry-title" data-en="Art Therapy Intern" data-zh="藝術治療實習生">Art Therapy Intern</div>
+                <div class="cv-entry-date" data-en="Jul 2022" data-zh="2022年7月">Jul 2022</div>
               </div>
-              <div class="cv-entry-org">Parrish of San Marco Vecchio, Florence, Italy</div>
-              <div class="cv-entry-detail">Facilitated group art therapy sessions for children ages 5–12, fostering emotional expression, confidence-building, and social development. Designed and implemented developmentally appropriate interventions tailored to each child's individual needs, strengths, and interests. Collaborated with parents and church staff to address emotional and behavioral challenges, providing psychoeducation on the therapeutic benefits of artmaking. Organized a culminating art exhibition celebrating participants' creative achievements and therapeutic journeys.</div>
+              <div class="cv-entry-org" data-en="Parrish of San Marco Vecchio, Florence, Italy" data-zh="聖馬可舊堂區,義大利佛羅倫斯">Parrish of San Marco Vecchio, Florence, Italy</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Facilitated group art therapy for children ages 5–12, fostering emotional expression and confidence" data-zh="為 5–12 歲兒童帶領團體藝術治療,培育情緒表達與自信心">Facilitated group art therapy for children ages 5–12, fostering emotional expression and confidence</li>
+                <li data-en="Designed developmentally appropriate interventions tailored to each child's needs and strengths" data-zh="依照每位兒童的發展需求、優勢與興趣,設計合適的介入方案">Designed developmentally appropriate interventions tailored to each child's needs and strengths</li>
+                <li data-en="Collaborated with parents and church staff to address emotional and behavioral challenges" data-zh="與家長與教會人員合作,協助處理情緒與行為議題">Collaborated with parents and church staff to address emotional and behavioral challenges</li>
+                <li data-en="Organized a culminating art exhibition celebrating participants' creative achievements" data-zh="於課程結束時籌辦藝術展覽,慶祝兒童的創作成果與療癒歷程">Organized a culminating art exhibition celebrating participants' creative achievements</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Research<em>scholarly work</em></h3>
+          <h3 class="cv-block-title" data-en-html="Research<em>scholarly work</em>" data-zh-html="研究<em>學術工作</em>">Research<em>scholarly work</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Graduate Research Assistant</div>
-                <div class="cv-entry-date">Sep 2024 — Jul 2025</div>
+                <div class="cv-entry-title" data-en="Graduate Research Assistant" data-zh="研究生研究助理">Graduate Research Assistant</div>
+                <div class="cv-entry-date" data-en="Sep 2024 — Jul 2025" data-zh="2024年9月 — 2025年7月">Sep 2024 — Jul 2025</div>
               </div>
-              <div class="cv-entry-org">Mount Sinai Hospital Suicide Prevention Research Lab — Dr. Igor Galynker</div>
-              <div class="cv-entry-detail">Supported suicide intervention research aimed at identifying and preventing suicidal behaviors in high-risk populations. Conducted structured interviews and assessments under supervision; contributed to data collection for ongoing studies. Collaborated with a multidisciplinary team investigating the Suicide Crisis Syndrome (SCS) and the Narrative-Crisis Model of Suicide. Assisted in compiling reports, analyzing findings, and preparing materials for conferences and academic publications.</div>
+              <div class="cv-entry-org" data-en="Mount Sinai Hospital Suicide Prevention Research Lab — Dr. Igor Galynker" data-zh="西奈山醫院自殺預防研究實驗室 — Dr. Igor Galynker">Mount Sinai Hospital Suicide Prevention Research Lab — Dr. Igor Galynker</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Supported suicide intervention research aimed at preventing suicidal behaviors in high-risk populations" data-zh="支持自殺介入研究,以預防高風險族群的自殺行為">Supported suicide intervention research aimed at preventing suicidal behaviors in high-risk populations</li>
+                <li data-en="Conducted structured interviews and assessments under supervision" data-zh="於督導下進行結構式訪談與評估">Conducted structured interviews and assessments under supervision</li>
+                <li data-en="Collaborated with team investigating the Suicide Crisis Syndrome (SCS) and Narrative-Crisis Model" data-zh="與團隊合作研究自殺危機症候群(SCS)與敘事危機模型">Collaborated with team investigating the Suicide Crisis Syndrome (SCS) and Narrative-Crisis Model</li>
+                <li data-en="Compiled reports, analyzed findings, and prepared materials for conferences and publications" data-zh="整理報告、分析資料,並協助會議與學術出版的素材準備">Compiled reports, analyzed findings, and prepared materials for conferences and publications</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Graduate Research Assistant</div>
-                <div class="cv-entry-date">Sep 2024 — Jul 2025</div>
+                <div class="cv-entry-title" data-en="Graduate Research Assistant" data-zh="研究生研究助理">Graduate Research Assistant</div>
+                <div class="cv-entry-date" data-en="Sep 2024 — Jul 2025" data-zh="2024年9月 — 2025年7月">Sep 2024 — Jul 2025</div>
               </div>
-              <div class="cv-entry-org">BOBA Project — Developmental Risk and Cultural Resilience Lab, Brigham and Women's Hospital · Harvard Medical School · NIMH</div>
-              <div class="cv-entry-detail">Directed by Dr. Cindy Liu and Dr. Tiffany Yip. Engaged in recruitment and outreach for a 5-year longitudinal study on racial discrimination, racial socialization, and mental health among Chinese American adolescents. Conducted community-based research efforts including on-site recruitment in NYC Chinatown and Flushing, fostering trust with participants and community organizations. Contributed to project meetings, data management, and report preparation, providing bilingual support to bridge language and cultural nuances.</div>
+              <div class="cv-entry-org" data-en="BOBA Project — Brigham and Women's Hospital · Harvard Medical School · NIMH" data-zh="BOBA 計畫 — 布萊根婦女醫院 · 哈佛醫學院 · 美國國家心理衛生院">BOBA Project — Brigham and Women's Hospital · Harvard Medical School · NIMH</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Joined a 5-year longitudinal study on racial discrimination and mental health among Chinese American adolescents" data-zh="參與為期五年、針對華裔美國青少年種族歧視與心理健康的縱貫研究">Joined a 5-year longitudinal study on racial discrimination and mental health among Chinese American adolescents</li>
+                <li data-en="Directed by Dr. Cindy Liu and Dr. Tiffany Yip" data-zh="由 Dr. Cindy Liu 與 Dr. Tiffany Yip 主持">Directed by Dr. Cindy Liu and Dr. Tiffany Yip</li>
+                <li data-en="Conducted community-based recruitment in NYC Chinatown and Flushing" data-zh="於紐約華埠與法拉盛進行社區招募,與社區組織建立信任關係">Conducted community-based recruitment in NYC Chinatown and Flushing</li>
+                <li data-en="Provided bilingual support to bridge language and cultural nuances in research and reports" data-zh="提供雙語支援,協助研究與報告中的語言與文化細節溝通">Provided bilingual support to bridge language and cultural nuances in research and reports</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Leadership & Founding<em>building & leading</em></h3>
+          <h3 class="cv-block-title" data-en-html="Leadership & Founding<em>building & leading</em>" data-zh-html="領導與創辦<em>建立與帶領</em>">Leadership &amp; Founding<em>building &amp; leading</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Founder & CEO — Soulverse 心球覺啟</div>
-                <div class="cv-entry-date">Jan 2024 — Present</div>
+                <div class="cv-entry-title" data-en="Founder & CEO — Soulverse 心球覺啟" data-zh="創辦人 & 執行長 — Soulverse 心球覺啟">Founder &amp; CEO — Soulverse 心球覺啟</div>
+                <div class="cv-entry-date" data-en="Jan 2024 — Present" data-zh="2024年1月 — 至今">Jan 2024 — Present</div>
               </div>
-              <div class="cv-entry-org">Asia & North America (Remote)</div>
-              <div class="cv-entry-detail">Founded and lead an early-stage digital mental wellness platform that uses art-making, emotional reflection, and community engagement to promote mental health awareness and access. Develop the platform's vision, product concept, user experience, and community-based model — integrating art therapy, psychology, creativity, spirituality, and culturally responsive mental health education. Coordinate with interdisciplinary collaborators (designers, developers, therapists, nonprofit partners, advisors). Conduct user research and market exploration to understand emotional wellness needs, especially among Asian and Asian diasporic communities where stigma and access barriers may limit help-seeking. Design art-based prompts, emotional check-in systems, reflective tools, and community engagement features. Explore ethical and culturally sensitive uses of technology to expand access to mental health education while preserving human creativity, reflection, and connection.</div>
+              <div class="cv-entry-org" data-en="Asia & North America (Remote)" data-zh="亞洲與北美(遠距)">Asia &amp; North America (Remote)</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Founded an early-stage digital mental wellness platform using art-making and emotional reflection" data-zh="創辦早期數位心靈健康平台,透過藝術創作與情感反思促進心理健康">Founded an early-stage digital mental wellness platform using art-making and emotional reflection</li>
+                <li data-en="Develop platform vision, product concept, UX, and culturally responsive community-based model" data-zh="制定平台願景、產品概念、使用者體驗與文化回應式社群模式">Develop platform vision, product concept, UX, and culturally responsive community-based model</li>
+                <li data-en="Coordinate interdisciplinary collaborators (designers, developers, therapists, advisors)" data-zh="協調跨領域夥伴(設計師、工程師、治療師、顧問)">Coordinate interdisciplinary collaborators (designers, developers, therapists, advisors)</li>
+                <li data-en="Conduct user research focused on Asian and Asian diasporic communities and stigma barriers" data-zh="針對亞洲與亞裔離散社群進行使用者研究,理解污名與求助障礙">Conduct user research focused on Asian and Asian diasporic communities and stigma barriers</li>
+                <li data-en="Design art-based prompts, emotional check-ins, reflective tools, and community engagement features" data-zh="設計藝術提示、情緒打卡、反思工具與社群互動功能">Design art-based prompts, emotional check-ins, reflective tools, and community engagement features</li>
+                <li data-en="Explore ethical, culturally sensitive uses of technology in mental health education" data-zh="探索符合倫理與文化敏感度的科技應用,擴大心理健康教育的可及性">Explore ethical, culturally sensitive uses of technology in mental health education</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Public Relations & Social Media Chair — Part-time (Remote)</div>
-                <div class="cv-entry-date">Mar 2024 — Present</div>
+                <div class="cv-entry-title" data-en="Public Relations & Social Media Chair — Part-time (Remote)" data-zh="公共關係與社群媒體主席 — 兼職(遠距)">Public Relations &amp; Social Media Chair — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Mar 2024 — Present" data-zh="2024年3月 — 至今">Mar 2024 — Present</div>
               </div>
-              <div class="cv-entry-org">New York Art Therapy Association (NYATA)</div>
-              <div class="cv-entry-detail">Lead NYATA's public communications strategy, managing social media platforms to amplify the visibility of art therapy and the association's mission. Create and schedule engaging, educational, and visually compelling content to promote events, workshops, and professional initiatives. Design and distribute digital newsletters, promotional materials, and website updates. Collaborate with board members, artists, and clinicians to develop inclusive messaging reflecting the diversity of the art therapy community. Cultivate relationships with partner organizations, media outlets, and stakeholders to strengthen public engagement and advocacy.</div>
+              <div class="cv-entry-org" data-en="New York Art Therapy Association (NYATA)" data-zh="紐約藝術治療協會 (NYATA)">New York Art Therapy Association (NYATA)</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Lead public communications strategy across social media platforms" data-zh="領導 NYATA 的公共傳播策略,管理多個社群媒體平台">Lead public communications strategy across social media platforms</li>
+                <li data-en="Create educational and visually compelling content to promote events and initiatives" data-zh="製作具教育性與視覺感染力的內容,推廣協會活動與倡議">Create educational and visually compelling content to promote events and initiatives</li>
+                <li data-en="Design and distribute digital newsletters, promotional materials, and website updates" data-zh="設計並發送電子報、宣傳素材與網站更新">Design and distribute digital newsletters, promotional materials, and website updates</li>
+                <li data-en="Collaborate with board members, artists, and clinicians on inclusive messaging" data-zh="與董事會、藝術家及臨床工作者合作,發展包容性的溝通訊息">Collaborate with board members, artists, and clinicians on inclusive messaging</li>
+                <li data-en="Cultivate relationships with partners, media, and stakeholders for advocacy" data-zh="與合作組織、媒體與利害關係人建立關係,推動倡議">Cultivate relationships with partners, media, and stakeholders for advocacy</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Founder — H-Bridge Chinese Young Artists Club</div>
-                <div class="cv-entry-date">Oct 2018 — Present</div>
+                <div class="cv-entry-title" data-en="Founder — H-Bridge Chinese Young Artists Club" data-zh="創辦人 — H-Bridge 華人青年藝術家社群">Founder — H-Bridge Chinese Young Artists Club</div>
+                <div class="cv-entry-date" data-en="Oct 2018 — Present" data-zh="2018年10月 — 至今">Oct 2018 — Present</div>
               </div>
-              <div class="cv-entry-org">New York, USA</div>
-              <div class="cv-entry-detail">Founded a student-led organization connecting Chinese art students across NYC through portfolio sharing, exhibitions, and career development. Organized exhibitions, networking events, and workshops offering platforms for emerging artists to showcase work and expand professional networks. Developed targeted outreach and marketing campaigns using social media and print materials to build membership and public engagement. Established and maintained partnerships with art schools, galleries, and organizations. Led a team of volunteers, fostering collaboration and strategic planning.</div>
+              <div class="cv-entry-org" data-en="New York, USA" data-zh="美國紐約">New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Founded a student-led organization connecting Chinese art students across NYC" data-zh="創辦學生主導的組織,連結紐約各校的華人藝術學生">Founded a student-led organization connecting Chinese art students across NYC</li>
+                <li data-en="Organized exhibitions, networking events, and workshops for emerging artists" data-zh="籌辦展覽、交流活動與工作坊,為新銳藝術家提供平台">Organized exhibitions, networking events, and workshops for emerging artists</li>
+                <li data-en="Developed outreach campaigns using social media and print to grow membership" data-zh="運用社群媒體與印刷品設計推廣活動,擴大成員與大眾參與">Developed outreach campaigns using social media and print to grow membership</li>
+                <li data-en="Established partnerships with art schools, galleries, and organizations" data-zh="與藝術學校、畫廊與組織建立合作關係">Established partnerships with art schools, galleries, and organizations</li>
+                <li data-en="Led a team of volunteers, fostering collaboration and strategic planning" data-zh="帶領志工團隊,促進團隊合作與策略規劃">Led a team of volunteers, fostering collaboration and strategic planning</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Founder — Hope</div>
-                <div class="cv-entry-date">Sep 2019 — Apr 2020</div>
+                <div class="cv-entry-title" data-en="Founder — Hope" data-zh="創辦人 — Hope">Founder — Hope</div>
+                <div class="cv-entry-date" data-en="Sep 2019 — Apr 2020" data-zh="2019年9月 — 2020年4月">Sep 2019 — Apr 2020</div>
               </div>
-              <div class="cv-entry-org">New York, USA</div>
-              <div class="cv-entry-detail">Founded a grassroots social awareness group using public art and storytelling to spotlight homelessness and reduce stigma. Designed and led art-based advocacy campaigns inviting community participation and fostering public dialogue. Conducted interviews with unhoused individuals to share their voices and perspectives through creative platforms. Organized donation drives collecting food, clothing, and hygiene supplies for local shelters. Mobilized volunteers and community members to support awareness, fundraising, and compassionate engagement.</div>
+              <div class="cv-entry-org" data-en="New York, USA" data-zh="美國紐約">New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Founded a grassroots social awareness group using public art and storytelling on homelessness" data-zh="創辦草根社會倡議團體,透過公共藝術與敘事關注無家者議題">Founded a grassroots social awareness group using public art and storytelling on homelessness</li>
+                <li data-en="Designed art-based advocacy campaigns inviting community participation and dialogue" data-zh="設計以藝術為基礎的倡議活動,邀請社區共同參與與對話">Designed art-based advocacy campaigns inviting community participation and dialogue</li>
+                <li data-en="Conducted interviews with unhoused individuals to share their voices through creative platforms" data-zh="訪談無家者,透過創意平台分享他們的故事與觀點">Conducted interviews with unhoused individuals to share their voices through creative platforms</li>
+                <li data-en="Organized donation drives collecting food, clothing, and hygiene supplies for shelters" data-zh="籌辦捐贈活動,為庇護所募集食物、衣物與衛生用品">Organized donation drives collecting food, clothing, and hygiene supplies for shelters</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Culture Advisor — Part-time (Remote)</div>
-                <div class="cv-entry-date">Jan 2021 — Present</div>
+                <div class="cv-entry-title" data-en="Culture Advisor — Part-time (Remote)" data-zh="文化顧問 — 兼職(遠距)">Culture Advisor — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Jan 2021 — Present" data-zh="2021年1月 — 至今">Jan 2021 — Present</div>
               </div>
-              <div class="cv-entry-org">Urantia Foundation, Chicago, USA</div>
-              <div class="cv-entry-detail">Translated books, posters, and digital content into Mandarin to expand the foundation's reach in Taiwanese and Chinese communities. Designed and facilitated cultural workshops and events highlighting Taiwanese and Chinese traditions and perspectives. Built partnerships and facilitated cross-cultural dialogue to support the foundation's global mission and community engagement.</div>
+              <div class="cv-entry-org" data-en="Urantia Foundation, Chicago, USA" data-zh="Urantia 基金會,美國芝加哥">Urantia Foundation, Chicago, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Translated books, posters, and digital content into Mandarin to expand Taiwanese/Chinese reach" data-zh="將書籍、海報與數位內容翻譯為中文,擴展在台灣與華語社群的影響力">Translated books, posters, and digital content into Mandarin to expand Taiwanese/Chinese reach</li>
+                <li data-en="Designed and facilitated cultural workshops highlighting Taiwanese and Chinese traditions" data-zh="設計並帶領文化工作坊,呈現台灣與華人文化觀點">Designed and facilitated cultural workshops highlighting Taiwanese and Chinese traditions</li>
+                <li data-en="Built partnerships and facilitated cross-cultural dialogue to support global mission" data-zh="建立合作關係,促進跨文化對話,以支持基金會的全球使命">Built partnerships and facilitated cross-cultural dialogue to support global mission</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Lunar New Year and Cultural Fair Event Planner</div>
-                <div class="cv-entry-date">Jan 2014 — Mar 2017</div>
+                <div class="cv-entry-title" data-en="Lunar New Year and Cultural Fair Event Planner" data-zh="春節與文化博覽會活動策劃">Lunar New Year and Cultural Fair Event Planner</div>
+                <div class="cv-entry-date" data-en="Jan 2014 — Mar 2017" data-zh="2014年1月 — 2017年3月">Jan 2014 — Mar 2017</div>
               </div>
-              <div class="cv-entry-detail">Organized and executed large-scale cultural events celebrating Lunar New Year, overseeing logistics, budgeting, and day-of coordination. Developed outreach strategies via social media, flyers, and community partnerships to promote events to diverse audiences. Designed immersive event spaces and cultural displays blending traditional aesthetics with contemporary elements.</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Organized large-scale Lunar New Year cultural events including logistics and budgeting" data-zh="籌辦大型春節文化活動,負責場地、預算與當日協調">Organized large-scale Lunar New Year cultural events including logistics and budgeting</li>
+                <li data-en="Developed outreach via social media and community partnerships for diverse audiences" data-zh="透過社群媒體、傳單與社區夥伴推廣活動,服務多元觀眾">Developed outreach via social media and community partnerships for diverse audiences</li>
+                <li data-en="Designed immersive event spaces blending traditional and contemporary aesthetics" data-zh="設計沉浸式活動空間,融合傳統美學與當代元素">Designed immersive event spaces blending traditional and contemporary aesthetics</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Cultural Ambassador — China Taiwan ACFTC Cultural Exchange</div>
-                <div class="cv-entry-date">Summer 2019</div>
+                <div class="cv-entry-title" data-en="Cultural Ambassador — China Taiwan ACFTC Cultural Exchange" data-zh="文化大使 — 海峽兩岸 ACFTC 文化交流">Cultural Ambassador — China Taiwan ACFTC Cultural Exchange</div>
+                <div class="cv-entry-date" data-en="Summer 2019" data-zh="2019年夏">Summer 2019</div>
               </div>
-              <div class="cv-entry-org">China</div>
-              <div class="cv-entry-detail">Represented Taiwan in a cross-strait cultural exchange program promoting mutual understanding and collaboration. Participated in cultural events, educational workshops, and performances to promote Taiwanese heritage. Engaged with Chinese media and government officials to support public diplomacy. Received media coverage highlighting the role of youth in cultural diplomacy.</div>
+              <div class="cv-entry-org" data-en="China" data-zh="中國">China</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Represented Taiwan in a cross-strait cultural exchange program" data-zh="代表台灣參與兩岸文化交流活動,促進相互理解與合作">Represented Taiwan in a cross-strait cultural exchange program</li>
+                <li data-en="Participated in cultural events, educational workshops, and performances" data-zh="參與文化活動、教育工作坊與表演,推廣台灣文化遺產">Participated in cultural events, educational workshops, and performances</li>
+                <li data-en="Engaged with Chinese media and government officials for public diplomacy" data-zh="與中國媒體與官方代表互動,支持青年公共外交">Engaged with Chinese media and government officials for public diplomacy</li>
+                <li data-en="Received media coverage highlighting youth in cultural diplomacy" data-zh="獲媒體報導,展現青年於文化外交中的角色">Received media coverage highlighting youth in cultural diplomacy</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Teaching & Workshops<em>education & outreach</em></h3>
+          <h3 class="cv-block-title" data-en-html="Teaching & Workshops<em>education & outreach</em>" data-zh-html="教學與工作坊<em>教育與推廣</em>">Teaching &amp; Workshops<em>education &amp; outreach</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Teacher — Part-time (Remote)</div>
-                <div class="cv-entry-date">Nov 2023 — Feb 2024</div>
+                <div class="cv-entry-title" data-en="Teacher — Part-time (Remote)" data-zh="講師 — 兼職(遠距)">Teacher — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Nov 2023 — Feb 2024" data-zh="2023年11月 — 2024年2月">Nov 2023 — Feb 2024</div>
               </div>
-              <div class="cv-entry-org">Yunnan Arts University, Yunnan, China</div>
-              <div class="cv-entry-detail">Led a series of free online art therapy info sessions for university students interested in the field. Adapted content to various experience levels, fostering accessibility and engagement across disciplines. Promoted emotional exploration and cultural connection through art-based discussions and creative reflection.</div>
+              <div class="cv-entry-org" data-en="Yunnan Arts University, Yunnan, China" data-zh="雲南藝術學院,中國雲南">Yunnan Arts University, Yunnan, China</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Led free online art therapy info sessions for university students" data-zh="為大學生帶領免費的線上藝術治療入門講座">Led free online art therapy info sessions for university students</li>
+                <li data-en="Adapted content to varying experience levels for accessibility across disciplines" data-zh="依不同學習背景調整內容,使跨領域學生皆能參與">Adapted content to varying experience levels for accessibility across disciplines</li>
+                <li data-en="Promoted emotional exploration through art-based discussions and creative reflection" data-zh="透過藝術討論與創意反思,促進情緒探索與文化連結">Promoted emotional exploration through art-based discussions and creative reflection</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapist — Part-time (Remote)</div>
-                <div class="cv-entry-date">Jun 2023 — Present</div>
+                <div class="cv-entry-title" data-en="Art Therapist — Part-time (Remote)" data-zh="藝術治療師 — 兼職(遠距)">Art Therapist — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Jun 2023 — Present" data-zh="2023年6月 — 至今">Jun 2023 — Present</div>
               </div>
-              <div class="cv-entry-org">Vagus, Yunnan, China</div>
-              <div class="cv-entry-detail">Facilitated online art-as-therapy workshops and public lectures to promote creative healing practices in Mainland China. Designed educational materials and developed curriculum introducing key art therapy concepts to the general public.</div>
+              <div class="cv-entry-org" data-en="Vagus, Yunnan, China" data-zh="Vagus,中國雲南">Vagus, Yunnan, China</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Facilitated online art-as-therapy workshops and public lectures" data-zh="帶領線上藝術治療工作坊與公開演講,推廣中國大陸的療癒實踐">Facilitated online art-as-therapy workshops and public lectures</li>
+                <li data-en="Designed educational materials and curriculum introducing art therapy concepts to the public" data-zh="設計教育材料與課程,向大眾介紹藝術治療核心觀念">Designed educational materials and curriculum introducing art therapy concepts to the public</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapist — Part-time (Remote)</div>
-                <div class="cv-entry-date">Nov 2023 — Present</div>
+                <div class="cv-entry-title" data-en="Art Therapist — Part-time (Remote)" data-zh="藝術治療師 — 兼職(遠距)">Art Therapist — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Nov 2023 — Present" data-zh="2023年11月 — 至今">Nov 2023 — Present</div>
               </div>
-              <div class="cv-entry-org">China International Art Therapy Prospective Forum 中國國際藝術治療前瞻論壇, China</div>
-              <div class="cv-entry-detail">Conducts online art-as-therapy workshops, public lectures, and curriculum development to promote understanding of art therapy in China. Shares curated resources — research articles, books, case studies — with online community members to deepen their knowledge.</div>
+              <div class="cv-entry-org" data-en="China International Art Therapy Prospective Forum 中國國際藝術治療前瞻論壇" data-zh="中國國際藝術治療前瞻論壇">China International Art Therapy Prospective Forum 中國國際藝術治療前瞻論壇</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Conduct online art-as-therapy workshops, lectures, and curriculum development" data-zh="進行線上藝術治療工作坊、演講與課程設計,推動中國的藝術治療發展">Conduct online art-as-therapy workshops, lectures, and curriculum development</li>
+                <li data-en="Share curated resources — research articles, books, case studies — with the online community" data-zh="與線上社群分享精選資源:研究文章、書籍與案例">Share curated resources — research articles, books, case studies — with the online community</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Study Abroad Tutor — Part-time (Remote)</div>
-                <div class="cv-entry-date">Aug 2023 — Dec 2024</div>
+                <div class="cv-entry-title" data-en="Study Abroad Tutor — Part-time (Remote)" data-zh="留學顧問 — 兼職(遠距)">Study Abroad Tutor — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Aug 2023 — Dec 2024" data-zh="2023年8月 — 2024年12月">Aug 2023 — Dec 2024</div>
               </div>
-              <div class="cv-entry-org">Yiji Episode 壹集藝術留學, Beijing, China</div>
-              <div class="cv-entry-detail">Delivered online lectures and Q&A sessions on art therapy graduate programs abroad, including portfolio and application guidance. Created personalized study plans and curricula tailored to each student's academic goals and artistic background. Supported students throughout the application process.</div>
+              <div class="cv-entry-org" data-en="Yiji Episode 壹集藝術留學, Beijing, China" data-zh="壹集藝術留學,中國北京">Yiji Episode 壹集藝術留學, Beijing, China</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Delivered online lectures on art therapy graduate programs and portfolio guidance" data-zh="提供藝術治療研究所留學的線上講座與作品集指導">Delivered online lectures on art therapy graduate programs and portfolio guidance</li>
+                <li data-en="Created personalized study plans tailored to each student's goals and background" data-zh="為每位學生量身設計學習計劃,符合其學術目標與藝術背景">Created personalized study plans tailored to each student's goals and background</li>
+                <li data-en="Supported students throughout the application process" data-zh="於整個申請流程中提供支持與陪伴">Supported students throughout the application process</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Study Abroad Tutor — Part-time (Remote)</div>
-                <div class="cv-entry-date">Aug 2023 — Aug 2024</div>
+                <div class="cv-entry-title" data-en="Study Abroad Tutor — Part-time (Remote)" data-zh="留學顧問 — 兼職(遠距)">Study Abroad Tutor — Part-time (Remote)</div>
+                <div class="cv-entry-date" data-en="Aug 2023 — Aug 2024" data-zh="2023年8月 — 2024年8月">Aug 2023 — Aug 2024</div>
               </div>
-              <div class="cv-entry-org">Honshi Art Study Abroad 弘時藝術留學, Beijing, China</div>
-              <div class="cv-entry-detail">Delivered online lectures and Q&A sessions on art therapy graduate programs abroad, including portfolio and application guidance. Created personalized study plans tailored to each student's academic goals and artistic background. Supported students throughout the application process, fostering motivation and confidence.</div>
+              <div class="cv-entry-org" data-en="Honshi Art Study Abroad 弘時藝術留學, Beijing, China" data-zh="弘時藝術留學,中國北京">Honshi Art Study Abroad 弘時藝術留學, Beijing, China</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Delivered online lectures on art therapy graduate programs and portfolio guidance" data-zh="提供藝術治療研究所留學的線上講座與作品集指導">Delivered online lectures on art therapy graduate programs and portfolio guidance</li>
+                <li data-en="Created personalized study plans tailored to each student's goals and background" data-zh="為學生量身設計學習計劃,符合其學術目標與藝術背景">Created personalized study plans tailored to each student's goals and background</li>
+                <li data-en="Fostered motivation and confidence throughout the application process" data-zh="在申請過程中協助學生建立動機與自信">Fostered motivation and confidence throughout the application process</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Co-Lead — Art for Wellness</div>
-                <div class="cv-entry-date">Spring 2023</div>
+                <div class="cv-entry-title" data-en="Co-Lead — Art for Wellness" data-zh="共同帶領 — Art for Wellness">Co-Lead — Art for Wellness</div>
+                <div class="cv-entry-date" data-en="Spring 2023" data-zh="2023年春">Spring 2023</div>
               </div>
-              <div class="cv-entry-org">New York University, New York, USA</div>
-              <div class="cv-entry-detail">Co-led art therapy groups for NYU students and community members with chronic illnesses (e.g., respiratory conditions, Parkinson's disease). Facilitated art-making sessions supporting stress relief, emotional expression, and social connection. Collaborated with the Program Director on trauma-informed, client-centered group activities. Introduced participants to the foundations of art therapy and its applications for mental health and holistic wellness.</div>
+              <div class="cv-entry-org" data-en="New York University, New York, USA" data-zh="紐約大學,美國紐約">New York University, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Co-led art therapy groups for NYU students and community members with chronic illnesses" data-zh="共同帶領藝術治療團體,服務 NYU 學生與患有慢性疾病的社區成員">Co-led art therapy groups for NYU students and community members with chronic illnesses</li>
+                <li data-en="Facilitated art-making sessions supporting stress relief and social connection" data-zh="帶領藝術創作活動,協助壓力釋放、情緒表達與人際連結">Facilitated art-making sessions supporting stress relief and social connection</li>
+                <li data-en="Collaborated with Program Director on trauma-informed, client-centered activities" data-zh="與計劃主任合作設計創傷知情、個案中心的活動">Collaborated with Program Director on trauma-informed, client-centered activities</li>
+                <li data-en="Introduced participants to foundations of art therapy and holistic wellness" data-zh="引介參與者認識藝術治療基礎與整體性健康">Introduced participants to foundations of art therapy and holistic wellness</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Creative & Community Roles<em>design & service</em></h3>
+          <h3 class="cv-block-title" data-en-html="Creative & Community Roles<em>design & service</em>" data-zh-html="創意與社區角色<em>設計與服務</em>">Creative &amp; Community Roles<em>design &amp; service</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Secretary</div>
-                <div class="cv-entry-date">Feb 2019 — Feb 2020</div>
+                <div class="cv-entry-title" data-en="Secretary" data-zh="行政助理">Secretary</div>
+                <div class="cv-entry-date" data-en="Feb 2019 — Feb 2020" data-zh="2019年2月 — 2020年2月">Feb 2019 — Feb 2020</div>
               </div>
-              <div class="cv-entry-org">Caroline Hu Fashion Studio, New York, USA</div>
-              <div class="cv-entry-detail">Provided comprehensive administrative and organizational support to fashion designer Caroline Hu, including managing her calendar, coordinating travel, and handling communications. Supported preparations for London Fashion Week by organizing logistics, overseeing material readiness, and assisting with backstage coordination. Maintained communication with international clients and vendors. Conducted market and trend research to inform design direction and studio planning.</div>
+              <div class="cv-entry-org" data-en="Caroline Hu Fashion Studio, New York, USA" data-zh="Caroline Hu 時裝工作室,美國紐約">Caroline Hu Fashion Studio, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Provided administrative support to designer Caroline Hu — calendar, travel, communications" data-zh="協助時裝設計師 Caroline Hu 處理行政事務,包括行程、差旅與聯絡">Provided administrative support to designer Caroline Hu — calendar, travel, communications</li>
+                <li data-en="Supported London Fashion Week preparations including logistics and backstage coordination" data-zh="協助倫敦時裝週籌備,包括物流安排與後台協調">Supported London Fashion Week preparations including logistics and backstage coordination</li>
+                <li data-en="Maintained communication with international clients and vendors" data-zh="與國際客戶與供應商維持溝通">Maintained communication with international clients and vendors</li>
+                <li data-en="Conducted market and trend research to inform design direction" data-zh="進行市場與趨勢研究,提供設計方向參考">Conducted market and trend research to inform design direction</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Graphic Designer</div>
-                <div class="cv-entry-date">Oct 2019 — Oct 2020</div>
+                <div class="cv-entry-title" data-en="Graphic Designer" data-zh="平面設計師">Graphic Designer</div>
+                <div class="cv-entry-date" data-en="Oct 2019 — Oct 2020" data-zh="2019年10月 — 2020年10月">Oct 2019 — Oct 2020</div>
               </div>
-              <div class="cv-entry-org">The Artists Forum, New York, USA</div>
-              <div class="cv-entry-detail">Designed digital and print materials including promotional flyers, social media graphics, and web assets. Assisted with photo retouching, layout design, and proofreading for visual campaigns. Applied Adobe Creative Suite (Photoshop, Illustrator, InDesign) to support diverse creative projects.</div>
+              <div class="cv-entry-org" data-en="The Artists Forum, New York, USA" data-zh="The Artists Forum,美國紐約">The Artists Forum, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Designed digital and print materials including flyers, social media graphics, and web assets" data-zh="設計數位與印刷素材,包括傳單、社群圖卡與網站視覺">Designed digital and print materials including flyers, social media graphics, and web assets</li>
+                <li data-en="Assisted with photo retouching, layout design, and proofreading for visual campaigns" data-zh="協助修圖、版面設計與視覺活動的校對">Assisted with photo retouching, layout design, and proofreading for visual campaigns</li>
+                <li data-en="Used Adobe Creative Suite (Photoshop, Illustrator, InDesign) on diverse projects" data-zh="使用 Adobe Creative Suite(Photoshop、Illustrator、InDesign)支援多元創作">Used Adobe Creative Suite (Photoshop, Illustrator, InDesign) on diverse projects</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Volunteer</div>
-                <div class="cv-entry-date">Oct 2019 — Apr 2020</div>
+                <div class="cv-entry-title" data-en="Volunteer" data-zh="志工">Volunteer</div>
+                <div class="cv-entry-date" data-en="Oct 2019 — Apr 2020" data-zh="2019年10月 — 2020年4月">Oct 2019 — Apr 2020</div>
               </div>
-              <div class="cv-entry-org">Mighty Mutts, New York, USA</div>
-              <div class="cv-entry-detail">Promoted animal welfare and fundraising during community outreach events in Union Square. Educated the public on animal rescue, adoption, and volunteer opportunities. Collaborated with fellow volunteers and staff to support event logistics and shelter operations.</div>
+              <div class="cv-entry-org" data-en="Mighty Mutts, New York, USA" data-zh="Mighty Mutts 動物救援組織,美國紐約">Mighty Mutts, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Promoted animal welfare and fundraising at outreach events in Union Square" data-zh="於聯合廣場推廣動物福利與募款活動">Promoted animal welfare and fundraising at outreach events in Union Square</li>
+                <li data-en="Educated public on animal rescue, adoption, and volunteer opportunities" data-zh="向大眾介紹動物救援、認養與志工機會">Educated public on animal rescue, adoption, and volunteer opportunities</li>
+                <li data-en="Supported event logistics and shelter operations" data-zh="協助活動執行與庇護所日常運作">Supported event logistics and shelter operations</li>
+              </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Contributing Artist — Washington Square News</div>
-                <div class="cv-entry-date">Spring 2023</div>
+                <div class="cv-entry-title" data-en="Contributing Artist — Washington Square News" data-zh="特約藝術家 — Washington Square News">Contributing Artist — Washington Square News</div>
+                <div class="cv-entry-date" data-en="Spring 2023" data-zh="2023年春">Spring 2023</div>
               </div>
-              <div class="cv-entry-org">New York University, New York, USA</div>
-              <div class="cv-entry-detail">Published original artwork in NYU's campus newspaper, demonstrating visual storytelling and design skills. Collaborated with editorial staff to deliver high-quality visual content. Contributed to NYU's creative community through art reflecting cultural identity and personal expression.</div>
+              <div class="cv-entry-org" data-en="New York University, New York, USA" data-zh="紐約大學,美國紐約">New York University, New York, USA</div>
+              <ul class="cv-entry-bullets">
+                <li data-en="Published original artwork in NYU's campus newspaper" data-zh="於 NYU 校園報紙刊登原創作品,展現視覺敘事與設計能力">Published original artwork in NYU's campus newspaper</li>
+                <li data-en="Collaborated with editorial staff to deliver high-quality visual content" data-zh="與編輯團隊合作,提供高品質的視覺內容">Collaborated with editorial staff to deliver high-quality visual content</li>
+                <li data-en="Contributed to NYU's creative community through cultural and personal expression" data-zh="透過反映文化身份與個人表達的作品,豐富 NYU 的創意社群">Contributed to NYU's creative community through cultural and personal expression</li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Media & Speaking<em>presentations & workshops</em></h3>
+          <h3 class="cv-block-title" data-en-html="Media & Speaking<em>presentations & workshops</em>" data-zh-html="媒體與演講<em>演講與工作坊</em>">Media &amp; Speaking<em>presentations &amp; workshops</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Guest Speaker — Introduction to Psychology Field</div>
-                <div class="cv-entry-date">Apr 2025</div>
+                <div class="cv-entry-title" data-en="Guest Speaker — Introduction to Psychology Field" data-zh="客座講者 — 心理學領域導論">Guest Speaker — Introduction to Psychology Field</div>
+                <div class="cv-entry-date" data-en="Apr 2025" data-zh="2025年4月">Apr 2025</div>
               </div>
-              <div class="cv-entry-org">NYU Mood Psychology, New York</div>
+              <div class="cv-entry-org" data-en="NYU Mood Psychology, New York" data-zh="紐約大學情緒心理學,紐約">NYU Mood Psychology, New York</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Introduction to Music Therapy — Public Lecture</div>
-                <div class="cv-entry-date">Mar 21, 2025</div>
+                <div class="cv-entry-title" data-en="Introduction to Music Therapy — Public Lecture" data-zh="音樂治療導論 — 公開講座">Introduction to Music Therapy — Public Lecture</div>
+                <div class="cv-entry-date" data-en="Mar 21, 2025" data-zh="2025年3月21日">Mar 21, 2025</div>
               </div>
-              <div class="cv-entry-org">Online</div>
+              <div class="cv-entry-org" data-en="Online" data-zh="線上">Online</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Journey Through the Darkness — International Online Art Therapy Workshop</div>
-                <div class="cv-entry-date">Mar 2, 2025</div>
+                <div class="cv-entry-title" data-en="Journey Through the Darkness — International Online Art Therapy Workshop" data-zh="穿越黑暗的旅程 — 國際線上藝術治療工作坊">Journey Through the Darkness — International Online Art Therapy Workshop</div>
+                <div class="cv-entry-date" data-en="Mar 2, 2025" data-zh="2025年3月2日">Mar 2, 2025</div>
               </div>
-              <div class="cv-entry-org">Online</div>
+              <div class="cv-entry-org" data-en="Online" data-zh="線上">Online</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art × Drama Healing Workshop (Art Therapy × Drama Therapy)</div>
-                <div class="cv-entry-date">Mar 1, 2025</div>
+                <div class="cv-entry-title" data-en="Art × Drama Healing Workshop (Art Therapy × Drama Therapy)" data-zh="藝術 × 戲劇療癒工作坊(藝術治療 × 戲劇治療)">Art × Drama Healing Workshop (Art Therapy × Drama Therapy)</div>
+                <div class="cv-entry-date" data-en="Mar 1, 2025" data-zh="2025年3月1日">Mar 1, 2025</div>
               </div>
               <div class="cv-entry-org">UTOPIA</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">In-Person Art Therapy Workshop</div>
-                <div class="cv-entry-date">Jan 11, 2025</div>
+                <div class="cv-entry-title" data-en="In-Person Art Therapy Workshop" data-zh="實體藝術治療工作坊">In-Person Art Therapy Workshop</div>
+                <div class="cv-entry-date" data-en="Jan 11, 2025" data-zh="2025年1月11日">Jan 11, 2025</div>
               </div>
-              <div class="cv-entry-org">New York, USA</div>
+              <div class="cv-entry-org" data-en="New York, USA" data-zh="美國紐約">New York, USA</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">In-Person Art Therapy Workshop</div>
-                <div class="cv-entry-date">Aug 26, 2024</div>
+                <div class="cv-entry-title" data-en="In-Person Art Therapy Workshop" data-zh="實體藝術治療工作坊">In-Person Art Therapy Workshop</div>
+                <div class="cv-entry-date" data-en="Aug 26, 2024" data-zh="2024年8月26日">Aug 26, 2024</div>
               </div>
-              <div class="cv-entry-org">Kaohsiung, Taiwan</div>
+              <div class="cv-entry-org" data-en="Kaohsiung, Taiwan" data-zh="台灣高雄">Kaohsiung, Taiwan</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Introductory Art Therapy Lecture & Workshop</div>
-                <div class="cv-entry-date">Aug 5, 2024</div>
+                <div class="cv-entry-title" data-en="Introductory Art Therapy Lecture & Workshop" data-zh="藝術治療入門講座與工作坊">Introductory Art Therapy Lecture &amp; Workshop</div>
+                <div class="cv-entry-date" data-en="Aug 5, 2024" data-zh="2024年8月5日">Aug 5, 2024</div>
               </div>
-              <div class="cv-entry-org">Shanghai Jiao Tong University Confucius Institute, Kunming Branch, China</div>
+              <div class="cv-entry-org" data-en="Shanghai Jiao Tong University Confucius Institute, Kunming Branch, China" data-zh="上海交通大學孔子學院昆明分院,中國">Shanghai Jiao Tong University Confucius Institute, Kunming Branch, China</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">3-Day In-Person Art Therapy Workshop</div>
-                <div class="cv-entry-date">Aug 1–4, 2024</div>
+                <div class="cv-entry-title" data-en="3-Day In-Person Art Therapy Workshop" data-zh="三日實體藝術治療工作坊">3-Day In-Person Art Therapy Workshop</div>
+                <div class="cv-entry-date" data-en="Aug 1–4, 2024" data-zh="2024年8月1–4日">Aug 1–4, 2024</div>
               </div>
-              <div class="cv-entry-org">Yunnan Kunming, China</div>
+              <div class="cv-entry-org" data-en="Yunnan Kunming, China" data-zh="中國雲南昆明">Yunnan Kunming, China</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Embracing Change and Uncertainty — Art as Therapy Workshop</div>
-                <div class="cv-entry-date">May 24, 2024</div>
+                <div class="cv-entry-title" data-en="Embracing Change and Uncertainty — Art as Therapy Workshop" data-zh="擁抱改變與不確定 — 藝術治療工作坊">Embracing Change and Uncertainty — Art as Therapy Workshop</div>
+                <div class="cv-entry-date" data-en="May 24, 2024" data-zh="2024年5月24日">May 24, 2024</div>
               </div>
               <div class="cv-entry-org">Not Yet Art</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Impact and Sustainability — Art as Therapy Workshop</div>
-                <div class="cv-entry-date">Apr 10, 2024</div>
+                <div class="cv-entry-title" data-en="Impact and Sustainability — Art as Therapy Workshop" data-zh="影響力與永續 — 藝術治療工作坊">Impact and Sustainability — Art as Therapy Workshop</div>
+                <div class="cv-entry-date" data-en="Apr 10, 2024" data-zh="2024年4月10日">Apr 10, 2024</div>
               </div>
-              <div class="cv-entry-org">GAIC, New York</div>
+              <div class="cv-entry-org" data-en="GAIC, New York" data-zh="GAIC,紐約">GAIC, New York</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">How to Become an Art Therapist</div>
-                <div class="cv-entry-date">Feb 17, 2024</div>
+                <div class="cv-entry-title" data-en="How to Become an Art Therapist" data-zh="如何成為藝術治療師">How to Become an Art Therapist</div>
+                <div class="cv-entry-date" data-en="Feb 17, 2024" data-zh="2024年2月17日">Feb 17, 2024</div>
               </div>
-              <div class="cv-entry-org">VAGUS, China</div>
+              <div class="cv-entry-org" data-en="VAGUS, China" data-zh="VAGUS,中國">VAGUS, China</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Ethics and Morals in Art Therapy</div>
-                <div class="cv-entry-date">Jan 20, 2024</div>
+                <div class="cv-entry-title" data-en="Ethics and Morals in Art Therapy" data-zh="藝術治療中的倫理與道德">Ethics and Morals in Art Therapy</div>
+                <div class="cv-entry-date" data-en="Jan 20, 2024" data-zh="2024年1月20日">Jan 20, 2024</div>
               </div>
-              <div class="cv-entry-org">VAGUS, China</div>
+              <div class="cv-entry-org" data-en="VAGUS, China" data-zh="VAGUS,中國">VAGUS, China</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Intervention in Correctional Settings</div>
-                <div class="cv-entry-date">Dec 17, 2023</div>
+                <div class="cv-entry-title" data-en="Art Therapy Intervention in Correctional Settings" data-zh="矯正機構中的藝術治療介入">Art Therapy Intervention in Correctional Settings</div>
+                <div class="cv-entry-date" data-en="Dec 17, 2023" data-zh="2023年12月17日">Dec 17, 2023</div>
               </div>
-              <div class="cv-entry-org">China International Arts Therapy Prospective Forum</div>
+              <div class="cv-entry-org" data-en="China International Arts Therapy Prospective Forum" data-zh="中國國際藝術治療前瞻論壇">China International Arts Therapy Prospective Forum</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Exhibition Panel Discussion — AI and Technology</div>
-                <div class="cv-entry-date">Oct 29, 2023</div>
+                <div class="cv-entry-title" data-en="Art Exhibition Panel Discussion — AI and Technology" data-zh="藝術展座談 — AI 與科技">Art Exhibition Panel Discussion — AI and Technology</div>
+                <div class="cv-entry-date" data-en="Oct 29, 2023" data-zh="2023年10月29日">Oct 29, 2023</div>
               </div>
-              <div class="cv-entry-org">Utopia, New York</div>
+              <div class="cv-entry-org" data-en="Utopia, New York" data-zh="Utopia,紐約">Utopia, New York</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy in a Correctional Setting</div>
-                <div class="cv-entry-date">Oct 16, 2023</div>
+                <div class="cv-entry-title" data-en="Art Therapy in a Correctional Setting" data-zh="矯正機構中的藝術治療">Art Therapy in a Correctional Setting</div>
+                <div class="cv-entry-date" data-en="Oct 16, 2023" data-zh="2023年10月16日">Oct 16, 2023</div>
               </div>
-              <div class="cv-entry-org">Sino Vision, New York Lounge — <a href="https://www.youtube.com/watch?v=LagO1dDDsyM&t=1399s" target="_blank" rel="noopener">YouTube</a></div>
+              <div class="cv-entry-org" data-en-html="Sino Vision, New York Lounge — <a href=&quot;https://www.youtube.com/watch?v=LagO1dDDsyM&amp;t=1399s&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>YouTube</a>" data-zh-html="Sino Vision 紐約龍門陣 — <a href=&quot;https://www.youtube.com/watch?v=LagO1dDDsyM&amp;t=1399s&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>YouTube</a>">Sino Vision, New York Lounge — <a href="https://www.youtube.com/watch?v=LagO1dDDsyM&t=1399s" target="_blank" rel="noopener">YouTube</a></div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Introduction — Healing Through Art</div>
-                <div class="cv-entry-date">Sep 17, 2023</div>
+                <div class="cv-entry-title" data-en="Art Therapy Introduction — Healing Through Art" data-zh="藝術治療入門 — 透過藝術療癒">Art Therapy Introduction — Healing Through Art</div>
+                <div class="cv-entry-date" data-en="Sep 17, 2023" data-zh="2023年9月17日">Sep 17, 2023</div>
               </div>
-              <div class="cv-entry-org">VAGUS, China</div>
+              <div class="cv-entry-org" data-en="VAGUS, China" data-zh="VAGUS,中國">VAGUS, China</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Study Abroad</div>
-                <div class="cv-entry-date">Aug 12, 2023</div>
+                <div class="cv-entry-title" data-en="Art Therapy Study Abroad" data-zh="藝術治療留學分享">Art Therapy Study Abroad</div>
+                <div class="cv-entry-date" data-en="Aug 12, 2023" data-zh="2023年8月12日">Aug 12, 2023</div>
               </div>
-              <div class="cv-entry-org">EPISODE, China</div>
+              <div class="cv-entry-org" data-en="EPISODE, China" data-zh="EPISODE,中國">EPISODE, China</div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Art Therapy Intervention in Correctional Settings</div>
-                <div class="cv-entry-date">Jul 23, 2023</div>
+                <div class="cv-entry-title" data-en="Art Therapy Intervention in Correctional Settings" data-zh="矯正機構中的藝術治療介入">Art Therapy Intervention in Correctional Settings</div>
+                <div class="cv-entry-date" data-en="Jul 23, 2023" data-zh="2023年7月23日">Jul 23, 2023</div>
               </div>
-              <div class="cv-entry-org">VAGUS, China</div>
+              <div class="cv-entry-org" data-en="VAGUS, China" data-zh="VAGUS,中國">VAGUS, China</div>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Magazine Publications<em>writing</em></h3>
+          <h3 class="cv-block-title" data-en-html="Magazine Publications<em>writing</em>" data-zh-html="雜誌出版<em>寫作</em>">Magazine Publications<em>writing</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">Viewing the World through 'Art Creation' in Correctional Institutions</div>
-                <div class="cv-entry-date">Jan 30, 2024</div>
+                <div class="cv-entry-title" data-en="Viewing the World through 'Art Creation' in Correctional Institutions" data-zh="從矯正機構中的「藝術創作」看世界">Viewing the World through 'Art Creation' in Correctional Institutions</div>
+                <div class="cv-entry-date" data-en="Jan 30, 2024" data-zh="2024年1月30日">Jan 30, 2024</div>
               </div>
-              <div class="cv-entry-org">Common Wealth Magazine — <a href="https://crossing.cw.com.tw/article/18599" target="_blank" rel="noopener">crossing.cw.com.tw/article/18599</a></div>
+              <div class="cv-entry-org" data-en-html="Common Wealth Magazine — <a href=&quot;https://crossing.cw.com.tw/article/18599&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>crossing.cw.com.tw/article/18599</a>" data-zh-html="天下雜誌《換日線》— <a href=&quot;https://crossing.cw.com.tw/article/18599&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>crossing.cw.com.tw/article/18599</a>">Common Wealth Magazine — <a href="https://crossing.cw.com.tw/article/18599" target="_blank" rel="noopener">crossing.cw.com.tw/article/18599</a></div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-head">
-                <div class="cv-entry-title">What Can 'Art Creation' Really Bring to Us? — Starting from My Childhood Healing Journey Through Painting</div>
-                <div class="cv-entry-date">Jan 17, 2024</div>
+                <div class="cv-entry-title" data-en="What Can 'Art Creation' Really Bring to Us? — Starting from My Childhood Healing Journey Through Painting" data-zh="「藝術創作」到底能為我們帶來什麼?——從我兒時透過繪畫療癒的旅程說起">What Can 'Art Creation' Really Bring to Us? — Starting from My Childhood Healing Journey Through Painting</div>
+                <div class="cv-entry-date" data-en="Jan 17, 2024" data-zh="2024年1月17日">Jan 17, 2024</div>
               </div>
-              <div class="cv-entry-org">Common Wealth Magazine — <a href="https://crossing.cw.com.tw/article/18559" target="_blank" rel="noopener">crossing.cw.com.tw/article/18559</a></div>
+              <div class="cv-entry-org" data-en-html="Common Wealth Magazine — <a href=&quot;https://crossing.cw.com.tw/article/18559&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>crossing.cw.com.tw/article/18559</a>" data-zh-html="天下雜誌《換日線》— <a href=&quot;https://crossing.cw.com.tw/article/18559&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>crossing.cw.com.tw/article/18559</a>">Common Wealth Magazine — <a href="https://crossing.cw.com.tw/article/18559" target="_blank" rel="noopener">crossing.cw.com.tw/article/18559</a></div>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Exhibitions<em>shown work</em></h3>
+          <h3 class="cv-block-title" data-en-html="Exhibitions<em>shown work</em>" data-zh-html="展覽<em>展出作品</em>">Exhibitions<em>shown work</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
-              <div class="cv-entry-title">How Carbon Is Forgotten — Shang Art Museum, Hangzhou, China, 2025</div>
+              <div class="cv-entry-title" data-en="How Carbon Is Forgotten — Shang Art Museum, Hangzhou, China, 2025" data-zh="碳如何被遺忘 — 尚藝術博物館,中國杭州,2025">How Carbon Is Forgotten — Shang Art Museum, Hangzhou, China, 2025</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Art Affect — NYU Barney Building, 2023</div>
+              <div class="cv-entry-title" data-en="Art Affect — NYU Barney Building, 2023" data-zh="Art Affect — NYU Barney Building,2023">Art Affect — NYU Barney Building, 2023</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">FATA Organa Art Exhibition — New York, 2022</div>
+              <div class="cv-entry-title" data-en="FATA Organa Art Exhibition — New York, 2022" data-zh="FATA Organa 藝術展 — 紐約,2022">FATA Organa Art Exhibition — New York, 2022</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Liminality Visual Art Exhibition — Wukong Media, New York & Los Angeles, Apr–Jun 2022</div>
+              <div class="cv-entry-title" data-en="Liminality Visual Art Exhibition — Wukong Media, New York & Los Angeles, Apr–Jun 2022" data-zh="Liminality 視覺藝術展 — 悟空傳媒,紐約與洛杉磯,2022年4–6月">Liminality Visual Art Exhibition — Wukong Media, New York &amp; Los Angeles, Apr–Jun 2022</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">BFA Fine Arts Exhibition — Parsons SJDC Window Gallery, New York, May 2020</div>
+              <div class="cv-entry-title" data-en="BFA Fine Arts Exhibition — Parsons SJDC Window Gallery, New York, May 2020" data-zh="BFA 純藝術畢業展 — 帕森斯 SJDC 櫥窗畫廊,紐約,2020年5月">BFA Fine Arts Exhibition — Parsons SJDC Window Gallery, New York, May 2020</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Systems Unfolding — Parsons The New School, New York, Dec 2019</div>
+              <div class="cv-entry-title" data-en="Systems Unfolding — Parsons The New School, New York, Dec 2019" data-zh="Systems Unfolding — 帕森斯設計學院,紐約,2019年12月">Systems Unfolding — Parsons The New School, New York, Dec 2019</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Small Work Exhibition — Limner Gallery, New York, Oct 2019</div>
+              <div class="cv-entry-title" data-en="Small Work Exhibition — Limner Gallery, New York, Oct 2019" data-zh="Small Work Exhibition — Limner Gallery,紐約,2019年10月">Small Work Exhibition — Limner Gallery, New York, Oct 2019</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Reveal — Personal Exhibition, EF International High School, New York, Apr 2017</div>
+              <div class="cv-entry-title" data-en="Reveal — Personal Exhibition, EF International High School, New York, Apr 2017" data-zh="Reveal — 個人展,EF 國際高中,紐約,2017年4月">Reveal — Personal Exhibition, EF International High School, New York, Apr 2017</div>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Awards<em>recognition</em></h3>
+          <h3 class="cv-block-title" data-en-html="Awards<em>recognition</em>" data-zh-html="獎項<em>肯定</em>">Awards<em>recognition</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
-              <div class="cv-entry-title">Gold Key Award — Scholastic Art Awards (Surrealism), 2017</div>
+              <div class="cv-entry-title" data-en="Gold Key Award — Scholastic Art Awards (Surrealism), 2017" data-zh="金鑰獎 — Scholastic 藝術獎(超現實主義類),2017">Gold Key Award — Scholastic Art Awards (Surrealism), 2017</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Silver Key Award — Scholastic Art Awards (Comics), 2017</div>
+              <div class="cv-entry-title" data-en="Silver Key Award — Scholastic Art Awards (Comics), 2017" data-zh="銀鑰獎 — Scholastic 藝術獎(漫畫類),2017">Silver Key Award — Scholastic Art Awards (Comics), 2017</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Portfolio Competition, Second Place — Parsons The New School, 2017</div>
+              <div class="cv-entry-title" data-en="Portfolio Competition, Second Place — Parsons The New School, 2017" data-zh="作品集競賽第二名 — 帕森斯設計學院,2017">Portfolio Competition, Second Place — Parsons The New School, 2017</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Art Student of the Year — EF International High School, New York, 2017</div>
+              <div class="cv-entry-title" data-en="Art Student of the Year — EF International High School, New York, 2017" data-zh="年度藝術學生 — EF 國際高中,紐約,2017">Art Student of the Year — EF International High School, New York, 2017</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Art Student of the Year — EF International High School, New York, 2016</div>
+              <div class="cv-entry-title" data-en="Art Student of the Year — EF International High School, New York, 2016" data-zh="年度藝術學生 — EF 國際高中,紐約,2016">Art Student of the Year — EF International High School, New York, 2016</div>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Training & Professional Development<em>continuing education</em></h3>
+          <h3 class="cv-block-title" data-en-html="Training & Professional Development<em>continuing education</em>" data-zh-html="專業訓練與發展<em>持續教育</em>">Training &amp; Professional Development<em>continuing education</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
-              <div class="cv-entry-title">Postpartum Depression Prevention — Elizabeth Werner, Ph.D., Columbia University Medical Center (Nov 2023)</div>
+              <div class="cv-entry-title" data-en="Postpartum Depression Prevention — Elizabeth Werner, Ph.D., Columbia University Medical Center (Nov 2023)" data-zh="產後憂鬱預防 — Elizabeth Werner 博士,哥大醫學中心(2023年11月)">Postpartum Depression Prevention — Elizabeth Werner, Ph.D., Columbia University Medical Center (Nov 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Personal Best — Martha E. Edward, Ph.D., Ackerman Institute (Nov 2023)</div>
+              <div class="cv-entry-title" data-en="Personal Best — Martha E. Edward, Ph.D., Ackerman Institute (Nov 2023)" data-zh="Personal Best — Martha E. Edward 博士,阿克曼研究所(2023年11月)">Personal Best — Martha E. Edward, Ph.D., Ackerman Institute (Nov 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Clinical Interviewing, Assessment, and Diagnosis — Diane Valente, TCCNY (Oct 2023)</div>
+              <div class="cv-entry-title" data-en="Clinical Interviewing, Assessment, and Diagnosis — Diane Valente, TCCNY (Oct 2023)" data-zh="臨床會談、評估與診斷 — Diane Valente,TCCNY(2023年10月)">Clinical Interviewing, Assessment, and Diagnosis — Diane Valente, TCCNY (Oct 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Dialectical Behavior Therapy Certification Training — Lane Pederson, PsyD, LP, C-DBT (Sep 2023)</div>
+              <div class="cv-entry-title" data-en="Dialectical Behavior Therapy Certification Training — Lane Pederson, PsyD, LP, C-DBT (Sep 2023)" data-zh="辯證行為治療(DBT)認證訓練 — Lane Pederson 博士(2023年9月)">Dialectical Behavior Therapy Certification Training — Lane Pederson, PsyD, LP, C-DBT (Sep 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Anxiety Summit: Integrating CBT and Exposure & Response Prevention for GAD, Panic Disorder, OCD, Social Anxiety, & Phobias — Kimberly Morrow & Elizabeth DuPont Spencer (Sep 2023)</div>
+              <div class="cv-entry-title" data-en="Anxiety Summit: CBT and ERP for GAD, Panic, OCD, Social Anxiety & Phobias (Sep 2023)" data-zh="焦慮高峰會:CBT 與 ERP 治療廣泛性焦慮、恐慌、強迫、社交焦慮與恐懼症(2023年9月)">Anxiety Summit: CBT and ERP for GAD, Panic, OCD, Social Anxiety &amp; Phobias (Sep 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Bright Beginning — Martha E. Edward, Ph.D., Ackerman Institute (Jun 2023)</div>
+              <div class="cv-entry-title" data-en="Bright Beginning — Martha E. Edward, Ph.D., Ackerman Institute (Jun 2023)" data-zh="Bright Beginning — Martha E. Edward 博士,阿克曼研究所(2023年6月)">Bright Beginning — Martha E. Edward, Ph.D., Ackerman Institute (Jun 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Postpartum Psychosis: Approach to Diagnosis and Clinical Management — Dr. Hart (Jun 2023)</div>
+              <div class="cv-entry-title" data-en="Postpartum Psychosis: Diagnosis and Clinical Management — Dr. Hart (Jun 2023)" data-zh="產後精神病:診斷與臨床處置 — Dr. Hart(2023年6月)">Postpartum Psychosis: Diagnosis and Clinical Management — Dr. Hart (Jun 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Transcending Trauma: Treating Complex PTSD with Internal Family Systems (IFS) — Frank Anderson, MD (Jun 2023)</div>
+              <div class="cv-entry-title" data-en="Transcending Trauma: Treating Complex PTSD with IFS — Frank Anderson, MD (Jun 2023)" data-zh="超越創傷:以 IFS 治療複雜性 PTSD — Frank Anderson 醫師(2023年6月)">Transcending Trauma: Treating Complex PTSD with IFS — Frank Anderson, MD (Jun 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">The Impact of Sexual Abuse on Young Children — Donna Potter (Mar 2023)</div>
+              <div class="cv-entry-title" data-en="The Impact of Sexual Abuse on Young Children — Donna Potter (Mar 2023)" data-zh="性虐待對幼兒的影響 — Donna Potter(2023年3月)">The Impact of Sexual Abuse on Young Children — Donna Potter (Mar 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Play Therapy 101 — Dr. Anderson Sungmin Yoon (Feb 2023)</div>
+              <div class="cv-entry-title" data-en="Play Therapy 101 — Dr. Anderson Sungmin Yoon (Feb 2023)" data-zh="遊戲治療入門 — Dr. Anderson Sungmin Yoon(2023年2月)">Play Therapy 101 — Dr. Anderson Sungmin Yoon (Feb 2023)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">IPT Level A Training — TTAC (Nov 2022)</div>
+              <div class="cv-entry-title" data-en="IPT Level A Training — TTAC (Nov 2022)" data-zh="人際心理治療(IPT)A 級訓練 — TTAC(2022年11月)">IPT Level A Training — TTAC (Nov 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Self-Care & Mindfulness-Based Stress Reduction (MBSR) — Dr. LaGrange (Mar 2022)</div>
+              <div class="cv-entry-title" data-en="Self-Care & Mindfulness-Based Stress Reduction (MBSR) — Dr. LaGrange (Mar 2022)" data-zh="自我照顧與正念減壓(MBSR) — Dr. LaGrange(2022年3月)">Self-Care &amp; Mindfulness-Based Stress Reduction (MBSR) — Dr. LaGrange (Mar 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Dual Diagnosis / Co-occurring Disorder — Dr. Carambot (Mar 2022)</div>
+              <div class="cv-entry-title" data-en="Dual Diagnosis / Co-occurring Disorder — Dr. Carambot (Mar 2022)" data-zh="雙重診斷/共病 — Dr. Carambot(2022年3月)">Dual Diagnosis / Co-occurring Disorder — Dr. Carambot (Mar 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">DBT, DBT in a Correctional Setting, and Treatment Plan of NSSI — Dr. Ho (Feb 2022)</div>
+              <div class="cv-entry-title" data-en="DBT, DBT in Correctional Settings, and Treatment Plan of NSSI — Dr. Ho (Feb 2022)" data-zh="DBT、矯正機構中的 DBT 與 NSSI 治療計畫 — Dr. Ho(2022年2月)">DBT, DBT in Correctional Settings, and Treatment Plan of NSSI — Dr. Ho (Feb 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Malingering — Dr. Poggioli (Feb 2022)</div>
+              <div class="cv-entry-title" data-en="Malingering — Dr. Poggioli (Feb 2022)" data-zh="詐病 — Dr. Poggioli(2022年2月)">Malingering — Dr. Poggioli (Feb 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Diagnosis — Dr. Otonichar (Feb 2022)</div>
+              <div class="cv-entry-title" data-en="Diagnosis — Dr. Otonichar (Feb 2022)" data-zh="診斷 — Dr. Otonichar(2022年2月)">Diagnosis — Dr. Otonichar (Feb 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Admission Criteria / Mental Hygiene Law Regarding Hospitalization, and Malingering — Dr. Jennifer Mathur (Jan 2022)</div>
+              <div class="cv-entry-title" data-en="Admission Criteria / Mental Hygiene Law and Hospitalization, Malingering — Dr. Mathur (Jan 2022)" data-zh="收治標準/精神衛生法住院與詐病 — Dr. Mathur(2022年1月)">Admission Criteria / Mental Hygiene Law and Hospitalization, Malingering — Dr. Mathur (Jan 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Trauma — Dr. Ho (Jan 2022)</div>
+              <div class="cv-entry-title" data-en="Trauma — Dr. Ho (Jan 2022)" data-zh="創傷 — Dr. Ho(2022年1月)">Trauma — Dr. Ho (Jan 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">ASPD — Dr. Subedi (Jan 2022)</div>
+              <div class="cv-entry-title" data-en="ASPD — Dr. Subedi (Jan 2022)" data-zh="反社會人格障礙(ASPD) — Dr. Subedi(2022年1月)">ASPD — Dr. Subedi (Jan 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">730 Mobile Team Services on Riker's Island — Dr. Chen (Jan 2022)</div>
+              <div class="cv-entry-title" data-en="730 Mobile Team Services on Riker's Island — Dr. Chen (Jan 2022)" data-zh="萊克斯島 730 機動團隊服務 — Dr. Chen(2022年1月)">730 Mobile Team Services on Riker's Island — Dr. Chen (Jan 2022)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Alternative to Incarceration (ATI) — Ms. Solimo (Dec 2021)</div>
+              <div class="cv-entry-title" data-en="Alternative to Incarceration (ATI) — Ms. Solimo (Dec 2021)" data-zh="監禁替代方案(ATI) — Ms. Solimo(2021年12月)">Alternative to Incarceration (ATI) — Ms. Solimo (Dec 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">730 Process — Dr. Fiona Radcliffe (Dec 2021)</div>
+              <div class="cv-entry-title" data-en="730 Process — Dr. Fiona Radcliffe (Dec 2021)" data-zh="730 流程 — Dr. Fiona Radcliffe(2021年12月)">730 Process — Dr. Fiona Radcliffe (Dec 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Working with Sexual Offenders — Dr. Gallagher (Dec 2021)</div>
+              <div class="cv-entry-title" data-en="Working with Sexual Offenders — Dr. Gallagher (Dec 2021)" data-zh="性犯罪者個案工作 — Dr. Gallagher(2021年12月)">Working with Sexual Offenders — Dr. Gallagher (Dec 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Working with Transgendered Populations on Riker Island — Dr. Harrison (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Working with Transgendered Populations on Riker Island — Dr. Harrison (Nov 2021)" data-zh="萊克斯島跨性別族群工作 — Dr. Harrison(2021年11月)">Working with Transgendered Populations on Riker Island — Dr. Harrison (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Violence Risk Assessment — Dr. Barber-Rioja (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Violence Risk Assessment — Dr. Barber-Rioja (Nov 2021)" data-zh="暴力風險評估 — Dr. Barber-Rioja(2021年11月)">Violence Risk Assessment — Dr. Barber-Rioja (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Hospitalization Assessment & BHPW — Dr. Chen (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Hospitalization Assessment & BHPW — Dr. Chen (Nov 2021)" data-zh="住院評估與 BHPW — Dr. Chen(2021年11月)">Hospitalization Assessment &amp; BHPW — Dr. Chen (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Suicidal Risk Assessment — Dr. Maslovskiy (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Suicidal Risk Assessment — Dr. Maslovskiy (Nov 2021)" data-zh="自殺風險評估 — Dr. Maslovskiy(2021年11月)">Suicidal Risk Assessment — Dr. Maslovskiy (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Forensic Psychiatric Evaluation Court Clinics (FPECC) — Dr. Weissman (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Forensic Psychiatric Evaluation Court Clinics (FPECC) — Dr. Weissman (Nov 2021)" data-zh="法庭精神科評估門診(FPECC) — Dr. Weissman(2021年11月)">Forensic Psychiatric Evaluation Court Clinics (FPECC) — Dr. Weissman (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Motivational Interviewing — Mr. Schwartz (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Motivational Interviewing — Mr. Schwartz (Nov 2021)" data-zh="動機式晤談 — Mr. Schwartz(2021年11月)">Motivational Interviewing — Mr. Schwartz (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">GCCS (Geriatrics & Complex Care Services) — Mr. Justine Butler & Ms. Kate Axelrod (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="GCCS (Geriatrics & Complex Care Services) — Justine Butler & Kate Axelrod (Nov 2021)" data-zh="GCCS(老年與複雜照護服務) — Justine Butler & Kate Axelrod(2021年11月)">GCCS (Geriatrics &amp; Complex Care Services) — Justine Butler &amp; Kate Axelrod (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Young Adult Services — Mr. Kemali Green (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Young Adult Services — Mr. Kemali Green (Nov 2021)" data-zh="青年成人服務 — Mr. Kemali Green(2021年11月)">Young Adult Services — Mr. Kemali Green (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Clinical Documentation — Dr. Garcia-Mansilla (Nov 2021)</div>
+              <div class="cv-entry-title" data-en="Clinical Documentation — Dr. Garcia-Mansilla (Nov 2021)" data-zh="臨床紀錄 — Dr. Garcia-Mansilla(2021年11月)">Clinical Documentation — Dr. Garcia-Mansilla (Nov 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">PACE Units at Riker's Island — Dr. Stancato (Oct 2021)</div>
+              <div class="cv-entry-title" data-en="PACE Units at Riker's Island — Dr. Stancato (Oct 2021)" data-zh="萊克斯島 PACE 單位 — Dr. Stancato(2021年10月)">PACE Units at Riker's Island — Dr. Stancato (Oct 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Core Services — Ms. Solimo (Oct 2021)</div>
+              <div class="cv-entry-title" data-en="Core Services — Ms. Solimo (Oct 2021)" data-zh="核心服務 — Ms. Solimo(2021年10月)">Core Services — Ms. Solimo (Oct 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Psychopharmacology — Dr. Kushner (Oct 2021)</div>
+              <div class="cv-entry-title" data-en="Psychopharmacology — Dr. Kushner (Oct 2021)" data-zh="精神藥理學 — Dr. Kushner(2021年10月)">Psychopharmacology — Dr. Kushner (Oct 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Clinical Interviewing — Dr. Rivera (Sep 2021)</div>
+              <div class="cv-entry-title" data-en="Clinical Interviewing — Dr. Rivera (Sep 2021)" data-zh="臨床會談 — Dr. Rivera(2021年9月)">Clinical Interviewing — Dr. Rivera (Sep 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Discharge Planning — Mr. Collins (Sep 2021)</div>
+              <div class="cv-entry-title" data-en="Discharge Planning — Mr. Collins (Sep 2021)" data-zh="出院規劃 — Mr. Collins(2021年9月)">Discharge Planning — Mr. Collins (Sep 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">DOC — Dr. Captain Gustave (Sep 2021)</div>
+              <div class="cv-entry-title" data-en="DOC — Dr. Captain Gustave (Sep 2021)" data-zh="懲教廳(DOC) — Dr. Captain Gustave(2021年9月)">DOC — Dr. Captain Gustave (Sep 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Overview of Criminal Justice System — Dr. Maslovskiy (Sep 2021)</div>
+              <div class="cv-entry-title" data-en="Overview of Criminal Justice System — Dr. Maslovskiy (Sep 2021)" data-zh="刑事司法系統概論 — Dr. Maslovskiy(2021年9月)">Overview of Criminal Justice System — Dr. Maslovskiy (Sep 2021)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Dual Loyalty, Confidentiality, Collateral Information & Communication in Correctional Setting — Dr. Ho (Sep 2021)</div>
+              <div class="cv-entry-title" data-en="Dual Loyalty, Confidentiality, Collateral Information in Correctional Settings — Dr. Ho (Sep 2021)" data-zh="矯正情境中的雙重忠誠、保密與旁證資訊 — Dr. Ho(2021年9月)">Dual Loyalty, Confidentiality, Collateral Information in Correctional Settings — Dr. Ho (Sep 2021)</div>
             </div>
           </div>
         </div>
 
         <div class="cv-block">
-          <h3 class="cv-block-title">Languages<em>spoken & written</em></h3>
+          <h3 class="cv-block-title" data-en-html="Languages<em>spoken & written</em>" data-zh-html="語言<em>口說與書寫</em>">Languages<em>spoken &amp; written</em></h3>
           <div class="cv-entries">
             <div class="cv-entry">
-              <div class="cv-entry-title">English — fluent (spoken and written)</div>
+              <div class="cv-entry-title" data-en="English — fluent (spoken and written)" data-zh="英文 — 流利(口說與書寫)">English — fluent (spoken and written)</div>
             </div>
             <div class="cv-entry">
-              <div class="cv-entry-title">Mandarin 國語 — fluent (spoken and written)</div>
+              <div class="cv-entry-title" data-en="Mandarin 國語 — fluent (spoken and written)" data-zh="中文 國語 — 流利(口說與書寫)">Mandarin 國語 — fluent (spoken and written)</div>
             </div>
           </div>
         </div>
@@ -777,11 +924,11 @@
   </section>
 
   <section class="cta-section">
-    <h2>Let's <em>create something</em><br>meaningful together</h2>
-    <p class="subtitle">Whether through therapy, workshops, art, or collaboration, I'd love to explore what we can create together.</p>
+    <h2 data-en-html="Let's <em>create something</em><br>meaningful together" data-zh-html="讓我們一起<br><em>創造有意義</em>的事物">Let's <em>create something</em><br>meaningful together</h2>
+    <p class="subtitle" data-en="Whether through therapy, workshops, art, or collaboration, I'd love to explore what we can create together." data-zh="無論是透過治療、工作坊、藝術或合作,我都期待與你一起探索能共同創造的可能。">Whether through therapy, workshops, art, or collaboration, I'd love to explore what we can create together.</p>
     <div class="actions">
-      <a href="contact.html" class="btn btn-primary btn-arrow">Get in touch</a>
-      <a href="artworks.html" class="btn btn-secondary">See artworks</a>
+      <a href="contact.html" class="btn btn-primary btn-arrow" data-en="Get in touch" data-zh="聯繫我">Get in touch</a>
+      <a href="artworks.html" class="btn btn-secondary" data-en="See artworks" data-zh="查看作品">See artworks</a>
     </div>
   </section>
 
@@ -792,9 +939,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
         <span>@stephy_art_therapy</span>
       </a>
-      <div class="footer-meta">© 2026 · made with care</div>
+      <div class="footer-meta" data-en="© 2026 · made with care" data-zh="© 2026 · 以心意製作">© 2026 · made with care</div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>
