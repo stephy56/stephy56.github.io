@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Stephy Hsu</title>
+  <meta name="description" content="Get in touch with Stephy Hsu — for sessions, workshops, lectures, or collaboration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30;0,9..144,300..700,80;1,9..144,300..600,30&family=Manrope:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-mark">Stephy <em>Hsu</em></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="artworks.html">Artworks</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="psychology.html">Psychology</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="artworks.html">Artworks</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="psychology.html">Psychology</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <header class="page-hero">
+    <div class="hero-blob"></div>
+    <div class="container">
+      <div class="page-hero-eyebrow">Contact · 聯繫</div>
+      <h1>Let's <em>connect</em></h1>
+      <p class="page-hero-tagline">
+        For therapy inquiries, workshop bookings, lectures, commissions, or collaboration — I'd love to hear from you.
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="booking-content" style="grid-template-columns: 1fr 1fr; gap: 5rem;">
+
+        <div>
+          <div class="section-header" style="grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 2.5rem;">
+            <div class="section-number">— I.</div>
+            <h2 class="section-title" style="font-size: 2.2rem;">Direct <em>contact</em></h2>
+          </div>
+
+          <div class="booking-actions">
+            <div class="booking-row" style="border-color: var(--rule-soft);">
+              <div class="booking-label" style="color: var(--lavender-deep);">Email</div>
+              <div class="booking-value" style="color: var(--space-cadet);"><a href="mailto:starstephy56@gmail.com" style="color: var(--space-cadet);">starstephy56@gmail.com</a></div>
+            </div>
+            <div class="booking-row" style="border-color: var(--rule-soft);">
+              <div class="booking-label" style="color: var(--lavender-deep);">Academic</div>
+              <div class="booking-value" style="color: var(--space-cadet);"><a href="mailto:shsu@adler.edu" style="color: var(--space-cadet);">shsu@adler.edu</a></div>
+            </div>
+            <div class="booking-row" style="border-color: var(--rule-soft);">
+              <div class="booking-label" style="color: var(--lavender-deep);">Languages</div>
+              <div class="booking-value" style="color: var(--space-cadet);">English · 國語</div>
+            </div>
+            <div class="booking-row" style="border-color: var(--rule-soft);">
+              <div class="booking-label" style="color: var(--lavender-deep);">Based in</div>
+              <div class="booking-value" style="color: var(--space-cadet);">Vancouver, BC</div>
+            </div>
+            <div class="booking-row" style="border-color: var(--rule-soft);">
+              <div class="booking-label" style="color: var(--lavender-deep);">Also serving</div>
+              <div class="booking-value" style="color: var(--space-cadet);">New York · Taipei (remote)</div>
+            </div>
+            <div class="booking-row" style="border-color: var(--rule-soft);">
+              <div class="booking-label" style="color: var(--lavender-deep);">Founder of</div>
+              <div class="booking-value" style="color: var(--space-cadet);">Soulverse 心球</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-header" style="grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 2.5rem;">
+            <div class="section-number">— II.</div>
+            <h2 class="section-title" style="font-size: 2.2rem;">Send a <em>message</em></h2>
+          </div>
+
+          <form class="contact-form" action="mailto:starstephy56@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Therapy inquiry · Workshop · Commission · Other">
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary btn-arrow">Send message</button>
+            </div>
+          </form>
+          <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--ink-muted); font-style: italic; line-height: 1.6;">
+            This form opens your email app with the message pre-filled. If it doesn't work, please email <a href="mailto:starstephy56@gmail.com" style="color: var(--lavender-deep);">starstephy56@gmail.com</a> directly.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lavender">
+    <div class="container">
+      <div class="section-header">
+        <div><div class="section-number">— III.</div></div>
+        <div>
+          <h2 class="section-title">How can I <em>help?</em></h2>
+          <p class="section-intro">Choose what fits — each link below opens a new email with the right subject line, so I can respond quickly.</p>
+        </div>
+      </div>
+
+      <div class="featured-grid">
+        <a href="mailto:starstephy56@gmail.com?subject=Therapy%20Consultation" class="feature-card">
+          <div class="feature-card-eyebrow">Therapy</div>
+          <h3 class="feature-card-title">Book a therapy<br>consultation</h3>
+          <p class="feature-card-desc">Free 15-minute introductory call to discuss whether we'd be a good fit. Bilingual sessions available.</p>
+          <div class="feature-card-arrow">Email me →</div>
+        </a>
+        <a href="mailto:starstephy56@gmail.com?subject=Workshop%20Inquiry" class="feature-card">
+          <div class="feature-card-eyebrow">Workshops</div>
+          <h3 class="feature-card-title">Book a workshop<br>or lecture</h3>
+          <p class="feature-card-desc">Group workshops, guest lectures, and corporate wellness — in person or online, English or Mandarin.</p>
+          <div class="feature-card-arrow">Email me →</div>
+        </a>
+        <a href="mailto:starstephy56@gmail.com?subject=Art%20Commission" class="feature-card">
+          <div class="feature-card-eyebrow">Artwork</div>
+          <h3 class="feature-card-title">Commission<br>artwork</h3>
+          <p class="feature-card-desc">I take select commissions for portraits, ink works, and collaborative artistic projects.</p>
+          <div class="feature-card-arrow">Email me →</div>
+        </a>
+        <a href="mailto:starstephy56@gmail.com?subject=Collaboration" class="feature-card">
+          <div class="feature-card-eyebrow">Collaboration</div>
+          <h3 class="feature-card-title">Press, research,<br>or partnership</h3>
+          <p class="feature-card-desc">Open to interviews, research collaborations, and partnerships in mental health, art therapy, or community wellness.</p>
+          <div class="feature-card-arrow">Email me →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-mark">Stephy <em>Hsu</em> · 徐一瑄</div>
+      <div class="footer-meta">© 2026 · made with care</div>
+    </div>
+  </footer>
+
+</body>
+</html>
