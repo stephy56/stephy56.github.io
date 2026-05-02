@@ -25,7 +25,7 @@
         <li><a href="psychology.html" class="active">Psychology</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
         <span></span><span></span><span></span>
       </button>
     </div>
