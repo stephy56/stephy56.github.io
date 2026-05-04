@@ -12,16 +12,22 @@
     if (SUPPORTED.indexOf(lang) === -1) lang = 'en';
 
     document.querySelectorAll('[data-en], [data-zh], [data-en-html], [data-zh-html]').forEach(function (el) {
-      var htmlVal = pick(el, lang, 'Html');
       var enHtml = el.dataset.enHtml;
       var zhHtml = el.dataset.zhHtml;
+      var enText = el.dataset.en;
+      var zhText = el.dataset.zh;
 
-      if (enHtml !== undefined || zhHtml !== undefined) {
-        var fallback = lang === 'zh' ? (zhHtml || enHtml) : (enHtml || zhHtml);
-        if (fallback !== undefined) el.innerHTML = fallback;
-      } else {
-        var txt = lang === 'zh' ? (el.dataset.zh || el.dataset.en) : (el.dataset.en || el.dataset.zh);
-        if (txt !== undefined) el.textContent = txt;
+      var preferred = lang === 'zh'
+        ? [['html', zhHtml], ['text', zhText], ['html', enHtml], ['text', enText]]
+        : [['html', enHtml], ['text', enText], ['html', zhHtml], ['text', zhText]];
+
+      for (var i = 0; i < preferred.length; i++) {
+        var kind = preferred[i][0];
+        var val = preferred[i][1];
+        if (val !== undefined) {
+          if (kind === 'html') el.innerHTML = val; else el.textContent = val;
+          break;
+        }
       }
     });
 
