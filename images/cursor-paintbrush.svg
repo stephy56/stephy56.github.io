@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="wood" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#e0c08a"/>
+      <stop offset="35%" stop-color="#b88a4e"/>
+      <stop offset="70%" stop-color="#9c6e34"/>
+      <stop offset="100%" stop-color="#6e4a1f"/>
+    </linearGradient>
+    <linearGradient id="ferrule" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a5a5a"/>
+      <stop offset="20%" stop-color="#c8c8c8"/>
+      <stop offset="50%" stop-color="#f0f0f0"/>
+      <stop offset="80%" stop-color="#a8a8a8"/>
+      <stop offset="100%" stop-color="#5a5a5a"/>
+    </linearGradient>
+    <radialGradient id="brushTip" cx="38%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#e6cdec"/>
+      <stop offset="35%" stop-color="#b896c0"/>
+      <stop offset="75%" stop-color="#6f4e80"/>
+      <stop offset="100%" stop-color="#3a2548"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0.8" dy="1.2" stdDeviation="0.9" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g transform="rotate(135 40 40)" filter="url(#shadow)">
+    <!-- Tapered wooden handle (wider at ferrule, tapers to fine point at top) -->
+    <path d="M 39.4,4 Q 40,4 40.6,4 L 44.5,40 Q 40,41.5 35.5,40 Z" fill="url(#wood)"/>
+    <!-- Wood grain stripes -->
+    <path d="M 38.5,8 Q 38,24 37.6,40" stroke="#5a3d18" stroke-width="0.35" fill="none" opacity="0.5"/>
+    <path d="M 41.2,8 Q 41.5,24 42.1,40" stroke="#5a3d18" stroke-width="0.3" fill="none" opacity="0.45"/>
+    <path d="M 39.8,6 Q 39.8,24 39.8,40" stroke="#3a2810" stroke-width="0.25" fill="none" opacity="0.4"/>
+    <!-- Top edge highlight on wood -->
+    <path d="M 39.4,4 Q 40,4 40.6,4 L 40.4,12 L 39.6,12 Z" fill="#f0d5a0" opacity="0.6"/>
+
+    <!-- Silver ferrule -->
+    <path d="M 35,40 L 45,40 L 46.5,52 L 33.5,52 Z" fill="url(#ferrule)"/>
+    <!-- Ferrule rivet/seam lines -->
+    <line x1="34.2" y1="44" x2="45.8" y2="44" stroke="#3a3a3a" stroke-width="0.5" opacity="0.7"/>
+    <line x1="33.8" y1="48.5" x2="46.2" y2="48.5" stroke="#3a3a3a" stroke-width="0.5" opacity="0.6"/>
+    <!-- Ferrule top highlight -->
+    <line x1="35.5" y1="41" x2="44.5" y2="41" stroke="#ffffff" stroke-width="0.6" opacity="0.7"/>
+
+    <!-- Sculpted lavender bristle tip (teardrop) -->
+    <path d="M 33.5,52 Q 40,51.5 46.5,52 Q 47,57 45,63 Q 42.5,69 40,71.5 Q 37.5,69 35,63 Q 33,57 33.5,52 Z" fill="url(#brushTip)"/>
+    <!-- Sculpted bristle facet lines -->
+    <path d="M 36.5,53 Q 37.5,60 38,68" stroke="#2a1635" stroke-width="0.4" fill="none" opacity="0.55"/>
+    <path d="M 40,52 Q 40,61 40,70" stroke="#2a1635" stroke-width="0.4" fill="none" opacity="0.5"/>
+    <path d="M 43.5,53 Q 42.5,60 42,68" stroke="#2a1635" stroke-width="0.4" fill="none" opacity="0.55"/>
+    <!-- Glossy highlight -->
+    <path d="M 37.5,54 Q 37,58 37.2,63" stroke="#f5e8f8" stroke-width="0.7" fill="none" opacity="0.75"/>
+    <path d="M 38.5,54 Q 38,58 38.5,62" stroke="#f5e8f8" stroke-width="0.4" fill="none" opacity="0.5"/>
+    <!-- Dark hair point at very tip -->
+    <path d="M 39.4,71 Q 40,72.5 40.6,71 L 40.1,75 Q 40,75.4 39.9,75 Z" fill="#1a0e25"/>
+  </g>
+</svg>
