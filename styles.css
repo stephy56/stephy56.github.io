@@ -743,6 +743,37 @@ section.tight { padding: 4rem 0; }
   max-width: 600px;
 }
 
+.workshop-note {
+  margin: 2.4rem 0 2.5rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--lavender-soft);
+  border-left: 3px solid var(--lavender-deep);
+  border-radius: 3px;
+  max-width: 760px;
+  color: var(--ink);
+}
+.workshop-note-title {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.01em;
+}
+.workshop-note p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0.4rem 0 0;
+}
+.workshop-note strong {
+  color: var(--lavender-deep);
+  font-weight: 600;
+}
+
 @media (max-width: 720px) {
   .section-header { grid-template-columns: 1fr; gap: 0.8rem; }
 }
