@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-en-title="Page Not Found — Stephy Hsu, Art Therapist in New York | 頁面走失 徐一瑄" data-zh-title="頁面走失了 — 徐一瑄 紐約藝術治療師 | Page Not Found, Stephy Hsu NYC">Page Not Found — Stephy Hsu, Art Therapist in New York | 頁面走失 徐一瑄</title>
+  <meta name="description" data-en-desc="This page wandered off the canvas. Find your way back to the studio of Stephy Hsu (徐一瑄), art therapist and artist in New York." data-zh-desc="這個頁面走失於畫布之外。回到紐約藝術治療師徐一瑄(Stephy Hsu)的工作室。" content="This page wandered off the canvas. Find your way back to the studio of Stephy Hsu (徐一瑄), art therapist and artist in New York.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Stephy Hsu — Art Therapist in New York">
+  <meta property="og:title" content="Page Not Found — Stephy Hsu, Art Therapist in New York">
+  <meta property="og:description" content="This page wandered off the canvas. Find your way back to the studio of Stephy Hsu, art therapist in New York.">
+  <meta property="og:url" content="https://stephyhsu.space/404.html">
+  <meta property="og:image" content="https://stephyhsu.space/images/attachment.jpg">
+  <meta property="og:image:alt" content="Attachment — oil painting by Stephy Hsu">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Page Not Found — Stephy Hsu, Art Therapist in New York">
+  <meta name="twitter:description" content="This page wandered off the canvas.">
+  <meta name="twitter:image" content="https://stephyhsu.space/images/attachment.jpg">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30;0,9..144,300..700,80;1,9..144,300..600,30&family=Manrope:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* ---- 404 page-specific styles ---- */
+    .error-hero {
+      padding: 9rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+    }
+    .error-hero .container { position: relative; z-index: 2; }
+
+    .error-content {
+      max-width: 760px;
+      text-align: left;
+    }
+
+    .error-number {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-variation-settings: 'SOFT' 80, 'opsz' 144;
+      font-size: clamp(8rem, 22vw, 18rem);
+      line-height: 0.85;
+      color: var(--space-cadet);
+      letter-spacing: -0.06em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.02em;
+      margin: 0.5rem 0 1.5rem;
+      animation: fadeIn 1.2s ease 0.15s both;
+      position: relative;
+    }
+    .error-number .digit {
+      display: inline-block;
+      animation: digitDrift 8s ease-in-out infinite;
+    }
+    .error-number .digit:nth-child(3) { animation-delay: -4s; }
+
+    /* The "0" is a soft watercolor blob, not a glyph */
+    .error-zero {
+      display: inline-block;
+      width: 0.78em;
+      height: 0.78em;
+      margin: 0 0.04em;
+      border-radius: 58% 42% 65% 35% / 50% 60% 40% 50%;
+      background: radial-gradient(circle at 35% 35%,
+                  var(--lavender-soft) 0%,
+                  var(--lavender) 45%,
+                  var(--lavender-deep) 80%,
+                  rgba(184, 150, 192, 0.5) 100%);
+      box-shadow:
+        inset -8px -10px 24px rgba(80, 105, 141, 0.15),
+        inset 6px 8px 18px rgba(255, 255, 255, 0.5),
+        0 12px 40px rgba(184, 150, 192, 0.35);
+      position: relative;
+      animation: blobBreathe 6s ease-in-out infinite, fadeIn 1.2s ease 0.3s both;
+      transition: transform 0.4s ease;
+    }
+    .error-zero:hover { transform: scale(1.08) rotate(8deg); }
+    .error-zero::after {
+      /* tiny highlight to make it look wet */
+      content: '';
+      position: absolute;
+      top: 18%;
+      left: 22%;
+      width: 22%;
+      height: 18%;
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 50%;
+      filter: blur(3px);
+    }
+
+    @keyframes blobBreathe {
+      0%, 100% {
+        border-radius: 58% 42% 65% 35% / 50% 60% 40% 50%;
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        border-radius: 42% 58% 35% 65% / 60% 50% 60% 40%;
+        transform: rotate(-6deg) scale(1.04);
+      }
+    }
+    @keyframes digitDrift {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-8px) rotate(-1.5deg); }
+    }
+
+    .error-zh {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.45em;
+      color: var(--ucla);
+      font-weight: 300;
+      margin-top: 0.6rem;
+      animation: fadeIn 1.2s ease 0.55s both;
+    }
+
+    .error-tagline {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+      line-height: 1.65;
+      max-width: 580px;
+      color: var(--ink-soft);
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 1.4rem;
+      animation: fadeIn 1.2s ease 0.65s both;
+    }
+
+    .error-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.4rem;
+      animation: fadeIn 1.2s ease 0.85s both;
+    }
+
+    /* "Wander instead" quick links */
+    .error-wander {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule-soft);
+      max-width: 620px;
+      animation: fadeIn 1.2s ease 1.05s both;
+    }
+    .error-wander-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--lavender-deep);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .error-wander-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.6rem;
+      list-style: none;
+      padding: 0;
+    }
+    .error-wander-links a {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: var(--ucla);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.25s ease;
+    }
+    .error-wander-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: -2px;
+      height: 1px;
+      background: var(--lavender-deep);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .error-wander-links a:hover { color: var(--space-cadet); }
+    .error-wander-links a:hover::after { transform: scaleX(1); }
+
+    /* Floating watercolor blobs in the background */
+    .floating-blob {
+      position: absolute;
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.45;
+      filter: blur(30px);
+      animation: floatBlob 22s ease-in-out infinite;
+    }
+    .floating-blob.b1 {
+      width: 380px; height: 380px;
+      top: 8%; right: -100px;
+      background: radial-gradient(circle, var(--lavender) 0%, transparent 65%);
+    }
+    .floating-blob.b2 {
+      width: 260px; height: 260px;
+      bottom: 5%; left: -80px;
+      background: radial-gradient(circle, var(--air-blue) 0%, transparent 65%);
+      opacity: 0.32;
+      animation-delay: -7s;
+      animation-duration: 26s;
+    }
+    .floating-blob.b3 {
+      width: 200px; height: 200px;
+      top: 55%; right: 15%;
+      background: radial-gradient(circle, var(--lavender-soft) 0%, transparent 65%);
+      opacity: 0.38;
+      animation-delay: -14s;
+      animation-duration: 30s;
+    }
+    @keyframes floatBlob {
+      0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      33%      { transform: translate(40px, -30px) scale(1.08) rotate(8deg); }
+      66%      { transform: translate(-30px, 25px) scale(0.95) rotate(-6deg); }
+    }
+
+    @media (max-width: 768px) {
+      .error-hero { padding: 7rem 0 3rem; min-height: auto; }
+      .error-number { font-size: clamp(6rem, 32vw, 10rem); }
+      .error-zh { letter-spacing: 0.3em; font-size: 1rem; }
+      .floating-blob.b1 { width: 280px; height: 280px; }
+      .floating-blob.b2 { width: 200px; height: 200px; }
+      .floating-blob.b3 { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .error-number .digit,
+      .error-zero,
+      .floating-blob { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/index.html" class="nav-mark"><img src="/images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
+      <ul class="nav-links">
+        <li><a href="/index.html" data-en="Home" data-zh="首頁">Home</a></li>
+        <li><a href="/about.html" data-en="About" data-zh="關於">About</a></li>
+        <li><a href="/artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+        <li><a href="/workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+        <li><a href="/psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+        <li><a href="/contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="/index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="/about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="/artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="/workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li><a href="/psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+      <li><a href="/contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
+    </ul>
+  </div>
+
+  <header class="error-hero">
+    <div class="floating-blob b1"></div>
+    <div class="floating-blob b2"></div>
+    <div class="floating-blob b3"></div>
+
+    <div class="container">
+      <div class="error-content">
+        <div class="page-hero-eyebrow" data-en="Page not found · 頁面走失" data-zh="頁面走失 · Page not found">Page not found · 頁面走失</div>
+
+        <div class="error-number" aria-label="404">
+          <span class="digit" aria-hidden="true">4</span>
+          <span class="error-zero" aria-hidden="true" title="a stray brushstroke"></span>
+          <span class="digit" aria-hidden="true">4</span>
+        </div>
+
+        <div class="error-zh">走失於畫布之外</div>
+
+        <h1 data-en-html="A brushstroke <em>wandered off</em> the canvas" data-zh-html="一筆色彩,<em>流到了畫布之外</em>">A brushstroke <em>wandered off</em> the canvas</h1>
+
+        <p class="error-tagline" data-en="The page you're looking for isn't here — perhaps it slipped away with the paint water, or was never quite finished. Even so, you're welcome to wander a while, or follow the path back home." data-zh="你尋找的頁面不在這裡——也許它隨著洗筆的水悄悄溜走了,也或許從未真正完成。即便如此,你仍可以在這裡漫步片刻,或循著小徑回到起點。">
+          The page you're looking for isn't here — perhaps it slipped away with the paint water, or was never quite finished. Even so, you're welcome to wander a while, or follow the path back home.
+        </p>
+
+        <div class="error-cta">
+          <a href="/index.html" class="btn btn-primary btn-arrow" data-en="Return home" data-zh="回到首頁">Return home</a>
+          <a href="/contact.html" class="btn btn-secondary" data-en="Send a message" data-zh="傳送訊息">Send a message</a>
+        </div>
+
+        <div class="error-wander">
+          <div class="error-wander-label" data-en="Or wander instead" data-zh="或繼續漫步">Or wander instead</div>
+          <ul class="error-wander-links">
+            <li><a href="/about.html" data-en="About Stephy" data-zh="關於 Stephy">About Stephy</a></li>
+            <li><a href="/artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+            <li><a href="/workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+            <li><a href="/psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <footer>
+    <div class="container">
+      <div class="footer-mark"><img src="/images/logo.png" alt="" class="footer-mark-logo"><span>Stephy <em>Hsu</em> · 徐一瑄</span></div>
+      <a href="https://instagram.com/stephy_art_therapy" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+        <span>@stephy_art_therapy</span>
+      </a>
+      <div class="footer-meta">
+        <span data-en="© 2026 · made with care" data-zh="© 2026 · 以心意製作">© 2026 · made with care</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/i18n.js"></script>
+  <script src="/cursor.js" defer></script>
+</body>
+</html>

@@ -46,6 +46,11 @@
       if (v !== undefined) document.title = v;
     });
 
+    document.querySelectorAll('meta[data-en-desc], meta[data-zh-desc]').forEach(function (el) {
+      var v = lang === 'zh' ? (el.dataset.zhDesc || el.dataset.enDesc) : (el.dataset.enDesc || el.dataset.zhDesc);
+      if (v !== undefined) el.setAttribute('content', v);
+    });
+
     document.querySelectorAll('.lang-toggle [data-lang]').forEach(function (b) {
       b.classList.toggle('active', b.dataset.lang === lang);
       b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
