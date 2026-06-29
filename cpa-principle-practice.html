@@ -29,8 +29,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1
 @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 #confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
 #toast{position:fixed;left:50%;top:28%;z-index:70;pointer-events:none;opacity:0;
-  font-family:var(--sans);font-weight:700;font-size:23px;letter-spacing:-.01em;color:#fff;
-  padding:13px 28px;border-radius:14px;box-shadow:0 12px 34px rgba(20,24,40,.22);white-space:nowrap}
+  font-family:var(--sans);font-weight:700;font-size:23px;letter-spacing:-.01em;color:#fff;text-align:center;
+  max-width:min(90vw,440px);padding:13px 26px;border-radius:14px;box-shadow:0 12px 34px rgba(20,24,40,.22)}
 #toast.good{background:var(--good);animation:pop 1.2s ease both}
 #toast.bad{background:var(--bad);animation:nope 1.05s ease both}
 @keyframes pop{
@@ -186,7 +186,23 @@ kbd{font-family:var(--sans);font-size:10.5px;background:var(--soft);border:1px s
 .std .c{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--muted);min-width:42px;flex:none;padding-top:1px}
 .std .t{font-family:var(--serif);font-size:15px}
 .note{font-size:12px;color:var(--muted);margin:16px 2px 0;line-height:1.5}
-@media(max-width:560px){.tiles{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){
+  body{padding:16px 12px 56px}
+  h1{font-size:18px}
+  .card{padding:20px 17px 18px}
+  .kicker{margin-bottom:11px;padding-right:38px}
+  .prompt{font-size:16.5px;line-height:1.42}
+  .prompt::before{font-size:24px;vertical-align:-4px}
+  .ctx{margin:13px 0 11px}
+  .opts{gap:8px}
+  .opt{padding:10px 12px;gap:9px}
+  .opt .k{width:26px;height:22px;font-size:12px}
+  .opt .lab{font-size:12.5px}
+  .opt.sc .lab{font-size:12.5px}
+  .star{top:14px;right:14px;width:32px;height:32px;font-size:16px}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  #toast{font-size:18px;padding:11px 20px}
+}
 </style>
 </head>
 <body>
@@ -357,7 +373,8 @@ function toast(ok){
 }
 function confetti(){
   if(REDUCE) return;
-  const cv=$("confetti"), ctx=cv.getContext("2d");
+  const cv=$("confetti"), ctx=cv&&cv.getContext&&cv.getContext("2d");
+  if(!ctx) return;
   const W=cv.width=innerWidth, H=cv.height=innerHeight;
   const cols=[css("--p1"),css("--p2"),css("--p3"),css("--p4"),"#f5c542","#ffffff"];
   const parts=[];
