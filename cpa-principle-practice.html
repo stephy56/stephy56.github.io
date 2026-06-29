@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPA Code of Ethics — Principle & Cluster Practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f4f6; --surface:#ffffff; --ink:#1b1e25; --muted:#6b7280; --line:#e4e6ea;
+  --soft:#f7f8fa;
+  --p1:#4f54c4; --p1bg:#edeefb;
+  --p2:#1f8a70; --p2bg:#e6f4ef;
+  --p3:#bd862a; --p3bg:#f8efdd;
+  --p4:#c05a78; --p4bg:#f9e9ee;
+  --good:#1f8a70; --goodbg:#e6f4ef;
+  --bad:#cc4646;  --badbg:#fbe9e9;
+  --mark:#fff2b8; --markline:#e8c948;
+  --r:14px; --sans:'Space Grotesk',system-ui,sans-serif; --serif:'Newsreader',Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;
+  -webkit-font-smoothing:antialiased;padding:22px 16px 64px}
+.wrap{max-width:760px;margin:0 auto}
+@media(prefers-reduced-motion:no-preference){.fade{animation:fade .28s ease}}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
+#toast{position:fixed;left:50%;top:28%;z-index:70;pointer-events:none;opacity:0;
+  font-family:var(--sans);font-weight:700;font-size:23px;letter-spacing:-.01em;color:#fff;
+  padding:13px 28px;border-radius:14px;box-shadow:0 12px 34px rgba(20,24,40,.22);white-space:nowrap}
+#toast.good{background:var(--good);animation:pop 1.2s ease both}
+#toast.bad{background:var(--bad);animation:nope 1.05s ease both}
+@keyframes pop{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.7) rotate(-3deg)}
+  14%{opacity:1;transform:translate(-50%,-50%) scale(1.1) rotate(2deg)}
+  28%{transform:translate(-50%,-50%) scale(1) rotate(0)}
+  78%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+@keyframes nope{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.82)}
+  12%{opacity:1;transform:translate(calc(-50% - 7px),-50%) scale(1)}
+  26%{transform:translate(calc(-50% + 7px),-50%)}
+  40%{transform:translate(calc(-50% - 5px),-50%)}
+  54%{transform:translate(calc(-50% + 4px),-50%)}
+  68%{transform:translate(-50%,-50%)}
+  82%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-50%)}}
+@media(prefers-reduced-motion:reduce){
+  #toast.good,#toast.bad{animation:fadeToast 1.2s ease both}
+  @keyframes fadeToast{0%{opacity:0}15%{opacity:1}80%{opacity:1}100%{opacity:0}}
+}
+
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+h1{font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0}
+.sub{color:var(--muted);font-size:12.5px;margin-top:3px;letter-spacing:.01em}
+.score{display:flex;gap:14px;align-items:baseline}
+.stat{text-align:right}
+.stat b{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px}
+.seg button{font-family:var(--sans);font-size:12.5px;font-weight:500;color:var(--muted);background:none;
+  border:none;border-radius:7px;padding:6px 11px;cursor:pointer;white-space:nowrap}
+.seg button.on{background:var(--ink);color:#fff}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-family:var(--sans);font-weight:600;font-size:12px;border:1.5px solid var(--line);background:var(--surface);
+  color:var(--muted);border-radius:999px;padding:5px 11px;cursor:pointer;letter-spacing:.02em;transition:.12s}
+.chip[data-p="I"].on{border-color:var(--p1);color:#fff;background:var(--p1)}
+.chip[data-p="II"].on{border-color:var(--p2);color:#fff;background:var(--p2)}
+.chip[data-p="III"].on{border-color:var(--p3);color:#fff;background:var(--p3)}
+.chip[data-p="IV"].on{border-color:var(--p4);color:#fff;background:var(--p4)}
+.spacer{flex:1}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);position:relative;
+  padding:26px 26px 22px;box-shadow:0 1px 2px rgba(20,24,40,.04)}
+.kicker{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-weight:600;padding-right:42px}
+.star{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;display:grid;place-items:center;font-size:18px;line-height:1;color:#c4c8d0;transition:.12s}
+.star:hover{border-color:var(--p3);color:var(--p3)}
+.star.on{color:var(--p3);border-color:var(--p3);background:var(--p3bg)}
+.mh .savestar{margin-left:auto;border:none;background:none;cursor:pointer;font-size:17px;color:var(--p3);line-height:1;padding:0 2px}
+.mh .savestar:hover{opacity:.6}
+.prompt{font-family:var(--serif);font-size:21px;line-height:1.45;letter-spacing:.005em}
+.prompt::before{content:"\201C";color:var(--line);font-size:30px;line-height:0;vertical-align:-6px;margin-right:2px}
+.ctx{font-size:12.5px;color:var(--muted);margin:16px 0 12px}
+.ctx b{font-weight:600}
+
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.opts.col{grid-template-columns:1fr}
+.opt{font-family:var(--sans);text-align:left;background:var(--soft);border:1.5px solid var(--line);
+  border-radius:11px;padding:12px 14px;cursor:pointer;transition:.12s;display:flex;gap:11px;align-items:center;color:var(--ink)}
+.opt:hover:not(:disabled){border-color:#c8ccd4;background:#fff}
+.opt:disabled{cursor:default}
+.opt .k{font-weight:700;font-size:13px;width:30px;height:24px;display:grid;place-items:center;border-radius:6px;
+  background:#fff;border:1px solid var(--line);color:var(--muted);flex:none}
+.opt .lab{font-size:13.5px;font-weight:500;line-height:1.3}
+.opt.sc .lab{font-size:13px}
+.opt.correct{border-color:var(--good);background:var(--goodbg)}
+.opt.correct .k{background:var(--good);color:#fff;border-color:var(--good)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.opt.wrong .k{background:var(--bad);color:#fff;border-color:var(--bad)}
+.opt.dim{opacity:.45}
+
+.reveal{margin-top:18px;border-top:1px dashed var(--line);padding-top:16px}
+.tag{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:12px;border-radius:999px;padding:5px 12px;letter-spacing:.02em}
+.code{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.02em}
+.rgrid{margin-top:11px;display:grid;grid-template-columns:auto 1fr;gap:5px 14px;align-items:baseline}
+.rk{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.rv{font-size:13.5px}
+.rv b{font-weight:600}
+.rtext{font-size:13px;color:var(--muted);margin-top:13px;line-height:1.6}
+.rtext .ft{font-family:var(--serif);font-size:15px;color:var(--ink)}
+.rtext mark{background:var(--mark);box-shadow:inset 0 -1px 0 var(--markline);color:inherit;border-radius:3px;padding:0 2px}
+.rcap{font-size:11px;color:var(--muted);margin-top:8px;display:flex;align-items:center;gap:6px}
+.swatch{width:11px;height:11px;border-radius:3px;background:var(--mark);box-shadow:inset 0 -1px 0 var(--markline);flex:none}
+.verdict{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+.verdict.y{color:var(--good)} .verdict.n{color:var(--bad)}
+
+.foot{display:flex;gap:10px;margin-top:18px;align-items:center}
+.btn{font-family:var(--sans);font-weight:600;font-size:13.5px;border:none;border-radius:10px;padding:11px 20px;cursor:pointer;letter-spacing:.01em}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.ghost{background:none;color:var(--muted);border:1px solid var(--line)}
+.hint{font-size:11.5px;color:var(--muted);margin-left:auto}
+kbd{font-family:var(--sans);font-size:10.5px;background:var(--soft);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 5px;color:var(--muted)}
+
+/* stats */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:15px 16px}
+.tile b{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.tile span{display:block;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin-bottom:12px}
+.panel h2{font-size:13px;font-weight:600;margin:0 0 3px}
+.panel .psub{font-size:11.5px;color:var(--muted);margin-bottom:14px}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;margin:11px 0}
+.rname{font-size:13px;font-weight:500}
+.rname small{color:var(--muted);font-weight:600;font-size:11px;margin-right:6px}
+.rfrac{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.track{grid-column:1 / -1;height:7px;background:var(--soft);border-radius:99px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.empty{font-size:12.5px;color:var(--muted);line-height:1.5}
+.reset{margin-top:4px}
+.miss{border:1px solid var(--line);border-left:3px solid var(--line);border-radius:11px;padding:14px 16px;margin:11px 0;background:var(--soft)}
+.miss .mh{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:9px}
+.miss .mcode{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.02em}
+.dimtag{font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 6px}
+.miss .ntag{font-size:10px;color:var(--muted);font-weight:600}
+.pill{font-size:11px;font-weight:600;border-radius:999px;padding:3px 9px;white-space:nowrap}
+.pill.you{background:var(--badbg);color:var(--bad)}
+.pill.ans{background:var(--goodbg);color:var(--good)}
+.pill.skip{background:#eef0f3;color:var(--muted)}
+.pillrow{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px;font-size:11px;align-items:center}
+.arrow{color:var(--muted);font-size:11px}
+.miss .mtext{font-family:var(--serif);font-size:14.5px;line-height:1.6;margin:4px 0 11px}
+.miss .mtext mark{background:var(--mark);box-shadow:inset 0 -1px 0 var(--markline);color:inherit;border-radius:3px;padding:0 2px}
+.clar{font-size:12.5px;line-height:1.6;color:var(--ink);border-top:1px solid var(--line);padding-top:10px}
+.clar .lbl{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin:9px 0 3px}
+.clar .lbl:first-child{margin-top:0}
+.cues{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.cue{font-size:11px;background:var(--mark);box-shadow:inset 0 -1px 0 var(--markline);border-radius:5px;padding:2px 8px}
+
+/* cluster map + browse */
+.map{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin-bottom:14px}
+.map h2{font-size:13px;font-weight:600;margin:0 0 4px}
+.map .msub{font-size:11.5px;color:var(--muted);margin-bottom:14px}
+.mrow{display:flex;gap:13px;padding:11px 0;border-top:1px solid var(--line)}
+.mrow:first-of-type{border-top:none}
+.mp{font-family:var(--sans);font-weight:700;font-size:13px;min-width:108px;flex:none}
+.mclusters{display:flex;gap:6px;flex-wrap:wrap}
+.mc{font-size:11.5px;border-radius:999px;padding:3px 10px;font-weight:500;background:var(--soft);border:1px solid var(--line);color:var(--ink)}
+.weight{font-size:11.5px;color:var(--muted);margin:2px 2px 14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.wb{font-weight:600;color:var(--ink)}
+.browse{margin-top:4px}
+.pgroup{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
+.phead{display:flex;align-items:center;gap:10px;padding:14px 18px;cursor:pointer;user-select:none}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.phead .nm{font-weight:600;font-size:14px}
+.phead .ct{margin-left:auto;font-size:12px;color:var(--muted)}
+.pbody{display:none;padding:0 18px 8px}
+.pgroup.open .pbody{display:block}
+.scat{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:14px 0 7px;padding-top:10px;border-top:1px solid var(--line)}
+.scat:first-child{border-top:none;padding-top:0}
+.std{display:flex;gap:12px;padding:7px 0;font-size:13.5px;line-height:1.45}
+.std .c{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--muted);min-width:42px;flex:none;padding-top:1px}
+.std .t{font-family:var(--serif);font-size:15px}
+.note{font-size:12px;color:var(--muted);margin:16px 2px 0;line-height:1.5}
+@media(max-width:560px){.tiles{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Principle &amp; Cluster Practice</h1>
+      <div class="sub">CPA Canadian Code of Ethics for Psychologists &middot; 4th ed. (2017)</div>
+    </div>
+    <div class="score" id="score">
+      <div class="stat"><b id="sCorrect">0</b><span>Correct</span></div>
+      <div class="stat"><b id="sSeen">0</b><span>Seen</span></div>
+      <div class="stat"><b id="sStreak">0</b><span>Streak</span></div>
+    </div>
+  </header>
+
+  <div class="bar">
+    <div class="seg" id="modeSeg">
+      <button data-mode="practice" class="on">Practice</button>
+      <button data-mode="stats">Stats</button>
+      <button data-mode="saved" id="savedTab">Saved</button>
+      <button data-mode="browse">Browse codes</button>
+    </div>
+    <div class="seg" id="diffSeg">
+      <button data-diff="principle" class="on">Principle</button>
+      <button data-diff="cluster">Cluster</button>
+      <button data-diff="both">Both</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="chips" id="chips">
+      <button class="chip on" data-p="I">I</button>
+      <button class="chip on" data-p="II">II</button>
+      <button class="chip on" data-p="III">III</button>
+      <button class="chip on" data-p="IV">IV</button>
+    </div>
+  </div>
+
+  <div id="practiceView">
+    <div class="card fade" id="card">
+      <button class="star" id="star" title="Save this standard" aria-label="Save this standard">&#9734;</button>
+      <div class="kicker" id="kicker"></div>
+      <div class="prompt" id="prompt"></div>
+      <div class="ctx" id="ctx"></div>
+      <div class="opts" id="opts"></div>
+      <div class="reveal" id="reveal" style="display:none"></div>
+      <div class="foot">
+        <button class="btn primary" id="next" style="display:none">Next &rarr;</button>
+        <button class="btn ghost" id="giveup">Reveal &amp; skip</button>
+        <span class="hint"><kbd>1</kbd>&ndash;<kbd>9</kbd> answer &middot; <kbd>S</kbd> save &middot; <kbd>N</kbd> next</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="statsView" style="display:none"></div>
+  <div id="savedView" style="display:none"></div>
+
+  <div id="browseView" style="display:none">
+    <div class="map" id="map">
+      <h2>Cluster map</h2>
+      <div class="msub">Each principle's standards are grouped into clusters. This is the structure you're placing codes into.</div>
+    </div>
+    <div class="weight">
+      <span class="wb">Weighting when principles conflict:</span>
+      <span>I &rarr; II &rarr; III &rarr; IV</span>
+      <span>(I generally highest, except clear &amp; imminent danger of bodily harm.)</span>
+    </div>
+    <div class="browse" id="browse"></div>
+    <div class="note">170 standards total. Tap a principle to expand. Standard text is verbatim from the 4th edition.</div>
+  </div>
+</div>
+
+<canvas id="confetti"></canvas>
+<div id="toast"></div>
+
+<script>
+const DATA = [{"code": "I.1", "principle": "I", "subcat": "General respect", "text": "Demonstrate appropriate respect for the knowledge, insight, experience, areas of expertise, and cultural perspectives and values of others, including those that are different from their own, limited only by those that seriously contravene the ethical principles of this Code."}, {"code": "I.2", "principle": "I", "subcat": "General respect", "text": "Not engage publicly (e.g., in public statements, presentations, research reports, with primary clients or other contacts) in degrading comments about others, including demeaning jokes based on such characteristics as culture, nationality, ethnicity, colour, race, religion, sex, gender, or sexual orientation."}, {"code": "I.3", "principle": "I", "subcat": "General respect", "text": "Strive to use language that conveys respect for the dignity of persons and peoples as much as possible in all spoken, written, electronic, or printed communication."}, {"code": "I.4", "principle": "I", "subcat": "General respect", "text": "Abstain from all forms of harassment, including sexual harassment."}, {"code": "I.5", "principle": "I", "subcat": "General rights", "text": "Avoid or refuse to participate in practices disrespectful of the moral rights of persons or peoples, including their human, legal and civil rights."}, {"code": "I.6", "principle": "I", "subcat": "General rights", "text": "Refuse to advise, train, or supply information to anyone who, in the psychologist’s judgment, will use the knowledge or skills to infringe on moral rights."}, {"code": "I.7", "principle": "I", "subcat": "General rights", "text": "Make every reasonable effort to ensure that psychological knowledge is not misinterpreted or misused, intentionally or unintentionally, to infringe on moral rights."}, {"code": "I.8", "principle": "I", "subcat": "General rights", "text": "Respect the moral right of research participants, primary clients, contract examinees, employees, supervisees, students, trainees, and others to safeguard their own dignity."}, {"code": "I.9", "principle": "I", "subcat": "Non-discrimination", "text": "Not practice, condone, facilitate, or collaborate with any form of unjust discrimination."}, {"code": "I.10", "principle": "I", "subcat": "Non-discrimination", "text": "Act to correct practices that are unjustly discriminatory."}, {"code": "I.11", "principle": "I", "subcat": "Non-discrimination", "text": "Seek to design research, teaching, supervision, practice, and business activities in such a way that they contribute to the fair distribution of benefits to individuals and groups (e.g., couples, families, organizations, communities, peoples), and that they do not unfairly exclude those who are vulnerable or might be disadvantaged."}, {"code": "I.12", "principle": "I", "subcat": "Fair treatment / due process", "text": "Work and act in a spirit of fair treatment to others."}, {"code": "I.13", "principle": "I", "subcat": "Fair treatment / due process", "text": "Help to establish and abide by due process and other natural justice procedures for employment, evaluation, adjudication, editorial, and peer review activities."}, {"code": "I.14", "principle": "I", "subcat": "Fair treatment / due process", "text": "Compensate others fairly for the use of their time, energy, and knowledge, unless such compensation is voluntarily refused."}, {"code": "I.15", "principle": "I", "subcat": "Fair treatment / due process", "text": "Establish fees that are fair in light of the time, energy, and knowledge of the psychologist and any associates or employees, and in light of the market value of the product or service. (Also see Standard IV.12.)"}, {"code": "I.16", "principle": "I", "subcat": "Informed consent", "text": "Seek as full and active participation as possible from individuals and groups (e.g., couples, families, organizations, communities, peoples) in decisions that affect them, respecting and integrating as much as possible their opinions and wishes. This would include respect for written or clearly expressed unwritten advance directives. Also, when working in an organizational or community context, it would include seeking participation of relevant individuals and subgroups that may not be represented by or may not have a role in the formal leadership."}, {"code": "I.17", "principle": "I", "subcat": "Informed consent", "text": "Recognize that obtaining informed consent is a process that involves taking time to establish an appropriate trusting relationship and to reach an agreement to work collaboratively, and may need to be obtained more than once (e.g., if significant new information becomes available)."}, {"code": "I.18", "principle": "I", "subcat": "Informed consent", "text": "Respect the expressed wishes of individuals to involve others (e.g., family members, community members, community leaders) in their decisions regarding informed consent."}, {"code": "I.19", "principle": "I", "subcat": "Informed consent", "text": "Obtain informed consent from all independent and partially dependent individuals and groups (e.g., couples, families, organizations, communities, peoples) for any psychological services provided to them except in circumstances of urgent need (e.g., disaster or other crisis). In urgent circumstances, psychologists would proceed with the assent of such individuals and groups, but fully informed consent would be obtained as soon as possible. (Also see Standard I.29.)"}, {"code": "I.20", "principle": "I", "subcat": "Informed consent", "text": "Obtain informed consent for all research activities that involve obtrusive observation or measures, invasion of privacy, risk of harm, or any attempt to change the behaviour of research participants."}, {"code": "I.21", "principle": "I", "subcat": "Informed consent", "text": "If signed consent forms are required by law or desired by the psychologist, the individuals or groups giving consent, or the organization for whom the psychologist works, establish and use signed consent forms that specify the dimensions of informed consent or that acknowledge that such dimensions have been explained and are understood."}, {"code": "I.22", "principle": "I", "subcat": "Informed consent", "text": "Accept and document non-written consent (e.g., oral, a verbal agreement, a handshake or other culturally normative exchange) in situations in which signed consent forms are not acceptable culturally or in which there are other good reasons for accepting non-written consent."}, {"code": "I.23", "principle": "I", "subcat": "Informed consent", "text": "Provide, in obtaining informed consent, as much information as reasonable or prudent individuals and groups (e.g., couples, families, organizations, communities, peoples) would want to know before making a decision or consenting to the activity. Typically, and as appropriate to the situation and context, this would include: purpose and nature of the activity; mutual responsibilities; whether a team or other collaborators are involved; privacy and confidentiality limitations, risks and protections; likely risks and benefits of the activity, including any particular risks or benefits of the methods or communication modalities used; alternatives available; likely consequences of non-action; the option to refuse or withdraw at any time, without prejudice; over what period of time the consent applies; and how to rescind consent if desired. (Also see Standards III.23-27.)"}, {"code": "I.24", "principle": "I", "subcat": "Informed consent", "text": "Relay the information given in obtaining informed consent in language that the individuals and groups involved understand (including providing translation into another language, if necessary), and take whatever reasonable steps are needed to ensure that the information is, in fact, understood."}, {"code": "I.25", "principle": "I", "subcat": "Informed consent", "text": "Provide new information in a timely manner, whenever such information becomes available and is significant enough that it reasonably could be seen as relevant to the original or ongoing informed consent."}, {"code": "I.26", "principle": "I", "subcat": "Informed consent", "text": "Clarify the nature of multiple relationships to all concerned parties, including collateral contacts, before obtaining consent, if providing services or conducting research at the request of or for the use of a retaining or other third party. This would include, but not be limited to clarifying: the purpose of the service or research; the role and responsibilities of the psychologist; the reasonably anticipated use that will be made of the information collected; access to records or the information contained therein; the limits of privacy and confidentiality; and any special legal requirements or limitations. Third parties may include schools, employers, community, or organizational leaders, third-party payers, courts, government, police, and research funding bodies."}, {"code": "I.27", "principle": "I", "subcat": "Freedom of consent", "text": "Take all reasonable steps to ensure that consent is not given under conditions of coercion, undue pressure, or undue reward. (Also see Standard III.29.)"}, {"code": "I.28", "principle": "I", "subcat": "Freedom of consent", "text": "Not proceed with any research activity, if consent is given under any condition of coercion, undue pressure, or undue reward. (Also see Standard III.29.)"}, {"code": "I.29", "principle": "I", "subcat": "Freedom of consent", "text": "Take all reasonable steps to confirm or re-establish freedom of consent, if consent for service is given under conditions of duress or conditions of extreme need."}, {"code": "I.30", "principle": "I", "subcat": "Freedom of consent", "text": "Respect the moral right of individuals and groups (e.g., couples, families, organizations, communities, peoples) to discontinue participation or service at any time, and be responsive to non-verbal indications of a desire to discontinue if the individuals or groups involved have difficulty with verbally communicating such a desire (e.g., young children, individuals with language disabilities) or, due to culture, are unlikely to communicate such a desire orally."}, {"code": "I.31", "principle": "I", "subcat": "Protections for vulnerable individuals and groups", "text": "Seek an independent and adequate ethical review of moral rights issues and protections for any research involving vulnerable groups or individual members of vulnerable groups, including individuals of diminished capacity to give informed consent, before making a decision to proceed."}, {"code": "I.32", "principle": "I", "subcat": "Protections for vulnerable individuals and groups", "text": "Not use vulnerable groups or individual members of vulnerable groups, including individuals of diminished capacity to give informed consent, in research studies, if the research involved may be carried out equally well with groups or individuals without such vulnerabilities."}, {"code": "I.33", "principle": "I", "subcat": "Protections for vulnerable individuals and groups", "text": "Seek to use methods that maximize the understanding and ability to consent of vulnerable groups or members of vulnerable groups, including individuals of diminished capacity to give informed consent."}, {"code": "I.34", "principle": "I", "subcat": "Protections for vulnerable individuals and groups", "text": "Carry out informed consent processes with those who are legally responsible or appointed to give informed consent on behalf of individuals not competent to consent on their own behalf, seeking to ensure respect for any previously expressed preferences of individuals not competent to consent, and clarifying protections and limitations regarding the privacy and confidentiality of such individuals."}, {"code": "I.35", "principle": "I", "subcat": "Protections for vulnerable individuals and groups", "text": "Seek willing and adequately informed participation from any person of diminished capacity to give informed consent, and proceed without such assent only if the service or research activity is considered to be of direct benefit to that person."}, {"code": "I.36", "principle": "I", "subcat": "Protections for vulnerable individuals and groups", "text": "Be particularly cautious in establishing the freedom of consent of any prospective research participant who is in a dependent relationship to the psychologist (e.g., student, trainee, employee). This may include, but is not limited to, offering that person an alternative activity to fulfill their educational or employment goals, or offering a range of research studies or experience opportunities from which the person can select, none of which is so onerous as to be coercive."}, {"code": "I.37", "principle": "I", "subcat": "Privacy", "text": "Seek and collect only information that is germane to the purpose(s) for which consent has been obtained."}, {"code": "I.38", "principle": "I", "subcat": "Privacy", "text": "Respect the moral right of research participants, employees, supervisees, students, and trainees to reasonable personal privacy, and take care not to infringe, in research, teaching, supervision, or service activities, on the personally, developmentally, or culturally defined private space of individuals or groups (e.g., couples, families, organizations, communities, peoples), unless clear permission is granted to do so."}, {"code": "I.39", "principle": "I", "subcat": "Privacy", "text": "Collect and record only that private information necessary for the provision of continuous, coordinated or collaborative service, or for the goals of the particular research study being conducted, or that is required or justified by law. (Also see Standards IV.17 and IV.18.)"}, {"code": "I.40", "principle": "I", "subcat": "Privacy", "text": "Respect the moral right of primary clients and contract examinees whose identifiable information is collected and recorded to access that information in the record (including obtaining copies) and to request corrections with regard to the accuracy or completeness of the information, except as otherwise required or justified by law (e.g., statutory law; court order; previous agreement; potential serious harm to the physical, emotional, or mental health of the individual or group; violation of the privacy or confidentiality of another individual or group)."}, {"code": "I.41", "principle": "I", "subcat": "Privacy", "text": "Collect, record, store, handle, and transfer all private information, whether written or unwritten (e.g., paper or electronic records, e-mail or fax communications, computer files, recordings), in a way that attends to the needs for privacy, confidentiality, and security. This would include protection from loss or unauthorized access, appropriate education of staff or other agents, and having adequate plans in circumstances of one’s own serious illness, termination of employment, or death."}, {"code": "I.42", "principle": "I", "subcat": "Privacy", "text": "Take all reasonable steps to ensure that records over which they have control remain personally identifiable only as long as necessary in the best interests of those to whom they refer and/or to the research project for which they were collected, or as required or justified by law (e.g., the possible need to defend oneself against future allegations), and render anonymous or destroy any records under their control that no longer need to be personally identifiable. (Also see Standards IV.17 and IV.18.)"}, {"code": "I.43", "principle": "I", "subcat": "Confidentiality", "text": "Be careful not to relay incidental information about colleagues, team members, other collaborators, the primary clients or contract examinees of others, research participants, employees, supervisees, students, or trainees gained in the process of their activities as psychologists, that the psychologist has reason to believe is considered confidential by those individuals or groups, except as required or justified by law. (Also see Standards IV.17 and IV.18.)"}, {"code": "I.44", "principle": "I", "subcat": "Confidentiality", "text": "Clarify what measures will be taken to protect privacy and confidentiality, and what responsibilities group members (e.g., couples, families, organizations, communities, peoples) have for the protection of each other’s privacy and confidentiality, when engaged in services to or research with groups."}, {"code": "I.45", "principle": "I", "subcat": "Confidentiality", "text": "Share confidential information with others only to the extent reasonably needed for the purpose of sharing, and only with the informed consent of those involved, or in a manner that the individuals and groups (e.g., couples, families, organizations, communities, peoples) involved cannot be identified, except as required or justified by law, or in circumstances of possible imminent serious bodily harm. (Also see Standards II.42, IV.17, and IV.18.)"}, {"code": "I.46", "principle": "I", "subcat": "Extended responsibility", "text": "Encourage others, in a manner consistent with this Code, to respect the dignity of persons and peoples, and to expect respect for their own dignity."}, {"code": "I.47", "principle": "I", "subcat": "Extended responsibility", "text": "Assume overall responsibility for the scientific and professional activities of their assistants, employees, students, trainees, and supervisees with regard to Respect for the Dignity of Persons and Peoples, all of whom, however, incur similar obligations."}, {"code": "II.1", "principle": "II", "subcat": "General caring", "text": "Protect and promote the well-being and best interests of primary clients, contract examinees, research participants, employees, supervisees, students, trainees, colleagues, team members or other collaborators, and others."}, {"code": "II.2", "principle": "II", "subcat": "General caring", "text": "Avoid doing harm to primary clients, contract examinees, research participants, employees, supervisees, students, trainees, colleagues, team members or other collaborators, and others."}, {"code": "II.3", "principle": "II", "subcat": "General caring", "text": "Accept responsibility for the consequences of their actions."}, {"code": "II.4", "principle": "II", "subcat": "General caring", "text": "Refuse to advise, train, or supply information to anyone who, in the psychologist’s judgment, will use the knowledge or skills to harm others."}, {"code": "II.5", "principle": "II", "subcat": "General caring", "text": "Make every reasonable effort to ensure that psychological knowledge is not misinterpreted or misused, intentionally or unintentionally, to harm others."}, {"code": "II.6", "principle": "II", "subcat": "Competence and self-knowledge", "text": "Offer or carry out (without supervision) only those activities for which they have established their competence to carry them out to the benefit of others."}, {"code": "II.7", "principle": "II", "subcat": "Competence and self-knowledge", "text": "Not delegate activities to individuals or groups not competent to carry them out to the benefit of others."}, {"code": "II.8", "principle": "II", "subcat": "Competence and self-knowledge", "text": "Take immediate steps to obtain consultation or supervision, or to refer a primary client to a colleague or other appropriate professional, whichever is more likely to result in providing the primary client with competent service, if it becomes apparent that a primary client’s issues or problems are beyond their competence."}, {"code": "II.9", "principle": "II", "subcat": "Competence and self-knowledge", "text": "Keep themselves up to date with a broad range of relevant knowledge, research methods, techniques, and technologies, and their impact on individuals and groups (e.g., couples, families, organizations, communities, and peoples), through the reading of relevant literature, peer consultation, and continuing education activities, in order that their practice, teaching, supervision, and research activities will benefit and not harm others."}, {"code": "II.10", "principle": "II", "subcat": "Competence and self-knowledge", "text": "Evaluate how their own experiences, attitudes, culture, beliefs, values, individual differences, specific training, external pressures, personal needs, and historical, economic, and political context might influence their interactions with and perceptions of others, and integrate this awareness into their efforts to benefit and not harm others."}, {"code": "II.11", "principle": "II", "subcat": "Competence and self-knowledge", "text": "Seek appropriate help and/or discontinue scientific, teaching, supervision, or practice activity for an appropriate period of time, if a physical or psychological condition reduces their ability to benefit and not harm others."}, {"code": "II.12", "principle": "II", "subcat": "Competence and self-knowledge", "text": "Engage in self-care activities that help to avoid conditions (e.g., burnout, addictions) that could result in impaired judgment and interfere with their ability to benefit and not harm others."}, {"code": "II.13", "principle": "II", "subcat": "Risk/benefit analysis", "text": "Assess the individuals and groups (e.g., couples, families, organizations, communities, peoples) involved in their activities adequately enough to ensure that they will be able to discern what will benefit and not harm them, using assessment methods that are appropriate to the particular cultural and social contexts of the individuals and groups involved."}, {"code": "II.14", "principle": "II", "subcat": "Risk/benefit analysis", "text": "Be sufficiently sensitive to and knowledgeable about individual and group characteristics, culture, and vulnerabilities to discern what will benefit and not harm the individuals and groups (e.g., couples, families, organizations, communities, peoples) involved in their activities."}, {"code": "II.15", "principle": "II", "subcat": "Risk/benefit analysis", "text": "Carry out pilot studies to determine the effects of all new procedures and techniques before considering their use on a broader scale."}, {"code": "II.16", "principle": "II", "subcat": "Risk/benefit analysis", "text": "Seek independent and adequate ethical review(s), by individuals and groups with relevant expertise (e.g., other researchers in the area; research ethics boards or equivalent; relevant representatives of the population being studied) of the ethical protections and the balance of risks and benefits of all research and new interventions that involve procedures of unknown consequence, or where pain, discomfort, or harm are possible, before making a decision to proceed."}, {"code": "II.17", "principle": "II", "subcat": "Risk/benefit analysis", "text": "Not carry out any scientific or professional activity unless the probable benefit is proportionately greater than the risk involved."}, {"code": "II.18", "principle": "II", "subcat": "Maximize benefit", "text": "Strive to provide and/or obtain the best reasonably accessible service for those seeking psychological services. This may include, but is not limited to, selecting assessment tools, methods, interventions, and communication modalities that are: (a) relevant and tailored to the needs, characteristics, and contexts of the primary client or contract examinee; and (b) based on the best available evidence in light of those needs, characteristics, and contexts. It also may include, but is not limited to: consulting or collaborating with service-providing organizations in the community, members of other disciplines, individuals and groups relevant to the culture or belief systems of those receiving or being subject to services; or advocating on behalf of a primary client when appropriate and needed."}, {"code": "II.19", "principle": "II", "subcat": "Maximize benefit", "text": "Make themselves aware of the knowledge and skills of other disciplines (e.g., law, social work, medicine, business administration), and make referrals or advise the use of such knowledge and skills where relevant to the benefit of others."}, {"code": "II.20", "principle": "II", "subcat": "Maximize benefit", "text": "Provide suitable information, unless declined or contraindicated (e.g., some critical inquiry studies, possibility of harm, legally disallowed), about the results of assessments, evaluations, or research findings to the individuals and groups (e.g., couples, families, organizations, communities, peoples) involved. This information would be communicated in ways that are developmentally, linguistically, and culturally appropriate, and that are meaningful and helpful."}, {"code": "II.21", "principle": "II", "subcat": "Maximize benefit", "text": "Create and maintain records relating to their activities that are sufficient to support continuity and coordination over time and to manage risks."}, {"code": "II.22", "principle": "II", "subcat": "Maximize benefit", "text": "Monitor and evaluate the effect of their activities, record their findings, and communicate new knowledge to relevant others."}, {"code": "II.23", "principle": "II", "subcat": "Maximize benefit", "text": "Consult, unless declined or contraindicated (e.g., critical inquiry studies, possibility of harm, legally disallowed) with the individuals and groups (e.g., couples, families, organizations, communities, peoples) being studied, in order to increase the accuracy of interpretation of results, to enhance the benefit of the results to the individuals and groups, and to minimize risk of misinterpretation or misuse."}, {"code": "II.24", "principle": "II", "subcat": "Maximize benefit", "text": "Debrief research participants in such a way that the participants’ knowledge is enhanced and the participants have a sense of contribution to knowledge. (Also see Standard III.25.)"}, {"code": "II.25", "principle": "II", "subcat": "Maximize benefit", "text": "Perform their teaching duties on the basis of careful preparation, so that their instruction is current and scholarly."}, {"code": "II.26", "principle": "II", "subcat": "Maximize benefit", "text": "Facilitate the professional and scientific development of their employees, supervisees, students, and trainees by ensuring that they understand the values and ethical prescriptions of the discipline, as well as the competencies needed for their areas of activity, and by providing or arranging for adequate working conditions, timely evaluations, and constructive supervision, consultation, and experience opportunities."}, {"code": "II.27", "principle": "II", "subcat": "Maximize benefit", "text": "Encourage and assist students and trainees in their engagement in developmentally appropriate professional and scientific activities, including the publication of worthy student or trainee papers."}, {"code": "II.28", "principle": "II", "subcat": "Minimize harm", "text": "Be acutely aware of the power relationship in therapy and, therefore, not encourage or engage in sexual intimacy with therapy clients, neither during therapy, nor for that period of time following therapy during which the power relationship reasonably could be expected to influence the client’s decision making. (Also see Standard III.28.)"}, {"code": "II.29", "principle": "II", "subcat": "Minimize harm", "text": "Not encourage or engage in sexual intimacy with students, trainees, or others with whom the psychologist has an evaluative or other relationship of direct authority. (Also see Standard III.28.)"}, {"code": "II.30", "principle": "II", "subcat": "Minimize harm", "text": "Be careful not to engage in activities in a way that could place incidentally involved individuals or groups at risk."}, {"code": "II.31", "principle": "II", "subcat": "Minimize harm", "text": "Ensure that any incidental findings suggesting that intervention may be needed to avoid serious harm are communicated as soon as possible to research participants and contract examinees."}, {"code": "II.32", "principle": "II", "subcat": "Minimize harm", "text": "Be acutely aware of the need for discretion in the recording and communication of information, in order that the information not be misinterpreted or misused to the detriment of others. This includes, but is not limited to: not recording or communicating information that could lead to misinterpretation or misuse by those having access to or receiving the information; avoiding conjecture; clearly labelling opinion; and communicating information in language that can be understood clearly by the recipient of the information."}, {"code": "II.33", "principle": "II", "subcat": "Minimize harm", "text": "Give reasonable assistance to secure needed psychological services or activities, if personally unable to meet requests for needed psychological services or activities."}, {"code": "II.34", "principle": "II", "subcat": "Minimize harm", "text": "Provide a primary client, if appropriate and if desired by the primary client, with reasonable assistance to find a way to receive needed services in the event that third party payments are exhausted and the primary client cannot afford the fees involved."}, {"code": "II.35", "principle": "II", "subcat": "Minimize harm", "text": "Maintain appropriate contact, support, and responsibility for caring until a colleague or other professional begins service, if referring a primary client to a colleague or other professional."}, {"code": "II.36", "principle": "II", "subcat": "Minimize harm", "text": "Give reasonable notice and be reasonably assured that discontinuation will cause no foreseeable material harm to the primary client, before discontinuing services."}, {"code": "II.37", "principle": "II", "subcat": "Minimize harm", "text": "Establish suitable procedures for responding to emergencies, including procedures for situations in which they are unavailable due to illness, absence, death, or technology failure."}, {"code": "II.38", "principle": "II", "subcat": "Minimize harm", "text": "Screen research participants and select those least likely to be harmed, if more than minimal risk of harm to some research participants is possible."}, {"code": "II.39", "principle": "II", "subcat": "Minimize harm", "text": "Act to minimize the impact of their research activities on research participants’ behavioural patterns, or on their physical or mental integrity."}, {"code": "II.40", "principle": "II", "subcat": "Offset/correct harm", "text": "Terminate an activity when it is clear that the activity carries more than minimal risk of harm and is found to be more harmful than beneficial, or when the activity is no longer needed."}, {"code": "II.41", "principle": "II", "subcat": "Offset/correct harm", "text": "Refuse to help individuals and groups (e.g., couples, families, organizations, communities, peoples) to carry out or to submit to activities that, according to current knowledge, or legal or professional guidelines, would cause serious physical or psychological harm to themselves or others."}, {"code": "II.42", "principle": "II", "subcat": "Offset/correct harm", "text": "Do everything reasonably possible to stop or offset the consequences of actions by others when these actions are likely to cause imminent serious bodily harm to themselves or others. This may include, but is not limited to, the possibility of disclosing some confidential information to appropriate authorities (e.g., the police), an intended victim, or a family member or other support person who can intervene. (Also see Standard I.45.)"}, {"code": "II.43", "principle": "II", "subcat": "Offset/correct harm", "text": "Act to stop or offset the consequences of seriously harmful activities being carried out by another psychologist or member of another discipline, when there is objective information about the activities and the harm. This may include reporting to the appropriate regulatory body, authority, or committee for action, depending on the psychologist’s judgment about the person(s) or body(ies) best suited to stop or offset the harm, and would be consistent with the privacy and confidentiality rights and limitations of the individuals and groups involved. (See Standards I.45 and IV.17.)"}, {"code": "II.44", "principle": "II", "subcat": "Offset/correct harm", "text": "Act also to stop or offset the consequences of harmful activities carried out by another psychologist or member of another discipline, when the harm is not serious or the activities appear to be primarily a lack of sensitivity, knowledge, or experience. This may include talking informally with the psychologist or member of the other discipline, obtaining objective information and, if possible and relevant, the assurance that the harm will discontinue and be corrected. If in a vulnerable position (e.g., employee, student, trainee) with respect to the other psychologist or member of the other discipline, it may include asking individuals or groups in less vulnerable positions to participate in the meeting(s). Any action taken would be consistent with the privacy and confidentiality rights and limitations of the individuals and groups involved. (See Standards I.45 and IV.17.)"}, {"code": "II.45", "principle": "II", "subcat": "Offset/correct harm", "text": "Be open to the concerns of others about perceptions of harm that they as a psychologist might be causing, stop activities that are causing harm, and not punish or seek punishment for those who raise such concerns in good faith."}, {"code": "II.46", "principle": "II", "subcat": "Offset/correct harm", "text": "Not place individuals or groups (e.g., couples, families, organizations, communities, peoples) needing service at a serious disadvantage by offering them no service in order to fulfill the conditions of a research design, when a standard service is available."}, {"code": "II.47", "principle": "II", "subcat": "Offset/correct harm", "text": "Debrief research participants in such a way that any harm caused can be discerned, and act to correct any resultant harm. (Also see Standard III.25.)"}, {"code": "II.48", "principle": "II", "subcat": "Care of animals", "text": "Treat animals humanely and not expose them to unnecessary discomfort, pain, or disruption."}, {"code": "II.49", "principle": "II", "subcat": "Care of animals", "text": "Not use animals in their research unless there is a reasonable expectation that the research will increase understanding of the structures and processes underlying behaviour, or increase understanding of the particular animal species used in the study, or result in benefits to the health and welfare of humans or other animals."}, {"code": "II.50", "principle": "II", "subcat": "Care of animals", "text": "Keep themselves up to date with animal care legislation, guidelines, and best practices, if using animals in direct service, research, teaching, or supervision."}, {"code": "II.51", "principle": "II", "subcat": "Care of animals", "text": "Use a procedure subjecting animals to pain, stress, or privation only if an alternative procedure is unavailable and the goal is justified by its prospective scientific, educational, or applied value."}, {"code": "II.52", "principle": "II", "subcat": "Care of animals", "text": "Submit any research that includes procedures that subject animals to pain, stress, or privation to an appropriate review panel or committee for review."}, {"code": "II.53", "principle": "II", "subcat": "Care of animals", "text": "Make every effort to minimize the discomfort, illness, and pain of animals. This would include using appropriate anaesthesia, analgesia, tranquilization and/or adjunctive relief measures sufficient to prevent or alleviate animal discomfort, pain, or distress, when using a procedure or condition likely to cause more than short-term, low-intensity suffering. It also would include, if killing animals at the termination of a research study, doing so as compassionately and painlessly as possible."}, {"code": "II.54", "principle": "II", "subcat": "Care of animals", "text": "Use animals in classroom demonstrations only if the instructional objectives cannot be achieved through the use of electronic recordings, films, computer simulations or other methods, and if the type of demonstration is warranted by the anticipated instructional gain."}, {"code": "II.55", "principle": "II", "subcat": "Extended responsibility", "text": "Encourage others, in a manner consistent with this Code, to care responsibly."}, {"code": "II.56", "principle": "II", "subcat": "Extended responsibility", "text": "Assume overall responsibility for the scientific and professional activities of their assistants, employees, supervisees, students, and trainees with regard to the Principle of Responsible Caring, all of whom, however, incur similar obligations."}, {"code": "III.1", "principle": "III", "subcat": "Accuracy/honesty", "text": "Not knowingly participate in, condone, or be associated with dishonesty, fraud, misappropriation, or misrepresentation."}, {"code": "III.2", "principle": "III", "subcat": "Accuracy/honesty", "text": "Accurately represent their own and their colleagues’ qualifications (e.g., credentials, education, experience, competence, affiliations) in all spoken, written, or printed communications, being careful not to use descriptions or information that could be misinterpreted (e.g., citing membership in a voluntary association of psychologists as a testament of competence)."}, {"code": "III.3", "principle": "III", "subcat": "Accuracy/honesty", "text": "Carefully protect their own and their colleagues’ qualifications from being misrepresented by others, and act quickly to correct any such misrepresentation."}, {"code": "III.4", "principle": "III", "subcat": "Accuracy/honesty", "text": "Maintain competence in their declared area(s) of psychological competence, as well as in their current area(s) of activity. (Also see Standard II.9.)"}, {"code": "III.5", "principle": "III", "subcat": "Accuracy/honesty", "text": "Accurately represent their own and their colleagues’ activities, functions, contributions, and likely or actual outcomes of their activities (including research results) in all spoken, written, electronic, or printed communication. This includes but is not limited to: advertisements of services or products; public information and prevention materials; personal résumés or curricula vitae; course and workshop descriptions; academic grading requirements; and research reports."}, {"code": "III.6", "principle": "III", "subcat": "Accuracy/honesty", "text": "Ensure that their own and their colleagues’ activities, functions, contributions, and likely or actual outcomes of their activities (including research results) are not misrepresented by others, and act quickly to correct any such misrepresentation."}, {"code": "III.7", "principle": "III", "subcat": "Accuracy/honesty", "text": "Take credit only for the work and ideas that they have actually done or generated, and give credit for work done or ideas contributed by others (including students and trainees), in proportion to their contribution."}, {"code": "III.8", "principle": "III", "subcat": "Accuracy/honesty", "text": "Acknowledge the limitations, and not suppress disconfirming evidence, of their own and their colleagues’ methods, findings, interventions, and views, and acknowledge alternative hypotheses and explanations."}, {"code": "III.9", "principle": "III", "subcat": "Objectivity/lack of bias", "text": "Evaluate how their own experiences, attitudes, culture, beliefs, values, individual differences, specific training, external pressures, personal needs, and historical, economic, and political context might influence their activities and thinking, integrating this awareness into their attempts to be as objective and unbiased as possible in their research, service, teaching, supervision, employment, evaluation, adjudication, editorial, and peer review activities."}, {"code": "III.10", "principle": "III", "subcat": "Objectivity/lack of bias", "text": "Take care to communicate as completely and objectively as possible, and to clearly differentiate facts, opinions, theories, hypotheses, and ideas, when communicating knowledge, findings, and views."}, {"code": "III.11", "principle": "III", "subcat": "Objectivity/lack of bias", "text": "Present instructional information accurately, avoiding undue bias in the selection and presentation of information, and publicly acknowledge any personal values or bias that influence the selection and presentation of information."}, {"code": "III.12", "principle": "III", "subcat": "Objectivity/lack of bias", "text": "Act quickly to clarify any distortion by a sponsor, primary client, agency (e.g., news media), or other individuals or groups, of the findings of their research."}, {"code": "III.13", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Be clear and straightforward about all information needed to establish informed consent or any other valid written or unwritten agreement (e.g., fees, including any limitations imposed by third-party payers; relevant conflicts of interest; relevant business policies and practices; contact information of accountability bodies; mutual concerns; mutual responsibilities; ethical responsibilities of psychologists; likely experiences; possible conflicts; possible outcomes; and expectations for processing, using, and sharing any information generated)."}, {"code": "III.14", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Establish procedures for reasonably ready access by a primary client or contract examinee to confidential information about themselves in their psychological record, limited only by what may be required or justified by law (e.g., statutory law; court order; previous agreement; potential serious harm to the physical, emotional, or mental health of the individual or group; protection of the privacy or confidentiality of another individual or group)."}, {"code": "III.15", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Develop easy-to-follow procedures for primary clients and contract examinees to request corrections to any confidential information about themselves in a psychological record (e.g., inaccuracies, incompleteness, outdated); be open to making such corrections where warranted; and be open to allowing them to file a note of disagreement with the confidential information in the record if the correction is not deemed warranted."}, {"code": "III.16", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Fully explain reasons for their actions to the individuals and groups (e.g., couples, families, organizations, communities, peoples) that have been affected by their actions, if appropriate and if asked."}, {"code": "III.17", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Honour all promises and commitments included in any written or verbal agreement, unless serious and unexpected circumstances (e.g., illness) intervene. If such circumstances occur, then the psychologist would make a full and honest explanation to other parties involved."}, {"code": "III.18", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Make clear whether they are acting as private citizens, as members of specific organizations or groups, or as representatives of the discipline of psychology, when making statements or when involved in public activities."}, {"code": "III.19", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Carry out, present, and discuss research in a way that is consistent with a commitment to honest, open inquiry, and to clear communication of any research aims, sponsorship, social context, personal values, or historical, economic, or political interests that might affect or appear to affect the research."}, {"code": "III.20", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Submit their research, in some accurate form and within the limits of privacy and confidentiality, to individuals or groups with expertise in the research area or topic, for their comments and evaluations, prior to publication or the preparation of any final report."}, {"code": "III.21", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Encourage and not interfere with the free and open exchange of psychological knowledge and theory between themselves, their students, trainees, colleagues, team members and other collaborators, and the public."}, {"code": "III.22", "principle": "III", "subcat": "Straightforwardness/openness", "text": "Make no attempt to conceal the status of a student or trainee and, if a student or trainee is providing direct service, ensure that the client or contract examinee is informed of that fact."}, {"code": "III.23", "principle": "III", "subcat": "Avoidance of incomplete disclosure and deception", "text": "Not engage in incomplete disclosure or deception in research that requires informed consent (see Standard I.20), if there are alternative procedures available, the negative effects cannot be predicted or offset, or the incomplete disclosure or deception would interfere with the understanding of facts that clearly might influence a decision to give adequately informed consent (e.g., withholding information about the level of risk, discomfort, or inconvenience)."}, {"code": "III.24", "principle": "III", "subcat": "Avoidance of incomplete disclosure and deception", "text": "Use the minimum necessary incomplete disclosure or deception when they are used in such research."}, {"code": "III.25", "principle": "III", "subcat": "Avoidance of incomplete disclosure and deception", "text": "Debrief research participants as soon as possible after the participants’ involvement when incomplete disclosure or deception is used in such research, providing clarification of the nature of the study, seeking to remove any misconceptions that might have arisen, seeking to re-establish any trust that might have been lost, and assuring the participants that the research procedures were neither arbitrary nor capricious, but necessary for scientifically valid findings. (Also see Standards II.24 and II.47.)"}, {"code": "III.26", "principle": "III", "subcat": "Avoidance of incomplete disclosure and deception", "text": "Give a research participant the option of removing his or her data, if the data are identifiable and the research participant expresses concern during the debriefing about the incomplete disclosure or deception, and if removal of the data will not compromise the validity of the research design and hence diminish the ethical value of the participation of the other research participants."}, {"code": "III.27", "principle": "III", "subcat": "Avoidance of incomplete disclosure and deception", "text": "Seek an independent and adequate ethical review of the risks to public or personal trust and of safeguards to protect such trust if planning to use incomplete disclosure or deception in any research that requires informed consent, before making a decision to proceed."}, {"code": "III.28", "principle": "III", "subcat": "Avoidance of conflict of interest", "text": "Not exploit any relationship established as a psychologist to further personal, political, or business interests at the expense of the dignity or well-being of their primary clients, contract examinees, research participants, students, trainees, employers, or others. This includes, but is not limited to: soliciting primary clients, contract examinees, research participants, or students or trainees of one’s employing agency for one’s own activities (e.g., private practice, own research study); taking advantage of trust or dependency to encourage or engage in sexual intimacies (e.g., with primary clients or other individuals not included in Standard II.28, with primary clients’ or contract examinees’ partners or relatives, with students or trainees not included in Standard II.29, with research participants); taking advantage of trust or dependency to frighten individuals or groups into receiving services; establishing an ongoing treatment relationship with members of one’s own family, close friends, or others in a significant current or previous personal relationship with the psychologist; misappropriating others’ intellectual property, including students’ or trainees’ ideas, research, or work; using the resources of one’s employing institution for purposes not agreed to; giving or receiving financial inducements for referrals; entering into fee arrangements (e.g., bartering) that are clinically or culturally contraindicated; allowing the financial advantages of method or communication-modality choices to outweigh the dignity, well-being or best interests of primary clients or contract examinees; seeking or accepting loans or investments from primary clients or contract examinees; and prejudicing others against a colleague for reasons of personal gain."}, {"code": "III.29", "principle": "III", "subcat": "Avoidance of conflict of interest", "text": "Not offer rewards sufficient to motivate individuals or groups (e.g., couples, families, organizations, communities, peoples) to participate in an activity that has possible or known risks to themselves or others. (Also see Standards I.27, I.28, II.2, and II.54.)"}, {"code": "III.30", "principle": "III", "subcat": "Avoidance of conflict of interest", "text": "Avoid dual or multiple relationships (e.g., with primary clients, contract examinees, research participants, employees, supervisees, students, trainees) that are not justified by the nature of the activity, by cultural or geographic factors, or where there is a lack of reasonably accessible alternatives."}, {"code": "III.31", "principle": "III", "subcat": "Avoidance of conflict of interest", "text": "Manage dual or multiple relationships or any other conflict-of-interest situation entered into in such a way that bias, lack of objectivity, and risk of exploitation or harm are minimized. This might include involving the affected party(ies) in clarification of boundaries and expectations, limiting the duration of the relationship, obtaining ongoing supervision or consultation for the duration of the dual or multiple relationship, or involving a third party in obtaining consent (e.g., approaching a primary client or employee about becoming a research participant)."}, {"code": "III.32", "principle": "III", "subcat": "Avoidance of conflict of interest", "text": "Inform all parties, if a real or potential conflict of interest arises, of the need to resolve the situation in a manner that is consistent with Respect for the Dignity of Persons and Peoples (Principle I) and Responsible Caring (Principle II), and take all reasonable steps to resolve the issue in such a manner."}, {"code": "III.33", "principle": "III", "subcat": "Reliance on the discipline", "text": "Familiarize themselves with their discipline’s rules and regulations, and abide by them, unless abiding by them would be seriously detrimental to the moral rights or welfare of others as demonstrated in the Principles of Respect for the Dignity of Persons and Peoples, or Responsible Caring. (See Standards IV.17 and IV.18 for guidelines regarding the resolution of such conflicts.)"}, {"code": "III.34", "principle": "III", "subcat": "Reliance on the discipline", "text": "Familiarize themselves with and take into account their discipline’s guidelines and best practices for their area(s) of activity, and demonstrate a commitment to maintaining the standards of their discipline."}, {"code": "III.35", "principle": "III", "subcat": "Reliance on the discipline", "text": "Seek consultation from colleagues and/or appropriate others, including advisory groups, and give due regard to their advice in arriving at a responsible decision, if faced with difficult situations."}, {"code": "III.36", "principle": "III", "subcat": "Extended responsibility", "text": "Encourage others, in a manner consistent with this Code, to relate with integrity."}, {"code": "III.37", "principle": "III", "subcat": "Extended responsibility", "text": "Assume overall responsibility for the scientific and professional activities of their assistants, employees, supervisees, students, and trainees with regard to the Principle of Integrity in Relationships, all of whom, however, incur similar obligations."}, {"code": "IV.1", "principle": "IV", "subcat": "Development of knowledge", "text": "Contribute to the discipline of psychology and to society’s understanding of itself and human beings generally, through free enquiry, innovation, and debate, and through the acquisition, transmission and expression of knowledge and ideas, unless such activities conflict with ethical requirements."}, {"code": "IV.2", "principle": "IV", "subcat": "Development of knowledge", "text": "Not interfere with, or condone interference with, free enquiry, innovation and debate, and the acquisition, transmission and expression of knowledge and ideas, that do not conflict with ethical requirements."}, {"code": "IV.3", "principle": "IV", "subcat": "Development of knowledge", "text": "Keep informed of progress in their area(s) of psychological activity, take this progress into account in their work, and try to make their own contributions to this progress."}, {"code": "IV.4", "principle": "IV", "subcat": "Beneficial activities", "text": "Participate in and contribute to formative and continuing education and to the professional and scientific growth of self, students, trainees, colleagues, collaborators, and the members of other disciplines as appropriate."}, {"code": "IV.5", "principle": "IV", "subcat": "Beneficial activities", "text": "Assist in the development of those who enter the discipline of psychology by helping them to acquire a full understanding of their ethical responsibilities and the needed competencies of their chosen area(s), including an understanding of critical analysis and of the variations, uses, limitations, and possible misinterpretations and misuses of the scientific paradigm."}, {"code": "IV.6", "principle": "IV", "subcat": "Beneficial activities", "text": "Participate in the discipline’s process of critical self-evaluation of its place in society, and in the development and implementation of structures and procedures that help the discipline to contribute to just and beneficial societal functioning and changes."}, {"code": "IV.7", "principle": "IV", "subcat": "Beneficial activities", "text": "Provide and/or contribute to a work or team environment that supports the respectful expression of ethical concern or dissent, and the constructive resolution of such concern or dissent."}, {"code": "IV.8", "principle": "IV", "subcat": "Beneficial activities", "text": "Engage in regular monitoring, assessment, and reporting (e.g., through peer review; in program reviews, case management reviews, and reports of one’s own research) of their ethical practices and safeguards."}, {"code": "IV.9", "principle": "IV", "subcat": "Beneficial activities", "text": "Help develop, promote, and participate in accountability processes and procedures related to their work, including but not limited to: continuous improvement activities; program or sector accreditation activities; and registration with appropriate licensing and credentialing bodies."}, {"code": "IV.10", "principle": "IV", "subcat": "Beneficial activities", "text": "Uphold the discipline’s responsibility to society by promoting and maintaining the highest standards of the discipline."}, {"code": "IV.11", "principle": "IV", "subcat": "Beneficial activities", "text": "Protect the skills, knowledge, and interpretations of psychology from being misinterpreted, misused, used incompetently, or made useless (e.g., loss of security of assessment techniques) by others."}, {"code": "IV.12", "principle": "IV", "subcat": "Beneficial activities", "text": "Contribute to the general welfare of society (e.g., improving accessibility of services regardless of ability to pay) and/or to the general welfare of their discipline, by offering a portion of their time to work for which they receive little or no financial return."}, {"code": "IV.13", "principle": "IV", "subcat": "Beneficial activities", "text": "Uphold the discipline’s responsibility to society by bringing incompetent or unethical behaviour, including misinterpretations or misuses of psychological knowledge and techniques, to the attention of appropriate authorities, committees, or regulatory bodies, in a manner consistent with the ethical principles of this Code, if informal resolution or correction of the situation is not appropriate or possible."}, {"code": "IV.14", "principle": "IV", "subcat": "Beneficial activities", "text": "Enter into or continue with only those agreements or contracts that allow them to act in accordance with the ethical principles and standards of this Code."}, {"code": "IV.15", "principle": "IV", "subcat": "Respect for society", "text": "Acquire an adequate knowledge of the culture, social structure, history, customs, and laws or policies of organizations, communities, and peoples before beginning any major work there, obtaining guidance from appropriate members of the organization, community, or people as needed."}, {"code": "IV.16", "principle": "IV", "subcat": "Respect for society", "text": "In their scientific and professional activities, convey respect for and abide by prevailing mores, social customs, and cultural expectations of organizations, communities, and peoples, provided that this does not contravene any of the ethical principles of this Code."}, {"code": "IV.17", "principle": "IV", "subcat": "Respect for society", "text": "Familiarize themselves with the laws and regulations of the societies in which they work, especially those that are related to their activities as psychologists (e.g., mandatory reporting, research regulations, jurisdictional licensing or certification requirements), and abide by them. If those laws or regulations seriously conflict with the ethical principles contained herein, psychologists would do whatever they could to uphold the ethical principles. If upholding the ethical principles could result in serious personal consequences (e.g., jail, physical harm), decision for final action would be considered a matter of personal conscience."}, {"code": "IV.18", "principle": "IV", "subcat": "Respect for society", "text": "Consult with colleagues or appropriate others, including advisory groups, if faced with an apparent conflict between abiding by a law or regulation and following an ethical principle, unless in an emergency, and seek consensus as to the most ethical course of action and the most responsible, knowledgeable, effective, and respectful way to carry it out."}, {"code": "IV.19", "principle": "IV", "subcat": "Development of society", "text": "Act to change those aspects of the discipline of psychology that detract from just and beneficial societal changes, where appropriate and possible."}, {"code": "IV.20", "principle": "IV", "subcat": "Development of society", "text": "Be sensitive to the needs, current issues, and problems of society, when determining research questions to be asked, services to be developed, content to be taught, information to be collected, or appropriate interpretation of results or findings."}, {"code": "IV.21", "principle": "IV", "subcat": "Development of society", "text": "If their work is related to societal issues, be especially careful to keep well informed of social, cultural, historical, economic, institutional, legal, and political context issues through relevant reading, peer consultation, and continuing education."}, {"code": "IV.22", "principle": "IV", "subcat": "Development of society", "text": "Speak out, in a manner consistent with the four principles of this Code, if they possess expert knowledge that bears on important societal issues being studied or discussed."}, {"code": "IV.23", "principle": "IV", "subcat": "Development of society", "text": "Provide thorough discussion of the limits of their data with respect to social policy, if their work touches on social policy and structure."}, {"code": "IV.24", "principle": "IV", "subcat": "Development of society", "text": "Make themselves aware of the current social, economic, and political climate and of previous and possible future societal misinterpretations and misuses of psychological knowledge, and exercise due discretion in communicating psychological information (e.g., research results, theoretical knowledge), in order to discourage any further misinterpretation or misuse."}, {"code": "IV.25", "principle": "IV", "subcat": "Development of society", "text": "Exercise particular care when reporting the results of any work regarding vulnerable groups, ensuring that results are not likely to be misinterpreted or misused in the development of social policy, attitudes, and practices (e.g., encouraging manipulation of vulnerable individuals, couples, families, organizations, communities, or peoples; reinforcing unjust discrimination against any specific population)."}, {"code": "IV.26", "principle": "IV", "subcat": "Development of society", "text": "Not promote, contribute to, nor engage in any activity that contravenes international humanitarian law (e.g., declarations, treaties, or conventions regarding: human rights; torture and other cruel, inhumane, or degrading treatment or punishment; economic, social and cultural rights; civil and political rights; rights of indigenous peoples; children’s rights; weapons of mass destruction; destruction of the environment)."}, {"code": "IV.27", "principle": "IV", "subcat": "Development of society", "text": "Provide appropriate individuals and groups (e.g., couples, families, organizations, communities, peoples) with any psychological knowledge relevant to their informed participation in the shaping of social policies and structures, if the psychologist possesses expert knowledge that bears on the social policies and structures."}, {"code": "IV.28", "principle": "IV", "subcat": "Development of society", "text": "Speak out and/or act, in a manner consistent with the four principles of this Code, if the policies, practices, laws, or regulations of the social structure within which they work seriously ignore or contradict any of the principles of this Code."}, {"code": "IV.29", "principle": "IV", "subcat": "Extended responsibility", "text": "Encourage others, in a manner consistent with this Code, to exercise responsibility to society."}, {"code": "IV.30", "principle": "IV", "subcat": "Extended responsibility", "text": "Assume overall responsibility for the scientific and professional activities of their assistants, employees, supervisees, students, and trainees with regard to the Principle of Responsibility to Society, all of whom, however, incur similar obligations."}];
+const CLUES = {"General respect": ["respect", "harassment", "degrading", "demeaning", "dignity"], "General rights": ["moral right", "moral rights", "human, legal and civil rights", "infringe", "civil rights"], "Non-discrimination": ["discrimination", "discriminatory", "fair distribution"], "Fair treatment / due process": ["fair treatment", "due process", "natural justice", "compensate", "fees", "fairly"], "Informed consent": ["informed consent", "consent", "advance directives", "signed consent"], "Freedom of consent": ["coercion", "undue pressure", "undue reward", "duress", "freedom of consent"], "Protections for vulnerable individuals and groups": ["vulnerable", "diminished capacity", "not competent to consent", "legally responsible"], "Privacy": ["privacy", "private information", "personally identifiable", "private space", "germane"], "Confidentiality": ["confidential", "confidentiality"], "General caring": ["well-being and best interests", "avoid doing harm", "consequences of their actions", "harm others", "benefit and not harm"], "Competence and self-knowledge": ["competence", "competent", "consultation", "supervision", "up to date", "self-care", "burnout", "addictions"], "Risk/benefit analysis": ["risk", "risks", "benefit", "benefits", "pilot studies", "ethical review"], "Maximize benefit": ["best reasonably accessible service", "referrals", "records", "debrief", "teaching duties", "professional and scientific development"], "Minimize harm": ["sexual intimacy", "power relationship", "discretion", "discontinuing", "emergencies", "minimal risk"], "Offset/correct harm": ["terminate", "stop or offset", "imminent", "serious bodily harm", "regulatory body", "refuse to help"], "Care of animals": ["animals", "animal"], "Accuracy/honesty": ["dishonesty", "fraud", "misrepresent", "misrepresentation", "misrepresented", "qualifications", "credentials", "take credit", "credit", "disconfirming evidence"], "Objectivity/lack of bias": ["objective", "objectivity", "bias", "unbiased", "distortion"], "Straightforwardness/openness": ["straightforward", "honour all promises", "open inquiry", "private citizens", "student or trainee", "free and open exchange"], "Avoidance of incomplete disclosure and deception": ["incomplete disclosure", "deception", "debrief"], "Avoidance of conflict of interest": ["conflict of interest", "exploit", "dual or multiple relationship", "dual or multiple relationships", "rewards"], "Reliance on the discipline": ["rules and regulations", "guidelines and best practices", "seek consultation", "commitment to maintaining the standards"], "Development of knowledge": ["free enquiry", "innovation", "debate", "knowledge and ideas"], "Beneficial activities": ["continuing education", "accountability", "peer review", "licensing", "welfare of society", "highest standards"], "Respect for society": ["laws and regulations", "mores", "social customs", "social structure", "prevailing mores", "cultural expectations"], "Development of society": ["social policy", "societal", "humanitarian law", "society", "vulnerable groups"], "Extended responsibility": ["encourage others", "assume overall responsibility", "incur similar obligations"]};
+const PVALUE = {"I": "Treat every person and people as inherently worthy — covering respect, non-discrimination, moral/legal rights, consent, privacy, and confidentiality. Generally weighted highest.", "II": "Actively benefit those you work with and avoid harm — which requires competence, weighing risks against benefits, and protecting well-being.", "III": "Be honest, accurate, objective, and open, and avoid conflicts of interest, so that professional relationships can be trusted.", "IV": "Use psychology for the good of society — developing and safeguarding knowledge, respecting communities and laws, and speaking out against misuse."};
+const CRATIONALE = {"General respect": "The baseline of dignity: showing respect for others' knowledge and perspectives, using respectful language, and abstaining from harassment.", "General rights": "Protecting people's human, legal, and civil (moral) rights, and refusing to help anyone infringe them.", "Non-discrimination": "Not practising or condoning unjust discrimination, and distributing benefits fairly — a direct expression of equal dignity.", "Fair treatment / due process": "Fair dealing in evaluation, fees, and compensation, and following natural-justice procedures.", "Informed consent": "Securing genuine, informed, ongoing agreement before acting — respecting people's right to decide about what affects them.", "Freedom of consent": "Making sure consent is free of coercion, undue pressure, or undue reward, and can be withdrawn at any time.", "Protections for vulnerable individuals and groups": "Extra safeguards and independent review when people have diminished capacity or heightened vulnerability.", "Privacy": "Collecting only what is needed and protecting people's private space and personal information.", "Confidentiality": "Limiting and protecting how confidential information is shared.", "General caring": "The core duty to promote well-being, avoid harm, and accept responsibility for the consequences of your actions.", "Competence and self-knowledge": "Working only within your competence, staying current, and managing your own state (e.g., self-care) so you can help and not harm.", "Risk/benefit analysis": "Assessing risks and benefits — and ensuring the likely benefit outweighs the risk — before proceeding, including ethical review.", "Maximize benefit": "Providing the best reasonably accessible service, sound records, referrals, and useful feedback so people benefit as much as possible.", "Minimize harm": "Actively reducing potential harms — including the firm bars on sexual intimacy with clients and careful handling of discontinuation and emergencies.", "Offset/correct harm": "Stopping, correcting, or reporting harm once it becomes apparent, including harm caused by other practitioners.", "Care of animals": "Humane treatment of animals used in research, teaching, or service.", "Accuracy/honesty": "Not taking part in dishonesty or misrepresentation; representing qualifications, work, and findings accurately and crediting others.", "Objectivity/lack of bias": "Recognising and limiting your own bias so communication and judgments are as objective as possible.", "Straightforwardness/openness": "Being clear and forthcoming — about consent terms, access to records, reasons for actions — and honouring commitments.", "Avoidance of incomplete disclosure and deception": "Tightly limiting, justifying, and debriefing any deception or incomplete disclosure in research.", "Avoidance of conflict of interest": "Not exploiting professional relationships, and avoiding or carefully managing dual / multiple relationships.", "Reliance on the discipline": "Knowing and following the discipline's rules, guidelines, and best practices, and consulting colleagues.", "Development of knowledge": "Advancing knowledge through free, ethical inquiry, innovation, and debate.", "Beneficial activities": "Contributing to education, accountability, accreditation, and pro-bono service — and reporting incompetent or unethical conduct.", "Respect for society": "Learning and respecting the laws, customs, and cultures of the communities you work in.", "Development of society": "Using expertise to improve society and refusing to let psychology be misused — including against international humanitarian law.", "Extended responsibility": "Encouraging others to uphold this principle, and taking overall responsibility for the work of those you supervise with respect to it."};
+const PNAME = {
+  "I":"Respect for the Dignity of Persons and Peoples",
+  "II":"Responsible Caring",
+  "III":"Integrity in Relationships",
+  "IV":"Responsibility to Society"
+};
+const PVAR = {"I":"--p1","II":"--p2","III":"--p3","IV":"--p4"};
+const PBG  = {"I":"--p1bg","II":"--p2bg","III":"--p3bg","IV":"--p4bg"};
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+const SUBS = {};
+["I","II","III","IV"].forEach(p=>{
+  SUBS[p]=[]; DATA.filter(d=>d.principle===p).forEach(d=>{ if(!SUBS[p].includes(d.subcat)) SUBS[p].push(d.subcat); });
+});
+
+let state = {mode:"practice", diff:"principle", pick:{I:true,II:true,III:true,IV:true},
+  deck:[], i:0, cur:null, phase:"principle", pRight:true,
+  correct:0, seen:0, streak:0, bestStreak:0,
+  pStats:{I:{a:0,c:0},II:{a:0,c:0},III:{a:0,c:0},IV:{a:0,c:0}}, cStats:{}, missMap:{}, missSeq:0, saved:{}};
+const $ = id => document.getElementById(id);
+
+/* ---------- helpers ---------- */
+function escapeHtml(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function reEsc(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"); }
+function highlight(text, cluster){
+  const safe = escapeHtml(text);
+  const phrases = (CLUES[cluster]||[]).slice().sort((a,b)=>b.length-a.length);
+  if(!phrases.length) return {html:safe, hit:false};
+  const alt = phrases.map(reEsc).join("|");
+  const re = new RegExp("(?<![A-Za-z])("+alt+")(?![A-Za-z])","gi");
+  let hit=false;
+  const html = safe.replace(re, m=>{ hit=true; return "<mark>"+m+"</mark>"; });
+  return {html, hit};
+}
+function pool(){ return DATA.filter(d=>state.pick[d.principle]); }
+function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];} return a; }
+function buildDeck(){ state.deck = shuffle(pool().slice()); state.i=0; }
+const ckey = (p,cl)=>p+"||"+cl;
+function recP(p,ok){ const s=state.pStats[p]; s.a++; if(ok)s.c++; }
+function recC(p,cl,ok){ const k=ckey(p,cl); const s=state.cStats[k]||(state.cStats[k]={a:0,c:0,p:p,cl:cl}); s.a++; if(ok)s.c++; }
+function matchedCues(text, cluster){
+  const out=[]; const lo=text.toLowerCase();
+  (CLUES[cluster]||[]).forEach(ph=>{ const re=new RegExp("(?<![A-Za-z])"+reEsc(ph)+"(?![A-Za-z])","i"); if(re.test(lo) && !out.includes(ph)) out.push(ph); });
+  return out;
+}
+const mkey=(code,dim)=>code+"|"+dim;
+function recordMiss(c,dim,your,correct){
+  const k=mkey(c.code,dim), prev=state.missMap[k];
+  state.missMap[k]={code:c.code,principle:c.principle,subcat:c.subcat,text:c.text,dim,your,correct,n:prev?prev.n+1:1,seq:state.missSeq++};
+}
+const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const GOOD_MSG = [
+  "CPA Code, no notes.",
+  "p < .05 you knew that.",
+  "High inter-rater agreement: you and the answer key.",
+  "Chef's kiss.",
+  "Prof didn't even need to fact-check that one.",
+  "Ethically sound.",
+  "Statistically significant brilliance.",
+  "Well-normed. Prof approves.",
+  "No ethics violations detected.",
+  "That response scored in the clinical range — of correct.",
+  "Certified correct.",
+  "You ate that one up."
+];
+const BAD_MSG = [
+  "The Code disagrees.",
+  "Prof flags a scoring discrepancy.",
+  "Outside the confidence interval.",
+  "Below the cut score — re-administer.",
+  "Prof raises an eyebrow.",
+  "Statistically… unlikely. Try again.",
+  "Mmm, not quite.",
+  "Oof. Not it."
+];
+const STREAK_MSG = [
+  "Outlier detected.",
+  "Prof is renorming the test around you.",
+  "p < .001 — significant streak.",
+  "Ceiling effect achieved.",
+  "On fire — no notes."
+];
+const pick = a => a[Math.random()*a.length|0];
+function toast(ok){
+  const t=$("toast");
+  t.textContent = ok ? pick(state.streak>=5 ? STREAK_MSG : GOOD_MSG) : pick(BAD_MSG);
+  t.classList.remove("good","bad"); void t.offsetWidth;
+  t.classList.add(ok?"good":"bad");
+}
+function confetti(){
+  if(REDUCE) return;
+  const cv=$("confetti"), ctx=cv.getContext("2d");
+  const W=cv.width=innerWidth, H=cv.height=innerHeight;
+  const cols=[css("--p1"),css("--p2"),css("--p3"),css("--p4"),"#f5c542","#ffffff"];
+  const parts=[];
+  for(let i=0;i<100;i++){
+    parts.push({x:W/2+(Math.random()-.5)*140, y:H*0.30,
+      vx:(Math.random()-.5)*10, vy:Math.random()*-10-3, g:0.22+Math.random()*0.12,
+      w:5+Math.random()*7, h:8+Math.random()*8, rot:Math.random()*6.28, vr:(Math.random()-.5)*0.34,
+      col:cols[Math.random()*cols.length|0], life:0});
+  }
+  let frame=0;
+  function tick(){
+    frame++; ctx.clearRect(0,0,W,H); let alive=false;
+    parts.forEach(p=>{
+      p.vy+=p.g; p.x+=p.vx; p.y+=p.vy; p.rot+=p.vr; p.life++;
+      const a=Math.max(0,1-p.life/95);
+      if(a>0 && p.y<H+24){ alive=true;
+        ctx.save(); ctx.globalAlpha=a; ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+        ctx.fillStyle=p.col; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore();
+      }
+    });
+    if(alive && frame<130) requestAnimationFrame(tick); else ctx.clearRect(0,0,W,H);
+  }
+  requestAnimationFrame(tick);
+}
+
+function clearMiss(code,dim){ delete state.missMap[mkey(code,dim)]; }
+
+function updateStar(){
+  const s=$("star"), c=state.cur;
+  if(!c){ s.style.display="none"; return; }
+  s.style.display="";
+  const on=!!state.saved[c.code];
+  s.classList.toggle("on",on);
+  s.innerHTML = on ? "&#9733;" : "&#9734;";
+  s.title = on ? "Saved — tap to remove" : "Save this standard";
+}
+function toggleStar(code){
+  if(state.saved[code]) delete state.saved[code]; else state.saved[code]=true;
+  updateStar(); updateSavedCount();
+  if(state.mode==="saved") buildSaved();
+}
+function updateSavedCount(){
+  const n=Object.keys(state.saved).length;
+  $("savedTab").textContent = n ? `Saved (${n})` : "Saved";
+}
+
+/* ---------- practice ---------- */
+function nextCard(){
+  if(!state.deck.length || state.i>=state.deck.length) buildDeck();
+  if(!state.deck.length){ state.cur=null; render(); return; }
+  state.cur = state.deck[state.i++];
+  state.phase = (state.diff==="cluster") ? "cluster" : "principle";
+  state.pRight = true;
+  render();
+}
+function render(){
+  const c = state.cur;
+  $("reveal").style.display="none"; $("next").style.display="none"; $("giveup").style.display="";
+  const card=$("card"); card.classList.remove("fade"); void card.offsetWidth; card.classList.add("fade");
+  if(!c){ $("prompt").textContent="No principles selected — turn one on above."; $("opts").innerHTML=""; $("ctx").textContent=""; $("kicker").textContent=""; return; }
+  $("prompt").textContent = c.text;
+  updateStar();
+  $("opts").classList.toggle("col", state.phase==="cluster");
+  if(state.phase==="principle"){
+    $("kicker").textContent="Which principle does this belong to?";
+    $("ctx").textContent="";
+    renderPrincipleOpts();
+  } else {
+    $("kicker").textContent="Which cluster does this code go under?";
+    const accent=css(PVAR[c.principle]);
+    $("ctx").innerHTML = `Principle: <b style="color:${accent}">${c.principle}. ${PNAME[c.principle]}</b>`;
+    renderClusterOpts();
+  }
+}
+function renderPrincipleOpts(){
+  const box=$("opts"); box.innerHTML="";
+  ["I","II","III","IV"].forEach((p,idx)=>{
+    const b=document.createElement("button"); b.className="opt"; b.dataset.p=p;
+    b.innerHTML=`<span class="k">${idx+1}</span><span class="lab">${p}. ${PNAME[p]}</span>`;
+    b.onclick=()=>answerPrinciple(p,b);
+    box.appendChild(b);
+  });
+}
+function renderClusterOpts(){
+  const box=$("opts"); box.innerHTML="";
+  SUBS[state.cur.principle].forEach((s,idx)=>{
+    const b=document.createElement("button"); b.className="opt sc";
+    const key = idx<9 ? idx+1 : 0;
+    b.innerHTML=`<span class="k">${key}</span><span class="lab">${s}</span>`;
+    b.onclick=()=>answerCluster(s,b);
+    box.appendChild(b);
+  });
+}
+function lockOpts(){ [...$("opts").children].forEach(b=>b.disabled=true); }
+function answerPrinciple(p, btn){
+  if([...$("opts").children].some(b=>b.disabled)) return;
+  const c=state.cur, right = p===c.principle;
+  lockOpts();
+  [...$("opts").children].forEach(b=>{
+    if(b.dataset.p===c.principle) b.classList.add("correct");
+    else if(b===btn) b.classList.add("wrong"); else b.classList.add("dim");
+  });
+  if(state.diff==="principle"){ recP(c.principle,right); if(right) clearMiss(c.code,"principle"); else recordMiss(c,"principle",p,c.principle); finish(right); }
+  else { state.pRight=right; if(right) clearMiss(c.code,"principle"); else recordMiss(c,"principle",p,c.principle); setTimeout(()=>{ state.phase="cluster"; render(); }, right?260:720); }
+}
+function answerCluster(s, btn){
+  if([...$("opts").children].some(b=>b.disabled)) return;
+  const c=state.cur, right = s===c.subcat;
+  lockOpts();
+  [...$("opts").children].forEach(b=>{
+    const lab=b.querySelector(".lab").textContent;
+    if(lab===c.subcat) b.classList.add("correct");
+    else if(b===btn) b.classList.add("wrong"); else b.classList.add("dim");
+  });
+  if(state.diff==="both") recP(c.principle, state.pRight);
+  recC(c.principle, c.subcat, right);
+  if(right) clearMiss(c.code,"cluster"); else recordMiss(c,"cluster",s,c.subcat);
+  finish(state.diff==="both" ? (state.pRight && right) : right);
+}
+function finish(right){
+  state.seen++;
+  if(right){ state.correct++; state.streak++; if(state.streak>state.bestStreak)state.bestStreak=state.streak; }
+  else { state.streak=0; }
+  updateScore(); toast(right); if(right) confetti(); showReveal(right?"correct":"wrong");
+  $("next").style.display=""; $("giveup").style.display="none"; $("next").focus();
+}
+function showReveal(status){
+  const c=state.cur, accent=css(PVAR[c.principle]), bg=css(PBG[c.principle]);
+  const r=$("reveal"); r.style.display="";
+  let v = status==="skip" ? `<div class="verdict n">Skipped</div>`
+        : status==="correct" ? `<div class="verdict y">&check; Correct</div>`
+                             : `<div class="verdict n">&times; Not quite</div>`;
+  const {html,hit} = highlight(c.text, c.subcat);
+  const cap = hit ? `<div class="rcap"><span class="swatch"></span>Highlighted words are cues for the &ldquo;${c.subcat}&rdquo; cluster.</div>` : "";
+  r.innerHTML = v +
+    `<span class="tag" style="background:${bg};color:${accent}"><span class="code">${c.code}</span></span>`+
+    `<div class="rgrid">`+
+      `<div class="rk">Principle</div><div class="rv"><b style="color:${accent}">${c.principle}.</b> ${PNAME[c.principle]}</div>`+
+      `<div class="rk">Cluster</div><div class="rv"><b>${c.subcat}</b></div>`+
+    `</div>`+
+    `<div class="rtext"><span class="ft">${c.code} — ${html}</span></div>`+ cap;
+}
+function updateScore(){
+  $("sCorrect").textContent=state.correct; $("sSeen").textContent=state.seen; $("sStreak").textContent=state.streak;
+}
+$("giveup").onclick=()=>{
+  if(!state.cur) return;
+  const c=state.cur;
+  if(state.phase==="principle"){ recP(c.principle,false); recordMiss(c,"principle","(skipped)",c.principle); }
+  else { if(state.diff==="both") recP(c.principle, state.pRight); recC(c.principle,c.subcat,false); recordMiss(c,"cluster","(skipped)",c.subcat); }
+  state.seen++; state.streak=0; updateScore(); lockOpts();
+  [...$("opts").children].forEach(b=>{
+    const isP=b.dataset.p, lab=b.querySelector(".lab")?.textContent;
+    if((state.phase==="principle"&&isP===c.principle)||(state.phase==="cluster"&&lab===c.subcat)) b.classList.add("correct");
+    else b.classList.add("dim");
+  });
+  showReveal("skip");
+  $("next").style.display=""; $("giveup").style.display="none"; $("next").focus();
+};
+$("next").onclick=nextCard;
+$("star").onclick=()=>{ if(state.cur) toggleStar(state.cur.code); };
+
+/* ---------- mode + filters ---------- */
+$("modeSeg").onclick=e=>{ const b=e.target.closest("button"); if(!b)return;
+  [...$("modeSeg").children].forEach(x=>x.classList.toggle("on",x===b));
+  state.mode=b.dataset.mode;
+  $("practiceView").style.display = state.mode==="practice"?"":"none";
+  $("statsView").style.display = state.mode==="stats"?"":"none";
+  $("savedView").style.display = state.mode==="saved"?"":"none";
+  $("browseView").style.display = state.mode==="browse"?"":"none";
+  if(state.mode==="stats") buildStats();
+  if(state.mode==="saved") buildSaved();
+  if(state.mode==="browse"){ buildMap(); buildBrowse(); }
+};
+$("diffSeg").onclick=e=>{ const b=e.target.closest("button"); if(!b)return;
+  [...$("diffSeg").children].forEach(x=>x.classList.toggle("on",x===b));
+  state.diff=b.dataset.diff; nextCard();
+};
+$("chips").onclick=e=>{ const b=e.target.closest(".chip"); if(!b)return;
+  const p=b.dataset.p; const on=[...$("chips").children].filter(c=>c.classList.contains("on"));
+  if(on.length===1 && b.classList.contains("on")) return;
+  b.classList.toggle("on"); state.pick[p]=b.classList.contains("on");
+  buildDeck(); nextCard();
+};
+document.addEventListener("keydown",e=>{
+  if(state.mode!=="practice") return;
+  if((e.key==="s"||e.key==="S") && state.cur){ e.preventDefault(); toggleStar(state.cur.code); return; }
+  if((e.key==="n"||e.key==="N"||e.key==="Enter") && $("next").style.display!=="none"){ e.preventDefault(); nextCard(); return; }
+  if(/^[0-9]$/.test(e.key)){
+    const opts=[...$("opts").children].filter(b=>!b.disabled);
+    const idx = e.key==="0" ? 9 : (+e.key-1);
+    if(opts[idx]) opts[idx].click();
+  }
+});
+
+/* ---------- stats ---------- */
+function pct(c,a){ return a? Math.round(100*c/a):0; }
+function fillColor(p){ return p>=80?css("--good") : p>=50?css("--p3") : css("--bad"); }
+function barRow(name, sub, c, a){
+  const p=pct(c,a), col=fillColor(p);
+  return `<div class="row">
+    <div class="rname">${sub?`<small>${sub}</small>`:""}${name}</div>
+    <div class="rfrac">${c}/${a} &middot; ${p}%</div>
+    <div class="track"><div class="fill" style="width:${p}%;background:${col}"></div></div>
+  </div>`;
+}
+function savedCard(c){
+  const accent=css(PVAR[c.principle]), bg=css(PBG[c.principle]);
+  const {html:txt}=highlight(c.text,c.subcat);
+  const cues=matchedCues(c.text,c.subcat);
+  const cuesHtml=cues.length?`<span class="lbl">Cue words</span><div class="cues">${cues.map(x=>`<span class="cue">${escapeHtml(x)}</span>`).join("")}</div>`:"";
+  return `<div class="miss" style="border-left-color:${accent}">
+    <div class="mh">
+      <span class="mcode" style="color:${accent}">${c.code}</span>
+      <span class="dimtag">${c.principle}. ${PNAME[c.principle]} &middot; ${c.subcat}</span>
+      <button class="savestar" data-unstar="${c.code}" title="Remove from saved" aria-label="Remove from saved">&#9733;</button>
+    </div>
+    <div class="mtext">${txt}</div>
+    <div class="clar">
+      <span class="lbl">Cluster &mdash; ${c.subcat}</span>
+      <div>${CRATIONALE[c.subcat]||""}</div>
+      <span class="lbl">Principle ${c.principle} &mdash; ${PNAME[c.principle]}</span>
+      <div>${PVALUE[c.principle]}</div>
+      ${cuesHtml}
+    </div>
+  </div>`;
+}
+function buildSaved(){
+  const v=$("savedView");
+  const items=DATA.filter(d=>state.saved[d.code]);
+  if(!items.length){
+    v.innerHTML=`<div class="panel"><div class="empty">Nothing saved yet. Tap the star (&#9734;) in the top-right corner of any card and it will be kept here with its principle, cluster, and clarification.</div></div>`;
+    return;
+  }
+  let html=`<div class="panel"><h2>Saved standards</h2><div class="psub">${items.length} saved &middot; in code order &middot; tap the star to remove.</div>`;
+  items.forEach(c=> html += savedCard(c));
+  html+=`</div>`;
+  v.innerHTML=html;
+  v.querySelectorAll("[data-unstar]").forEach(b=> b.onclick=()=>{
+    delete state.saved[b.dataset.unstar]; updateSavedCount(); updateStar(); buildSaved();
+  });
+}
+function missCard(m){
+  const accent=css(PVAR[m.principle]), bg=css(PBG[m.principle]);
+  const {html:txt} = highlight(m.text, m.subcat);
+  const dimLabel = m.dim==="principle" ? "Principle" : "Cluster";
+  const skipped = m.your==="(skipped)";
+  let yourDisp = skipped ? "Skipped"
+      : m.dim==="principle" ? `${m.your}. ${PNAME[m.your]}` : m.your;
+  let corrDisp = m.dim==="principle" ? `${m.correct}. ${PNAME[m.correct]}` : m.correct;
+  const pills = skipped
+    ? `<span class="pill skip">Skipped</span><span class="arrow">&rarr;</span><span class="pill ans">${corrDisp}</span>`
+    : `<span class="pill you">You: ${yourDisp}</span><span class="arrow">&rarr;</span><span class="pill ans">Correct: ${corrDisp}</span>`;
+  const cues = matchedCues(m.text, m.subcat);
+  const cuesHtml = cues.length ? `<span class="lbl">Cue words</span><div class="cues">${cues.map(x=>`<span class="cue">${escapeHtml(x)}</span>`).join("")}</div>` : "";
+  return `<div class="miss" style="border-left-color:${accent}">
+    <div class="mh">
+      <span class="mcode" style="color:${accent}">${m.code}</span>
+      <span class="dimtag">${dimLabel}</span>
+      ${m.n>1?`<span class="ntag">missed ${m.n}&times;</span>`:""}
+    </div>
+    <div class="pillrow">${pills}</div>
+    <div class="mtext">${txt}</div>
+    <div class="clar">
+      <span class="lbl">Principle ${m.principle} &mdash; ${PNAME[m.principle]}</span>
+      <div>${PVALUE[m.principle]}</div>
+      <span class="lbl">Cluster &mdash; ${m.subcat}</span>
+      <div>${CRATIONALE[m.subcat]||""}</div>
+      ${cuesHtml}
+    </div>
+  </div>`;
+}
+function buildStats(){
+  const v=$("statsView");
+  const acc=pct(state.correct,state.seen);
+  let html = `<div class="tiles">
+    <div class="tile"><b>${state.seen}</b><span>Answered</span></div>
+    <div class="tile"><b>${state.correct}</b><span>Correct</span></div>
+    <div class="tile"><b>${acc}%</b><span>Accuracy</span></div>
+    <div class="tile"><b>${state.bestStreak}</b><span>Best streak</span></div>
+  </div>`;
+
+  // review of misses
+  const misses = Object.values(state.missMap).sort((a,b)=>b.seq-a.seq);
+  if(misses.length){
+    html += `<div class="panel"><h2>Review your misses</h2>
+      <div class="psub">Everything you got wrong or skipped, newest first. Get one right again and it drops off this list.</div>`;
+    misses.forEach(m=> html += missCard(m));
+    html += `</div>`;
+  }
+
+  // weakest clusters
+  const cs = Object.values(state.cStats).filter(s=>s.a>0);
+  if(cs.length){
+    const weak = cs.slice().sort((x,y)=> pct(x.c,x.a)-pct(y.c,y.a) || (y.a-y.c)-(x.a-x.c) || y.a-x.a).slice(0,8);
+    html += `<div class="panel"><h2>Where you're getting tripped up</h2>
+      <div class="psub">Clusters you've attempted, weakest first.</div>`;
+    weak.forEach(s=> html += barRow(s.cl, s.p, s.c, s.a));
+    html += `</div>`;
+  }
+
+  // by principle
+  const anyP = ["I","II","III","IV"].some(p=>state.pStats[p].a>0);
+  if(anyP){
+    html += `<div class="panel"><h2>By principle</h2><div class="psub">From Principle and Both modes.</div>`;
+    ["I","II","III","IV"].forEach(p=>{ const s=state.pStats[p]; if(s.a>0) html += barRow(PNAME[p], p, s.c, s.a); });
+    html += `</div>`;
+  }
+
+  // full cluster breakdown grouped by principle
+  if(cs.length){
+    html += `<div class="panel"><h2>All attempted clusters</h2><div class="psub">From Cluster and Both modes.</div>`;
+    ["I","II","III","IV"].forEach(p=>{
+      const rows = SUBS[p].map(cl=>state.cStats[ckey(p,cl)]).filter(s=>s&&s.a>0);
+      if(!rows.length) return;
+      html += `<div class="scat" style="color:var(${PVAR[p]})">${p}. ${PNAME[p]}</div>`;
+      rows.forEach(s=> html += barRow(s.cl, "", s.c, s.a));
+    });
+    html += `</div>`;
+  }
+
+  if(!state.seen){
+    html += `<div class="panel"><div class="empty">No data yet. Answer a few cards in Practice and this page fills up: a review of every miss with a clarification of the code, your weakest clusters, and a per-principle and per-cluster breakdown.</div></div>`;
+  } else {
+    html += `<button class="btn ghost reset" id="resetStats">Reset all stats</button>`;
+  }
+  v.innerHTML = html;
+  const rb=$("resetStats");
+  if(rb) rb.onclick=()=>{
+    state.correct=0;state.seen=0;state.streak=0;state.bestStreak=0;
+    state.pStats={I:{a:0,c:0},II:{a:0,c:0},III:{a:0,c:0},IV:{a:0,c:0}};state.cStats={};state.missMap={};state.missSeq=0;
+    updateScore(); buildStats();
+  };
+}
+
+/* ---------- map + browse ---------- */
+function buildMap(){
+  const m=$("map"); if(m.dataset.built) return; m.dataset.built="1";
+  ["I","II","III","IV"].forEach(p=>{
+    const row=document.createElement("div"); row.className="mrow";
+    const accent=`var(${PVAR[p]})`, bg=`var(${PBG[p]})`;
+    let chips = SUBS[p].map(s=>`<span class="mc" style="background:${bg};color:${accent};border-color:${bg}">${s}</span>`).join("");
+    row.innerHTML=`<div class="mp" style="color:${accent}">${p}. ${PNAME[p]}</div><div class="mclusters">${chips}</div>`;
+    m.appendChild(row);
+  });
+}
+function buildBrowse(){
+  const wrap=$("browse"); if(wrap.dataset.built) return; wrap.dataset.built="1";
+  ["I","II","III","IV"].forEach(p=>{
+    const items=DATA.filter(d=>d.principle===p);
+    const g=document.createElement("div"); g.className="pgroup";
+    const head=document.createElement("div"); head.className="phead";
+    head.innerHTML=`<span class="dot" style="background:var(${PVAR[p]})"></span>
+      <span class="nm">${p}. ${PNAME[p]}</span><span class="ct">${items.length} standards &middot; ${SUBS[p].length} clusters</span>`;
+    head.onclick=()=>g.classList.toggle("open");
+    const body=document.createElement("div"); body.className="pbody";
+    SUBS[p].forEach(sc=>{
+      const h=document.createElement("div"); h.className="scat"; h.textContent=sc; body.appendChild(h);
+      items.filter(d=>d.subcat===sc).forEach(d=>{
+        const row=document.createElement("div"); row.className="std";
+        row.innerHTML=`<span class="c">${d.code}</span><span class="t">${d.text}</span>`;
+        body.appendChild(row);
+      });
+    });
+    g.appendChild(head); g.appendChild(body); wrap.appendChild(g);
+  });
+}
+
+buildDeck(); nextCard(); updateSavedCount();
+</script>
+</body>
+</html>
