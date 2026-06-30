@@ -62,7 +62,7 @@ h1{font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0}
 .stat span{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 
 .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
-.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px}
+.seg{display:inline-flex;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px}
 .seg button{font-family:var(--sans);font-size:12.5px;font-weight:500;color:var(--muted);background:none;
   border:none;border-radius:7px;padding:6px 11px;cursor:pointer;white-space:nowrap}
 .seg button.on{background:var(--ink);color:#fff}
@@ -189,6 +189,46 @@ kbd{font-family:var(--sans);font-size:10.5px;background:var(--soft);border:1px s
 .std .c{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--muted);min-width:42px;flex:none;padding-top:1px}
 .std .t{font-family:var(--serif);font-size:15px}
 .note{font-size:12px;color:var(--muted);margin:16px 2px 0;line-height:1.5}
+/* dilemma writing practice */
+.dintro{font-size:12.5px;color:var(--muted);line-height:1.55;margin:2px 2px 14px}
+.dsel{width:100%;font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:var(--surface);margin-bottom:14px;cursor:pointer}
+.dscn{font-family:var(--serif);font-size:16px;line-height:1.6;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin-bottom:12px}
+.dtoggle{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;margin-bottom:14px}
+.dcodes{display:none;font-size:12.5px;line-height:1.6;color:var(--ink);background:var(--p3bg);border-radius:10px;padding:12px 15px;margin-bottom:14px}
+.dcodes.show{display:block}
+.dcodes b{font-weight:600}
+.dwrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.dblk{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.dblk:first-child{margin-top:0;padding-top:0;border-top:none}
+.dhdr{display:flex;gap:10px;align-items:center;margin-bottom:4px}
+.dsn{font-family:var(--sans);font-weight:700;font-size:12px;color:#fff;background:var(--ink);min-width:24px;height:24px;border-radius:7px;display:grid;place-items:center;flex:none}
+.dnm{font-weight:600;font-size:14px}
+.dprompt{font-size:12px;color:var(--muted);margin:0 0 9px 34px;line-height:1.5}
+.dblk textarea{width:100%;font-family:var(--sans);font-size:13.5px;line-height:1.5;color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;resize:vertical;min-height:62px;background:var(--soft)}
+.dblk textarea:focus{outline:none;border-color:#9aa0ad;background:#fff}
+.dmbtn{font-family:var(--sans);font-size:11.5px;color:var(--muted);background:none;border:none;cursor:pointer;padding:7px 0 0;text-decoration:underline}
+.dmodel{display:none;margin-top:9px;font-size:12.5px;line-height:1.6;color:var(--ink);background:var(--p2bg);border-left:3px solid var(--p2);border-radius:8px;padding:11px 13px}
+.dmodel.show{display:block}
+.dmodel .ml{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--p2);font-weight:700;display:block;margin-bottom:4px}
+.dfoot{display:flex;gap:10px;margin-top:18px;align-items:center;flex-wrap:wrap}
+.dcopied{font-size:12px;color:var(--good);font-weight:600}
+@media(max-width:560px){
+  .dscn{font-size:15px;padding:15px 16px}
+  .dwrap{padding:16px 15px}
+  .dprompt{margin-left:0}
+}
+/* MC quiz */
+.mcscore{font-size:12px;color:var(--muted);margin:2px 2px 12px;font-weight:500}
+.mcscore b{color:var(--ink);font-variant-numeric:tabular-nums}
+.tchips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tchip{font-family:var(--sans);font-weight:500;font-size:11.5px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:5px 11px;cursor:pointer}
+.tchip.on{border-color:var(--p1);color:#fff;background:var(--p1)}
+.mckick{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-weight:600;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.mcsrc{color:var(--p1);background:var(--p1bg);border-radius:999px;padding:2px 9px;font-size:10px;letter-spacing:.02em;white-space:nowrap}
+.mcq{font-size:17px;line-height:1.4;font-weight:500;margin-bottom:16px}
+.mcexpl{font-size:13.5px;line-height:1.6;color:var(--ink)}
+.mcexpl b{font-weight:600}
+@media(max-width:560px){ .mcq{font-size:15.5px} }
 @media(max-width:560px){
   body{padding:16px 12px 56px}
   h1{font-size:18px}
@@ -230,6 +270,8 @@ kbd{font-family:var(--sans);font-size:10.5px;background:var(--soft);border:1px s
       <button data-mode="stats">Stats</button>
       <button data-mode="saved" id="savedTab">Saved</button>
       <button data-mode="browse">Browse codes</button>
+      <button data-mode="dilemma">Dilemma</button>
+      <button data-mode="mc">MC quiz</button>
     </div>
     <div class="seg" id="diffSeg">
       <button data-diff="principle" class="on">Principle</button>
@@ -277,6 +319,9 @@ kbd{font-family:var(--sans);font-size:10.5px;background:var(--soft);border:1px s
     <div class="browse" id="browse"></div>
     <div class="note">170 standards total. Tap a principle to expand. Standard text is verbatim from the 4th edition.</div>
   </div>
+
+  <div id="dilemmaView" style="display:none"></div>
+  <div id="mcView" style="display:none"></div>
 </div>
 
 <canvas id="confetti"></canvas>
@@ -287,6 +332,10 @@ const DATA = [{"code": "I.1", "principle": "I", "subcat": "General respect", "te
 const CLUES = {"General respect": ["respect", "harassment", "degrading", "demeaning", "dignity"], "General rights": ["moral right", "moral rights", "human, legal and civil rights", "infringe", "civil rights"], "Non-discrimination": ["discrimination", "discriminatory", "fair distribution"], "Fair treatment / due process": ["fair treatment", "due process", "natural justice", "compensate", "fees", "fairly"], "Informed consent": ["informed consent", "consent", "advance directives", "signed consent"], "Freedom of consent": ["coercion", "undue pressure", "undue reward", "duress", "freedom of consent"], "Protections for vulnerable individuals and groups": ["vulnerable", "diminished capacity", "not competent to consent", "legally responsible"], "Privacy": ["privacy", "private information", "personally identifiable", "private space", "germane"], "Confidentiality": ["confidential", "confidentiality"], "General caring": ["well-being and best interests", "avoid doing harm", "consequences of their actions", "harm others", "benefit and not harm"], "Competence and self-knowledge": ["competence", "competent", "consultation", "supervision", "up to date", "self-care", "burnout", "addictions"], "Risk/benefit analysis": ["risk", "risks", "benefit", "benefits", "pilot studies", "ethical review"], "Maximize benefit": ["best reasonably accessible service", "referrals", "records", "debrief", "teaching duties", "professional and scientific development"], "Minimize harm": ["sexual intimacy", "power relationship", "discretion", "discontinuing", "emergencies", "minimal risk"], "Offset/correct harm": ["terminate", "stop or offset", "imminent", "serious bodily harm", "regulatory body", "refuse to help"], "Care of animals": ["animals", "animal"], "Accuracy/honesty": ["dishonesty", "fraud", "misrepresent", "misrepresentation", "misrepresented", "qualifications", "credentials", "take credit", "credit", "disconfirming evidence"], "Objectivity/lack of bias": ["objective", "objectivity", "bias", "unbiased", "distortion"], "Straightforwardness/openness": ["straightforward", "honour all promises", "open inquiry", "private citizens", "student or trainee", "free and open exchange"], "Avoidance of incomplete disclosure and deception": ["incomplete disclosure", "deception", "debrief"], "Avoidance of conflict of interest": ["conflict of interest", "exploit", "dual or multiple relationship", "dual or multiple relationships", "rewards"], "Reliance on the discipline": ["rules and regulations", "guidelines and best practices", "seek consultation", "commitment to maintaining the standards"], "Development of knowledge": ["free enquiry", "innovation", "debate", "knowledge and ideas"], "Beneficial activities": ["continuing education", "accountability", "peer review", "licensing", "welfare of society", "highest standards"], "Respect for society": ["laws and regulations", "mores", "social customs", "social structure", "prevailing mores", "cultural expectations"], "Development of society": ["social policy", "societal", "humanitarian law", "society", "vulnerable groups"], "Extended responsibility": ["encourage others", "assume overall responsibility", "incur similar obligations"]};
 const PVALUE = {"I": "Treat every person and people as inherently worthy — covering respect, non-discrimination, moral/legal rights, consent, privacy, and confidentiality. Generally weighted highest.", "II": "Actively benefit those you work with and avoid harm — which requires competence, weighing risks against benefits, and protecting well-being.", "III": "Be honest, accurate, objective, and open, and avoid conflicts of interest, so that professional relationships can be trusted.", "IV": "Use psychology for the good of society — developing and safeguarding knowledge, respecting communities and laws, and speaking out against misuse."};
 const CRATIONALE = {"General respect": "The baseline of dignity: showing respect for others' knowledge and perspectives, using respectful language, and abstaining from harassment.", "General rights": "Protecting people's human, legal, and civil (moral) rights, and refusing to help anyone infringe them.", "Non-discrimination": "Not practising or condoning unjust discrimination, and distributing benefits fairly — a direct expression of equal dignity.", "Fair treatment / due process": "Fair dealing in evaluation, fees, and compensation, and following natural-justice procedures.", "Informed consent": "Securing genuine, informed, ongoing agreement before acting — respecting people's right to decide about what affects them.", "Freedom of consent": "Making sure consent is free of coercion, undue pressure, or undue reward, and can be withdrawn at any time.", "Protections for vulnerable individuals and groups": "Extra safeguards and independent review when people have diminished capacity or heightened vulnerability.", "Privacy": "Collecting only what is needed and protecting people's private space and personal information.", "Confidentiality": "Limiting and protecting how confidential information is shared.", "General caring": "The core duty to promote well-being, avoid harm, and accept responsibility for the consequences of your actions.", "Competence and self-knowledge": "Working only within your competence, staying current, and managing your own state (e.g., self-care) so you can help and not harm.", "Risk/benefit analysis": "Assessing risks and benefits — and ensuring the likely benefit outweighs the risk — before proceeding, including ethical review.", "Maximize benefit": "Providing the best reasonably accessible service, sound records, referrals, and useful feedback so people benefit as much as possible.", "Minimize harm": "Actively reducing potential harms — including the firm bars on sexual intimacy with clients and careful handling of discontinuation and emergencies.", "Offset/correct harm": "Stopping, correcting, or reporting harm once it becomes apparent, including harm caused by other practitioners.", "Care of animals": "Humane treatment of animals used in research, teaching, or service.", "Accuracy/honesty": "Not taking part in dishonesty or misrepresentation; representing qualifications, work, and findings accurately and crediting others.", "Objectivity/lack of bias": "Recognising and limiting your own bias so communication and judgments are as objective as possible.", "Straightforwardness/openness": "Being clear and forthcoming — about consent terms, access to records, reasons for actions — and honouring commitments.", "Avoidance of incomplete disclosure and deception": "Tightly limiting, justifying, and debriefing any deception or incomplete disclosure in research.", "Avoidance of conflict of interest": "Not exploiting professional relationships, and avoiding or carefully managing dual / multiple relationships.", "Reliance on the discipline": "Knowing and following the discipline's rules, guidelines, and best practices, and consulting colleagues.", "Development of knowledge": "Advancing knowledge through free, ethical inquiry, innovation, and debate.", "Beneficial activities": "Contributing to education, accountability, accreditation, and pro-bono service — and reporting incompetent or unethical conduct.", "Respect for society": "Learning and respecting the laws, customs, and cultures of the communities you work in.", "Development of society": "Using expertise to improve society and refusing to let psychology be misused — including against international humanitarian law.", "Extended responsibility": "Encouraging others to uphold this principle, and taking overall responsibility for the work of those you supervise with respect to it."};
+const STEPS10 = [[1, "Identify affected parties"], [2, "Identify the ethical issues"], [3, "Consider your biases"], [4, "Outline options"], [5, "Weigh risks & benefits"], [6, "Choose an action"], [7, "Act & take responsibility"], [8, "Evaluate results"], [9, "Correct & re-engage"], [10, "Prevent recurrence"]];
+const DPROMPTS = ["Who is affected? List every individual and group — client, third parties, you, the public, institutions.", "What ethical issues are at stake? Name them and map to the CPA table (e.g., confidentiality, conflict of interest, consent). Lots of marks here.", "What personal or societal biases, values, or pressures might influence your judgment here?", "List several genuine courses of action — and how you'd actually carry each one out. Not just “report / don't report.”", "For each option, weigh the short- and long-term risks and benefits for everyone involved.", "Which option do you choose, and why? Apply the principles, standards, and any relevant law or case.", "How will you carry it out, and how do you take responsibility for the consequences?", "How will you evaluate whether your action worked?", "If there are negative consequences, how will you correct them or re-enter the process?", "What will you change (intake, procedures, policy, consultation) to prevent this in future?"];
+const DILEMMAS = [{"title": "The insurer-funded disability client", "scenario": "You treat a 35-year-old man for depression and anxiety in private practice. His workplace insurer pays you directly to support his return to work, and he also sees a psychiatrist in the public system. At intake he signed a release allowing you to share progress reports with the insurer. After 10 sessions you must send a report to request further coverage. His recent improvement is mostly tied to completing a professional training course and exploring a new career — but any educational training or paid work contradicts the terms of his disability coverage. What do you put in the report and your notes, and how do you proceed?", "codes": "CPA: Confidentiality (I.43–I.45), Informed consent (I.16–I.26), Maximize benefit / Minimize harm (II), Accuracy/honesty (III.1–III.8), Avoidance of conflict of interest (III.28–III.32). College: Conflict of Interest, Consent, Records.", "steps": ["The client, you, the insurer, the psychiatrist — and arguably the insurer's other clients / the public.", "Limits of the release (confidentiality), informed consent (does he grasp what the report must contain?), conflict of interest (the insurer pays you), and integrity/honesty — you cannot omit or distort material information, which would edge into fraud.", "Wanting to keep the client in therapy (income + alliance), over-identifying with the client, or discomfort with the insurer.", "(A) Report fully and accurately, including the training/career activity. (B) Omit or minimize it to preserve coverage — dishonest and likely fraudulent. (C) Talk with the client first: revisit what the report requires and the scope of the release, name the dilemma openly, document accurately, help him decide how to handle disclosure, and explore alternative funding (sliding scale, EAP, public options) and referral; consult a colleague.", "(A) honest, protects your integrity and licence, but he may lose funded care. (B) preserves access short-term but is fraud — risks your licence, harms integrity, illegal. (C) honest and supportive, transparent, ethically sound — he may still lose coverage; takes more time.", "An option C-style path: the report must be accurate (you can't falsify), but you handle it transparently with the client first, document the consent discussion, and help him find alternatives. Principles I, II, and III all point here.", "Have the conversation, write an accurate report within the scope of the release, document it, provide referrals/alternative supports, and consult as needed.", "Did he keep access to care through other means? Did the alliance survive? Any complaint?", "If he is harmed by losing funded care, help mitigate (referrals, public system, sliding scale) and revisit the plan.", "At intake with insurer-funded clients, clarify the limits of confidentiality, what reports must contain, and your commitment to accuracy — ideally a written policy."]}, {"title": "A credible threat to an identifiable person", "scenario": "During a session, a client describes a specific, credible plan to seriously harm an identifiable ex-partner within the next few days, and has the means to do so. How do you proceed?", "codes": "CPA: Confidentiality and its limits (I.43–I.45), Minimize / Offset harm (II.39–II.47), Respect for dignity (I). Cases: Tarasoff; Smith v. Jones (criteria: clear risk to an identifiable person, serious bodily harm/death, imminent). No duty if it was a fleeting fit of anger.", "steps": ["The client, the identifiable potential victim, you, the public, and possibly police/Crown.", "Confidentiality and the limits on it; the duty to protect (apply the Smith v. Jones criteria); responsible caring (minimize and offset harm).", "Fear of liability, over- or under-estimating the risk, and reluctance to rupture the alliance.", "(A) Work with the client: structured risk assessment, safety planning, removing means, voluntary supports or hospitalization, increased monitoring. (B) Breach confidentiality to protect: warn the identifiable victim and notify police, sharing only necessary information, with documentation. (C) Least-intrusive-first combination: attempt (A) while preparing to escalate to (B) if risk remains and criteria are met. Spell out the “how”: who you'd call, what you'd say, what you'd document.", "Warning protects the victim but breaches confidentiality and may damage the alliance; not warning risks serious harm and liability — you can be partly responsible if a reasonable psychologist could have foreseen the violence.", "If all three Smith v. Jones criteria are met, the duty to protect is triggered — warn the identifiable victim and police using the minimum necessary information, while pursuing safety planning concurrently. Consult.", "Assess, consult, warn as required, and document your rationale.", "Was the harm prevented? What is the client's status and engagement now?", "Support the client through the consequences, re-assess risk, and continue care or refer as appropriate.", "State the limits of confidentiality clearly at intake, keep a risk-assessment protocol, and maintain consultation relationships."]}, {"title": "A child-protection concern", "scenario": "A 9-year-old you see for anxiety mentions, almost in passing, that they're often left alone overnight and that a parent “hits hard” when angry — showing you a bruise on their arm. The parent pays for the sessions and has asked to be kept informed of everything discussed. How do you proceed?", "codes": "CPA: Confidentiality and its limits (I.43–I.45), Protections for vulnerable individuals (I.31–I.36), Minimize / Offset harm (II). Law: Child, Family and Community Service Act — mandatory reporting on reasonable grounds to suspect a child needs protection. College: Consent, Privacy & Confidentiality.", "steps": ["The child, the parent(s), you, child-protection services, and possibly siblings.", "A mandatory duty to report (CFCSA) that overrides confidentiality; the limits of confidentiality; informed consent (the parent's request to be “kept informed” cannot override the child's safety or your legal duty); protecting a vulnerable person.", "Reluctance to disrupt the family or the paying relationship; minimizing (“maybe it's nothing”); cultural assumptions about discipline.", "(A) Report to child protection now — you have reasonable grounds to suspect the child needs protection. (B) Gently gather a little clarifying information from the child first (without interrogating), then report. (C) Raise it with the parent — but you cannot withhold a mandatory report. Detail the “how”: contact the child-protection line, give the necessary information, document, and consider the child's immediate safety.", "Reporting protects the child (a legal duty) but may strain the family and the alliance; not reporting breaches the law and leaves the child at risk.", "You have reasonable grounds to suspect the child is in need of protection, so you must report under the CFCSA — this duty overrides confidentiality and the parent's request. Take steps for the child's immediate safety.", "Make the report, provide the necessary information, document your grounds and actions, and follow agency guidance.", "Was the report received and acted on? Is the child safe? What is the status of the therapeutic relationship?", "Support the child and, where appropriate, the family through the process; re-assess; continue or refer.", "State the limits of confidentiality (including mandatory reporting) clearly at intake with both child and parent; keep a reporting protocol and consultation supports."]}];
+const MCQ = [{"t": "Principles & table", "q": "When the four CPA principles conflict, which is generally given the HIGHEST weight?", "o": ["I. Respect for the Dignity of Persons and Peoples", "II. Responsible Caring", "III. Integrity in Relationships", "IV. Responsibility to Society"], "a": 0, "e": "The principles are ordered I→IV by the weight they generally carry when they conflict. Respect for the Dignity of Persons and Peoples is highest — except in cases of clear and imminent danger of bodily harm.", "src": "Class 1"}, {"t": "Principles & table", "q": "Which principle generally carries the LOWEST weight when principles conflict?", "o": ["I. Respect for the Dignity of Persons and Peoples", "II. Responsible Caring", "III. Integrity in Relationships", "IV. Responsibility to Society"], "a": 3, "e": "The weighting runs I (highest) → IV (lowest). Responsibility to Society is generally weighted lowest when principles conflict.", "src": "Class 1"}, {"t": "Principles & table", "q": "The cluster “Maximize benefit” belongs under which principle?", "o": ["I. Respect for the Dignity of Persons and Peoples", "II. Responsible Caring", "III. Integrity in Relationships", "IV. Responsibility to Society"], "a": 1, "e": "Maximize benefit is one of the clusters under Responsible Caring (alongside General caring, Competence, Risk/benefit analysis, Minimize harm, Offset/correct harm, Care of animals).", "src": "CPA table"}, {"t": "Principles & table", "q": "“Avoidance of conflict of interest” is a cluster under which principle?", "o": ["I. Respect for the Dignity of Persons and Peoples", "II. Responsible Caring", "III. Integrity in Relationships", "IV. Responsibility to Society"], "a": 2, "e": "It sits under Integrity in Relationships, with Accuracy/honesty, Objectivity, Straightforwardness/openness, Avoidance of deception, and Reliance on the discipline.", "src": "CPA table"}, {"t": "Principles & table", "q": "“Non-discrimination” is a cluster under which principle?", "o": ["I. Respect for the Dignity of Persons and Peoples", "II. Responsible Caring", "III. Integrity in Relationships", "IV. Responsibility to Society"], "a": 0, "e": "Non-discrimination falls under Respect for the Dignity of Persons and Peoples, along with General respect, General rights, Fair treatment/due process, Consent, Privacy, and Confidentiality.", "src": "CPA table"}, {"t": "Cases & law", "q": "Smith v. Jones (1999) set out the Canadian duty to disclose to protect a third party. Which is NOT one of the required criteria?", "o": ["A clear risk to an identifiable person or group", "A risk of serious bodily harm or death", "The danger is imminent", "The client has a prior criminal record"], "a": 3, "e": "All three of the first criteria must be met: clear risk to an identifiable person/group, risk of serious bodily harm or death, and imminent danger. A prior record is not a criterion. (No duty if the statement was a fleeting fit of anger.)", "src": "Class 8 / Class 3"}, {"t": "Cases & law", "q": "The Tarasoff case, which established a therapist’s duty to warn/protect, originated in:", "o": ["The Supreme Court of Canada", "California, USA", "British Columbia", "The United Kingdom"], "a": 1, "e": "Tarasoff is a U.S. (California) case. The therapist's client killed Tatiana Tarasoff; the court held there is a duty to take reasonable steps to protect a reasonably identifiable victim.", "src": "Class 8"}, {"t": "Cases & law", "q": "A psychologist in private practice in BC is governed by which privacy law for their client records?", "o": ["FOIPPA", "PIPEDA", "PIPA (Personal Information Protection Act)", "The Infants Act"], "a": 2, "e": "PIPA governs BC private-sector organizations (including private practice) and applies in BC instead of the federal PIPEDA.", "src": "Class 8"}, {"t": "Cases & law", "q": "FOIPPA (Freedom of Information and Protection of Privacy Act) applies to:", "o": ["Private practices and businesses", "Public bodies in BC (e.g., hospitals, school boards, municipalities)", "Only federal government agencies", "Insurance companies only"], "a": 1, "e": "FOIPPA covers information collected/controlled by public bodies in BC. Private practice falls under PIPA instead.", "src": "Class 8"}, {"t": "Cases & law", "q": "In BC, the age of majority is:", "o": ["16", "18", "19", "21"], "a": 2, "e": "BC's age of majority is 19 (not 18). Above it, competence to consent is assumed; below it, it is not assumed (but see the mature-minor doctrine).", "src": "Class 3"}, {"t": "Cases & law", "q": "The Canadian “mature minor” doctrine was supported by which case?", "o": ["Smith v. Jones", "JSC v. Wren (1986)", "Tarasoff", "R. v. Oakes"], "a": 1, "e": "JSC v. Wren (Alberta, 1986) supported a 16-year-old's decision against her parents' wishes. A minor with sufficient understanding to appreciate the proposed service may be capable of consenting.", "src": "Class 3"}, {"t": "Cases & law", "q": "Sexual contact between a psychologist and a current client is:", "o": ["Permitted if the client gives written consent", "A boundary crossing but not illegal", "Considered sexual assault under Canadian law regardless of client consent", "Acceptable once therapy has formally ended"], "a": 2, "e": "Under Canadian law it is sexual assault regardless of client consent — consent is not considered valid given the power differential.", "src": "Class 6"}, {"t": "Confidentiality & consent", "q": "The first formal record in a client's file is typically:", "o": ["The intake assessment", "The informed consent form", "The diagnosis", "The discharge summary"], "a": 1, "e": "The informed consent form is usually the first formal record. Whether consent is written, electronic, or oral, the consent process must be documented in the client's record.", "src": "Class 4"}, {"t": "Confidentiality & consent", "q": "Informed consent is best understood as:", "o": ["A one-time signature collected at intake", "An ongoing process documented throughout care", "Only required for research", "Optional if the client returns voluntarily"], "a": 1, "e": "Consent is an ongoing process. Psychologists document when consent discussions occur (e.g., changes in diagnosis, treatment, recommendations, or review of consent).", "src": "Class 3 / 4"}, {"t": "Confidentiality & consent", "q": "Providing health care WITHOUT consent is permitted only when:", "o": ["The client is late for the appointment", "The person is incapable of consenting, no substitute decision-maker is available, and care is limited to preventing serious harm", "The psychologist judges it convenient", "A family member requests it"], "a": 1, "e": "Emergency care without consent applies only when the person cannot consent and no substitute decision-maker is available, limited to services needed to prevent serious physical/mental harm or severe pain.", "src": "College Standards / Class 3"}, {"t": "Confidentiality & consent", "q": "A capable minor's consent to health services should be:", "o": ["Ignored if a parent is present", "Obtained even when a parent or guardian accompanies them, if the licensee determines the minor is capable", "Replaced entirely by parental consent until age 19", "Required only in writing from the parent"], "a": 1, "e": "If the licensee determines the minor is capable, the minor's consent should be obtained even when accompanied by a parent/guardian. Documenting verbal assent is recommended even when parents provide written consent.", "src": "College Standards / Class 3"}, {"t": "Records & assessment", "q": "Under the NEW College Standards, patient records must be retained for at least:", "o": ["3 years", "7 years", "16 years (from last encounter, or beyond age of majority)", "Indefinitely"], "a": 2, "e": "The new standard is 16 years from the last encounter, or 16 years beyond the age of majority — whichever is later. (The legacy Code required 7 years.)", "src": "Class 4 / Class 2"}, {"t": "Records & assessment", "q": "A client must be given access to their record within how long of a request (College Standard)?", "o": ["48 hours", "10 business days", "30 business days", "90 days"], "a": 2, "e": "Access to/copy of the record must be provided within 30 business days, subject to specific exceptions.", "src": "Class 5"}, {"t": "Records & assessment", "q": "Which is a VALID reason to deny a client access to their record?", "o": ["The client owes outstanding fees", "Disclosure would jeopardize the security/integrity of test materials, data, or scoring keys", "The psychologist disagrees with the client", "The record is older than one year"], "a": 1, "e": "Valid exceptions include significant likelihood of harm, a minor who can't understand the contents, disclosure of another person's information, or jeopardizing test material/scoring-key security. Owed fees is not a basis to deny access.", "src": "Class 5"}, {"t": "Records & assessment", "q": "Test security requires that a psychologist:", "o": ["Share test items freely for education", "Not reproduce or describe tests in any way that might invalidate them", "Post sample items online for transparency", "Give clients the scoring key on request"], "a": 1, "e": "Psychologists must not reproduce or describe tests/assessment devices in publications, lectures, online, or other media in ways that could invalidate them — an issue to weigh carefully with AI tools.", "src": "Class 7"}, {"t": "Regulation & standards", "q": "The College's Practice Standards differ from the CPA Code in that they are:", "o": ["Aspirational principles only", "Prescriptive, enforceable rules of conduct judged in disciplinary hearings", "Optional guidelines", "Identical to the CPA Code"], "a": 1, "e": "Practice Standards operationalize the Code into behavioural criteria — they are prescriptive, enforceable rules against which conduct is judged in settings such as disciplinary hearings.", "src": "Class 2"}, {"t": "Regulation & standards", "q": "Under the new Standards, you must report another licensee who:", "o": ["Is not fit to practice", "Has committed sexual misconduct or abuse", "Has committed an act of discrimination", "All of the above"], "a": 3, "e": "The new Standards require reporting a licensee who is unfit, has committed sexual misconduct/abuse, or has committed discrimination. Previously, reporting sexual abuse needed client consent, and there was no requirement to report discrimination.", "src": "Class 2"}, {"t": "Regulation & standards", "q": "Mandatory child-protection reporting (Child, Family and Community Service Act) is triggered when:", "o": ["A child is failing at school", "There are reasonable grounds to suspect a child is in need of protection", "A parent requests an assessment", "The child turns 16"], "a": 1, "e": "All jurisdictions require reporting on reasonable grounds to suspect a child needs protection. (Note the slide flag: there is no ethical obligation to report disclosures of one's own historical 'childhood sexual abuse' as an adult.)", "src": "Class 8"}, {"t": "Boundaries & culture", "q": "Under CPA Standard III.30, dual or multiple relationships should be:", "o": ["Always permitted if disclosed", "Avoided when not justified by the activity, cultural/geographic factors, or lack of accessible alternatives", "Encouraged to build rapport", "Permitted only with payment"], "a": 1, "e": "III.30 says to avoid dual/multiple relationships that aren't justified by the nature of the activity, cultural or geographic factors, or a lack of reasonably accessible alternatives. III.31 then says to manage any that are entered so bias and risk of exploitation are minimized.", "src": "Class 6"}, {"t": "Boundaries & culture", "q": "The In Plain Sight report (2020) found:", "o": ["Underfunding of rural clinics", "Widespread systemic racism against Indigenous peoples in BC health care", "A shortage of psychologists", "Excellent cultural safety practices"], "a": 1, "e": "In Plain Sight (Nov 2020) documented widespread systemic racism against Indigenous peoples in BC's health care system, informing the College's Indigenous Cultural Safety, Humility, and Anti-Racism standard.", "src": "Class 5"}, {"t": "Boundaries & culture", "q": "The Indigenous Cultural Safety standard expects licensees to:", "o": ["Treat all clients identically and ignore culture", "Engage in self-reflection, anti-racism, and take action when anti-Indigenous racism is observed", "Refer all Indigenous clients elsewhere", "Avoid discussing culture in therapy"], "a": 1, "e": "Licensees are expected to reflect on and not act on stereotypes/biases, examine how their power and assumptions affect care, seek feedback, and take action when anti-Indigenous racism is observed — within trauma-informed, strengths-based, client-led care.", "src": "Class 5 / 6"}, {"t": "10-step model", "q": "In the CPA 10-step decision-making model, Step 1 is to:", "o": ["Choose a course of action", "Identify all affected individuals and groups", "Evaluate the results", "Consider your biases"], "a": 1, "e": "Step 1 is identifying everyone affected. (Step 2 = identify the ethical issues — 'lots of points; know your CPA table'.)", "src": "Class 1/3"}, {"t": "10-step model", "q": "“Consider personal and societal biases that might influence you” is which step?", "o": ["Step 2", "Step 3", "Step 6", "Step 9"], "a": 1, "e": "Step 3 is considering personal/societal biases. (Step 2 is identifying the ethical issues; Step 4 is outlining options.)", "src": "Class 1"}, {"t": "10-step model", "q": "In the model, choosing a course of action comes:", "o": ["Before identifying affected parties", "After weighing the short- and long-term risks and benefits of each option", "First, then you list options", "Only after taking action"], "a": 1, "e": "Order: identify affected parties (1) → ethical issues (2) → biases (3) → outline options (4) → weigh risks/benefits of each (5) → choose (6) → act (7) → evaluate (8) → correct/re-engage (9) → prevent recurrence (10).", "src": "Class 1"}, {"t": "Cases & law", "q": "Which federal privacy law is generally displaced by PIPA for BC's private sector?", "o": ["FOIPPA", "PIPEDA", "The Privacy Act", "HIPAA"], "a": 1, "e": "BC's PIPA applies to the private sector in place of the federal PIPEDA.", "src": "Class 8"}, {"t": "Cases & law", "q": "McInerney v. McDonald (1992, SCC) established that a patient's right to access their own records is:", "o": ["Absolute and unconditional", "Not absolute — and the practitioner bears the onus to justify any denial", "Never permitted without a court order", "Decided entirely by the patient"], "a": 1, "e": "Access is generally granted, but it is not absolute; a practitioner may deny access (e.g., significant likelihood of substantial harm) and carries the onus to justify the denial.", "src": "Class 5"}, {"t": "Cases & law", "q": "In McInerney v. McDonald, who owns the physical clinical records?", "o": ["The patient", "The practitioner who created them", "The College", "The insurer"], "a": 1, "e": "The patient is entitled to access and to copies of information considered in their care, but the physical records themselves belong to the practitioner.", "src": "Class 5"}, {"t": "Cases & law", "q": "Ewert v. Canada concerned:", "o": ["A psychologist's sexual misconduct", "Risk-assessment tools that may lack validity for Indigenous people due to cultural bias", "Mandatory child-abuse reporting", "A breach of confidentiality to police"], "a": 1, "e": "Jeffrey Ewert (Métis) argued Correctional Service Canada used risk-assessment tools lacking validity for Aboriginal people, disadvantaging parole. The court found CSC failed its obligation to ensure information is accurate; policies must respect cultural differences.", "src": "Class 7"}, {"t": "Cases & law", "q": "The key assessment lesson from Ewert v. Canada is to:", "o": ["Always use the newest test available", "Use tools that are valid, reliable, and appropriate to the client's cultural context", "Avoid all standardized testing", "Let the client choose the test"], "a": 1, "e": "Select and adapt assessment tools so they are valid and appropriate for the client's condition, needs, and cultural context — adapting or supplementing where standardized tools don't fit.", "src": "Class 7"}, {"t": "Confidentiality & consent", "q": "“Privilege,” as distinct from privacy and confidentiality, refers to:", "o": ["The duty to keep client information secret", "A client's right to access their record", "The right to withhold information from the courts", "A psychologist's right to refuse a client"], "a": 2, "e": "Privilege is the right to withhold information from courts. Importantly, most information psychologists hold is confidential but NOT privileged.", "src": "Class 3"}, {"t": "Confidentiality & consent", "q": "Which statement is TRUE about psychologists' records?", "o": ["All confidential information is automatically privileged", "Most information psychologists hold is confidential but not privileged", "Privilege and confidentiality mean the same thing", "Privilege is decided by the psychologist"], "a": 1, "e": "Confidentiality is a professional duty; privilege (withholding from courts) is narrower. Most psychological information, though confidential, is not privileged.", "src": "Class 3"}, {"t": "Cases & law", "q": "In BC, involuntary psychiatric admission and treatment are governed primarily by the:", "o": ["Infants Act", "Mental Health Act", "PIPA", "FOIPPA"], "a": 1, "e": "BC's Mental Health Act provides for involuntary admission and treatment in specified circumstances.", "src": "Class 8"}, {"t": "Cases & law", "q": "Which BC statute governs consent to health care and substitute decision-making?", "o": ["Health Care (Consent) and Care Facility (Admission) Act", "Limitation Act", "Criminal Records Review Act", "PIPEDA"], "a": 0, "e": "The Health Care (Consent) and Care Facility (Admission) Act sets out consent and substitute decision-making rules for health care in BC.", "src": "Class 8 / Class 2"}, {"t": "Cases & law", "q": "The BC Infants Act is most relevant to:", "o": ["Adoption only", "A minor's capacity to consent to health care", "Record retention periods", "Privacy of public bodies"], "a": 1, "e": "The Infants Act is relevant to minors' consent to health care, connecting to the mature-minor doctrine.", "src": "Class 8 / Class 3"}, {"t": "Cases & law", "q": "Section 46 of the Adult Guardianship Act is most relevant to:", "o": ["Support and protection for vulnerable adults who are abused, neglected, or unable to seek help", "Licensing of psychologists", "Test security", "Research ethics review"], "a": 0, "e": "This part of the Adult Guardianship Act concerns support and assistance for vulnerable adults who are abused or neglected and unable to seek help, via designated agencies.", "src": "Class 2"}, {"t": "Cases & law", "q": "A psychologist employed by a public hospital is primarily governed, for privacy, by:", "o": ["PIPA", "PIPEDA", "FOIPPA", "No privacy law"], "a": 2, "e": "Public bodies in BC (e.g., hospitals) fall under FOIPPA; private practice falls under PIPA.", "src": "Class 8"}, {"t": "Cases & law", "q": "Which statement about BC/federal privacy law is correct?", "o": ["PIPEDA always overrides PIPA in BC", "BC's PIPA applies to the private sector instead of the federal PIPEDA", "FOIPPA covers private practices", "PIPA covers public hospitals"], "a": 1, "e": "BC's PIPA governs private-sector organizations and applies in place of the federal PIPEDA; FOIPPA covers public bodies.", "src": "Class 8"}];
 const PNAME = {
   "I":"Respect for the Dignity of Persons and Peoples",
   "II":"Responsible Caring",
@@ -305,7 +354,7 @@ const SUBS = {};
 let state = {mode:"practice", diff:"principle", pick:{I:true,II:true,III:true,IV:true},
   deck:[], i:0, cur:null, phase:"principle", pRight:true, cRight:null, pPick:null, cPick:null,
   correct:0, seen:0, streak:0, bestStreak:0,
-  pStats:{I:{a:0,c:0},II:{a:0,c:0},III:{a:0,c:0},IV:{a:0,c:0}}, cStats:{}, missMap:{}, missSeq:0, saved:{}};
+  pStats:{I:{a:0,c:0},II:{a:0,c:0},III:{a:0,c:0},IV:{a:0,c:0}}, cStats:{}, missMap:{}, missSeq:0, saved:{}, dilIdx:0, dilAnswers:{}, dilBuilt:false, mcBuilt:false, mcTopics:{}, mcDeck:[], mcI:0, mcCur:null, mcDone:false, mcCorrect:0, mcSeen:0, mcStreak:0};
 const $ = id => document.getElementById(id);
 
 /* ---------- helpers ---------- */
@@ -583,9 +632,13 @@ $("modeSeg").onclick=e=>{ const b=e.target.closest("button"); if(!b)return;
   $("statsView").style.display = state.mode==="stats"?"":"none";
   $("savedView").style.display = state.mode==="saved"?"":"none";
   $("browseView").style.display = state.mode==="browse"?"":"none";
+  $("dilemmaView").style.display = state.mode==="dilemma"?"":"none";
+  $("mcView").style.display = state.mode==="mc"?"":"none";
   if(state.mode==="stats") buildStats();
   if(state.mode==="saved") buildSaved();
   if(state.mode==="browse"){ buildMap(); buildBrowse(); }
+  if(state.mode==="dilemma") buildDilemma();
+  if(state.mode==="mc") buildMC();
 };
 $("diffSeg").onclick=e=>{ const b=e.target.closest("button"); if(!b)return;
   [...$("diffSeg").children].forEach(x=>x.classList.toggle("on",x===b));
@@ -598,6 +651,11 @@ $("chips").onclick=e=>{ const b=e.target.closest(".chip"); if(!b)return;
   buildDeck(); nextCard();
 };
 document.addEventListener("keydown",e=>{
+  if(state.mode==="mc"){
+    if((e.key==="n"||e.key==="N"||e.key==="Enter") && $("mcNext") && $("mcNext").style.display!=="none"){ e.preventDefault(); mcNext(); return; }
+    if(/^[1-4]$/.test(e.key)){ const o=[...$("mcOpts").children].filter(b=>!b.disabled); if(o[+e.key-1]) o[+e.key-1].click(); }
+    return;
+  }
   if(state.mode!=="practice") return;
   if((e.key==="s"||e.key==="S") && state.cur){ e.preventDefault(); toggleStar(state.cur.code); return; }
   if((e.key==="n"||e.key==="N"||e.key==="Enter") && $("next").style.display!=="none"){ e.preventDefault(); nextCard(); return; }
@@ -779,6 +837,143 @@ function buildBrowse(){
     });
     g.appendChild(head); g.appendChild(body); wrap.appendChild(g);
   });
+}
+
+function buildDilemma(){
+  if(state.dilBuilt) return; state.dilBuilt=true;
+  const v=$("dilemmaView");
+  const opts = DILEMMAS.map((d,i)=>`<option value="${i}">${i+1}. ${d.title}</option>`).join("");
+  const blocks = STEPS10.map((s,i)=>`
+    <div class="dblk">
+      <div class="dhdr"><span class="dsn">${s[0]}</span><span class="dnm">${s[1]}</span></div>
+      <div class="dprompt">${DPROMPTS[i]}</div>
+      <textarea data-step="${i}" rows="2" placeholder="Write your response\u2026"></textarea>
+      <button class="dmbtn" data-model="${i}">Show model points</button>
+      <div class="dmodel" id="dmodel${i}"><span class="ml">Model points to compare</span><span class="dmtext"></span></div>
+    </div>`).join("");
+  v.innerHTML =
+    `<div class="dintro">Read the scenario, then write your response to each step \u2014 this is the format the exam dilemma uses. Reveal the model points to compare. Your writing stays put while you're in this tab but clears on reload, so use <b>Copy my answer</b> to keep it.</div>`+
+    `<select class="dsel" id="dilSel">${opts}</select>`+
+    `<div class="dscn" id="dilScn"></div>`+
+    `<button class="dtoggle" id="dilCodesBtn">Show most-relevant codes &amp; laws</button>`+
+    `<div class="dcodes" id="dilCodes"></div>`+
+    `<div class="dwrap">${blocks}</div>`+
+    `<div class="dfoot"><button class="btn primary" id="dilCopy">Copy my answer</button>`+
+    `<button class="btn ghost" id="dilClear">Clear</button>`+
+    `<span class="dcopied" id="dilCopied" style="display:none">Copied!</span></div>`;
+  $("dilSel").onchange=e=>{ saveCurrentDil(); state.dilIdx=+e.target.value; loadDilemma(state.dilIdx); };
+  $("dilCodesBtn").onclick=()=>{ const on=$("dilCodes").classList.toggle("show"); $("dilCodesBtn").textContent=on?"Hide codes & laws":"Show most-relevant codes & laws"; };
+  v.querySelectorAll("textarea[data-step]").forEach(t=>{
+    t.addEventListener("input",()=>{ state.dilAnswers[state.dilIdx+":"+t.dataset.step]=t.value; });
+  });
+  v.querySelectorAll(".dmbtn[data-model]").forEach(b=>{
+    b.onclick=()=>{ const on=$("dmodel"+b.dataset.model).classList.toggle("show"); b.textContent=on?"Hide model points":"Show model points"; };
+  });
+  $("dilCopy").onclick=copyDilemma;
+  $("dilClear").onclick=clearDilemma;
+  loadDilemma(state.dilIdx);
+}
+function loadDilemma(idx){
+  const d=DILEMMAS[idx];
+  $("dilScn").textContent=d.scenario;
+  $("dilCodes").innerHTML=`<b>Most relevant:</b> ${d.codes}`;
+  STEPS10.forEach((s,i)=>{ $("dmodel"+i).querySelector(".dmtext").textContent=d.steps[i]; });
+  $("dilemmaView").querySelectorAll("textarea[data-step]").forEach(t=>{ t.value=state.dilAnswers[idx+":"+t.dataset.step]||""; });
+  $("dilCopied").style.display="none";
+}
+function saveCurrentDil(){
+  $("dilemmaView").querySelectorAll("textarea[data-step]").forEach(t=>{ state.dilAnswers[state.dilIdx+":"+t.dataset.step]=t.value; });
+}
+function copyDilemma(){
+  saveCurrentDil();
+  const d=DILEMMAS[state.dilIdx];
+  let out=d.title+"\n\nScenario: "+d.scenario+"\n";
+  STEPS10.forEach((s,i)=>{ const a=(state.dilAnswers[state.dilIdx+":"+i]||"").trim(); out+=`\nStep ${s[0]} — ${s[1]}:\n${a||"(blank)"}\n`; });
+  const done=()=>{ const c=$("dilCopied"); c.style.display=""; setTimeout(()=>c.style.display="none",1600); };
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(out).then(done,done); }
+  else { const ta=document.createElement("textarea"); ta.value=out; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy");}catch(e){} document.body.removeChild(ta); done(); }
+}
+function clearDilemma(){
+  $("dilemmaView").querySelectorAll("textarea[data-step]").forEach(t=>{ t.value=""; delete state.dilAnswers[state.dilIdx+":"+t.dataset.step]; });
+}
+
+/* ---------- MC quiz ---------- */
+function buildMC(){
+  if(state.mcBuilt) return; state.mcBuilt=true;
+  [...new Set(MCQ.map(m=>m.t))].forEach(t=>state.mcTopics[t]=true);
+  const v=$("mcView");
+  v.innerHTML =
+    `<div class="mcscore" id="mcScore"></div>`+
+    `<div class="tchips" id="mcChips"></div>`+
+    `<div class="card fade" id="mcCard">`+
+      `<div class="mckick"><span>Multiple choice</span><span class="mcsrc" id="mcSrc"></span></div>`+
+      `<div class="mcq" id="mcQ"></div>`+
+      `<div class="opts col" id="mcOpts"></div>`+
+      `<div class="reveal" id="mcReveal" style="display:none"></div>`+
+      `<div class="foot">`+
+        `<button class="btn primary" id="mcNext" style="display:none">Next &rarr;</button>`+
+        `<button class="btn ghost" id="mcRevealBtn">Reveal answer</button>`+
+        `<span class="hint"><kbd>1</kbd>&ndash;<kbd>4</kbd> answer &middot; <kbd>N</kbd> next</span>`+
+      `</div>`+
+    `</div>`;
+  const chips=$("mcChips");
+  Object.keys(state.mcTopics).forEach(t=>{
+    const b=document.createElement("button"); b.className="tchip on"; b.textContent=t;
+    b.onclick=()=>{
+      const on=[...chips.children].filter(x=>x.classList.contains("on"));
+      if(on.length===1 && b.classList.contains("on")) return;
+      b.classList.toggle("on"); state.mcTopics[t]=b.classList.contains("on"); mcBuildDeck(); mcNext();
+    };
+    chips.appendChild(b);
+  });
+  $("mcRevealBtn").onclick=mcRevealSkip;
+  $("mcNext").onclick=mcNext;
+  mcScore(); mcBuildDeck(); mcNext();
+}
+function mcScore(){
+  const pct=state.mcSeen?Math.round(100*state.mcCorrect/state.mcSeen):0;
+  $("mcScore").innerHTML=`<b>${state.mcCorrect}</b> correct of <b>${state.mcSeen}</b> &middot; ${pct}% &middot; streak <b>${state.mcStreak}</b>`;
+}
+function mcPool(){ return MCQ.filter(m=>state.mcTopics[m.t]); }
+function mcBuildDeck(){ state.mcDeck=shuffle(mcPool().slice()); state.mcI=0; }
+function mcNext(){
+  if(!state.mcDeck.length||state.mcI>=state.mcDeck.length) mcBuildDeck();
+  state.mcCur = state.mcDeck.length ? state.mcDeck[state.mcI++] : null;
+  state.mcDone=false; mcRender();
+}
+function mcRender(){
+  const c=state.mcCur, card=$("mcCard");
+  card.classList.remove("fade"); void card.offsetWidth; card.classList.add("fade");
+  $("mcReveal").style.display="none"; $("mcNext").style.display="none"; $("mcRevealBtn").style.display="";
+  if(!c){ $("mcQ").textContent="No topics selected — turn one on above."; $("mcOpts").innerHTML=""; $("mcSrc").textContent=""; return; }
+  $("mcSrc").textContent=c.src; $("mcQ").textContent=c.q;
+  const box=$("mcOpts"); box.innerHTML="";
+  c.o.forEach((opt,idx)=>{
+    const b=document.createElement("button"); b.className="opt sc";
+    b.innerHTML=`<span class="k">${idx+1}</span><span class="lab">${opt}</span>`;
+    b.onclick=()=>mcAnswer(idx,b); box.appendChild(b);
+  });
+}
+function mcAnswer(idx,btn){
+  if([...$("mcOpts").children].some(b=>b.disabled)) return;
+  const c=state.mcCur, ok=idx===c.a;
+  [...$("mcOpts").children].forEach((b,i)=>{ b.disabled=true;
+    if(i===c.a) b.classList.add("correct"); else if(b===btn) b.classList.add("wrong"); else b.classList.add("dim"); });
+  state.mcDone=true; state.mcSeen++; if(ok){state.mcCorrect++;state.mcStreak++;} else state.mcStreak=0;
+  mcScore(); mcShow(ok?"correct":"wrong");
+}
+function mcRevealSkip(){
+  if(!state.mcCur||state.mcDone) return;
+  state.mcSeen++; state.mcStreak=0; mcScore();
+  [...$("mcOpts").children].forEach((b,i)=>{ b.disabled=true; if(i===state.mcCur.a)b.classList.add("correct"); else b.classList.add("dim"); });
+  state.mcDone=true; mcShow("skip");
+}
+function mcShow(status){
+  const c=state.mcCur, r=$("mcReveal"); r.style.display="";
+  const v = status==="skip" ? `<div class="verdict n">Answer</div>`
+          : status==="correct" ? `<div class="verdict y">&check; Correct</div>` : `<div class="verdict n">&times; Not quite</div>`;
+  r.innerHTML = v + `<div class="mcexpl"><b>${String.fromCharCode(65+c.a)}. ${c.o[c.a]}</b><br>${c.e}</div>`;
+  $("mcNext").style.display=""; $("mcRevealBtn").style.display="none"; $("mcNext").focus();
 }
 
 buildDeck(); nextCard(); updateSavedCount();
