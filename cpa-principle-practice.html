@@ -117,7 +117,10 @@ h1{font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0}
 .rcap{font-size:11px;color:var(--muted);margin-top:8px;display:flex;align-items:center;gap:6px}
 .swatch{width:11px;height:11px;border-radius:3px;background:var(--mark);box-shadow:inset 0 -1px 0 var(--markline);flex:none}
 .verdict{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
-.verdict.y{color:var(--good)} .verdict.n{color:var(--bad)}
+.verdict.y{color:var(--good)} .verdict.n{color:var(--bad)} .verdict.p{color:var(--p3)}
+.rv .ok{color:var(--good);font-weight:700}
+.rv .no{color:var(--bad);font-weight:700}
+.rv .chose{color:var(--muted);font-weight:500;font-size:12px}
 
 .foot{display:flex;gap:10px;margin-top:18px;align-items:center}
 .btn{font-family:var(--sans);font-weight:600;font-size:13.5px;border:none;border-radius:10px;padding:11px 20px;cursor:pointer;letter-spacing:.01em}
@@ -300,7 +303,7 @@ const SUBS = {};
 });
 
 let state = {mode:"practice", diff:"principle", pick:{I:true,II:true,III:true,IV:true},
-  deck:[], i:0, cur:null, phase:"principle", pRight:true,
+  deck:[], i:0, cur:null, phase:"principle", pRight:true, cRight:null, pPick:null, cPick:null,
   correct:0, seen:0, streak:0, bestStreak:0,
   pStats:{I:{a:0,c:0},II:{a:0,c:0},III:{a:0,c:0},IV:{a:0,c:0}}, cStats:{}, missMap:{}, missSeq:0, saved:{}};
 const $ = id => document.getElementById(id);
@@ -429,7 +432,7 @@ function nextCard(){
   if(!state.deck.length){ state.cur=null; render(); return; }
   state.cur = state.deck[state.i++];
   state.phase = (state.diff==="cluster") ? "cluster" : "principle";
-  state.pRight = true;
+  state.pRight = true; state.cRight=null; state.pPick=null; state.cPick=null;
   render();
 }
 function render(){
@@ -479,7 +482,8 @@ function answerPrinciple(p, btn){
     if(b.dataset.p===c.principle) b.classList.add("correct");
     else if(b===btn) b.classList.add("wrong"); else b.classList.add("dim");
   });
-  if(state.diff==="principle"){ recP(c.principle,right); if(right) clearMiss(c.code,"principle"); else recordMiss(c,"principle",p,c.principle); finish(right); }
+  state.pPick=p;
+  if(state.diff==="principle"){ state.pRight=right; recP(c.principle,right); if(right) clearMiss(c.code,"principle"); else recordMiss(c,"principle",p,c.principle); finish(right); }
   else { state.pRight=right; if(right) clearMiss(c.code,"principle"); else recordMiss(c,"principle",p,c.principle); setTimeout(()=>{ state.phase="cluster"; render(); }, right?260:720); }
 }
 function answerCluster(s, btn){
@@ -492,6 +496,7 @@ function answerCluster(s, btn){
     else if(b===btn) b.classList.add("wrong"); else b.classList.add("dim");
   });
   if(state.diff==="both") recP(c.principle, state.pRight);
+  state.cPick=s; state.cRight=right;
   recC(c.principle, c.subcat, right);
   if(right) clearMiss(c.code,"cluster"); else recordMiss(c,"cluster",s,c.subcat);
   finish(state.diff==="both" ? (state.pRight && right) : right);
@@ -506,16 +511,47 @@ function finish(right){
 function showReveal(status){
   const c=state.cur, accent=css(PVAR[c.principle]), bg=css(PBG[c.principle]);
   const r=$("reveal"); r.style.display="";
-  let v = status==="skip" ? `<div class="verdict n">Skipped</div>`
-        : status==="correct" ? `<div class="verdict y">&check; Correct</div>`
-                             : `<div class="verdict n">&times; Not quite</div>`;
+  const pTested = state.diff==="principle" || state.diff==="both";
+  const cTested = state.diff==="cluster"   || state.diff==="both";
+
+  // verdict (Both mode can be "Partly right")
+  let vlabel, vcls;
+  if(status==="skip"){ vlabel="Skipped"; vcls="n"; }
+  else if(state.diff==="both"){
+    if(state.pRight && state.cRight){ vlabel="&check; Correct"; vcls="y"; }
+    else if(!state.pRight && !state.cRight){ vlabel="&times; Not quite"; vcls="n"; }
+    else { vlabel="&#9680; Partly right"; vcls="p"; }
+  } else {
+    vlabel = status==="correct" ? "&check; Correct" : "&times; Not quite";
+    vcls   = status==="correct" ? "y" : "n";
+  }
+  const v = `<div class="verdict ${vcls}">${vlabel}</div>`;
+
+  const mark = ok => ok ? `<span class="ok">&check;</span> ` : `<span class="no">&times;</span> `;
+  // principle row
+  let pRow;
+  if(status!=="skip" && pTested){
+    pRow = mark(state.pRight) + `<b style="color:${accent}">${c.principle}.</b> ${PNAME[c.principle]}`
+         + (!state.pRight && state.pPick ? ` <span class="chose">you chose ${state.pPick}. ${PNAME[state.pPick]}</span>` : "");
+  } else {
+    pRow = `<b style="color:${accent}">${c.principle}.</b> ${PNAME[c.principle]}`;
+  }
+  // cluster row
+  let cRow;
+  if(status!=="skip" && cTested){
+    cRow = mark(state.cRight) + `<b>${c.subcat}</b>`
+         + (!state.cRight && state.cPick ? ` <span class="chose">you chose ${state.cPick}</span>` : "");
+  } else {
+    cRow = `<b>${c.subcat}</b>`;
+  }
+
   const {html,hit} = highlight(c.text, c.subcat);
   const cap = hit ? `<div class="rcap"><span class="swatch"></span>Highlighted words are cues for the &ldquo;${c.subcat}&rdquo; cluster.</div>` : "";
   r.innerHTML = v +
     `<span class="tag" style="background:${bg};color:${accent}"><span class="code">${c.code}</span></span>`+
     `<div class="rgrid">`+
-      `<div class="rk">Principle</div><div class="rv"><b style="color:${accent}">${c.principle}.</b> ${PNAME[c.principle]}</div>`+
-      `<div class="rk">Cluster</div><div class="rv"><b>${c.subcat}</b></div>`+
+      `<div class="rk">Principle</div><div class="rv">${pRow}</div>`+
+      `<div class="rk">Cluster</div><div class="rv">${cRow}</div>`+
     `</div>`+
     `<div class="rtext"><span class="ft">${c.code} — ${html}</span></div>`+ cap;
 }
