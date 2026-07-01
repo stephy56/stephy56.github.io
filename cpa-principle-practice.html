@@ -184,6 +184,7 @@ kbd{font-family:var(--sans);font-size:10.5px;background:var(--soft);border:1px s
 .pbody{display:none;padding:0 18px 8px}
 .pgroup.open .pbody{display:block}
 .scat{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:14px 0 7px;padding-top:10px;border-top:1px solid var(--line)}
+.sdef{font-size:12.5px;color:var(--muted);line-height:1.55;margin:-3px 0 9px;padding-left:11px;border-left:2px solid var(--line)}
 .scat:first-child{border-top:none;padding-top:0}
 .std{display:flex;gap:12px;padding:7px 0;font-size:13.5px;line-height:1.45}
 .std .c{font-family:var(--sans);font-weight:700;font-size:12px;color:var(--muted);min-width:42px;flex:none;padding-top:1px}
@@ -812,7 +813,7 @@ function buildMap(){
   ["I","II","III","IV"].forEach(p=>{
     const row=document.createElement("div"); row.className="mrow";
     const accent=`var(${PVAR[p]})`, bg=`var(${PBG[p]})`;
-    let chips = SUBS[p].map(s=>`<span class="mc" style="background:${bg};color:${accent};border-color:${bg}">${s}</span>`).join("");
+    let chips = SUBS[p].map(s=>`<span class="mc" title="${(CRATIONALE[s]||'').replace(/"/g,'&quot;')}" style="background:${bg};color:${accent};border-color:${bg}">${s}</span>`).join("");
     row.innerHTML=`<div class="mp" style="color:${accent}">${p}. ${PNAME[p]}</div><div class="mclusters">${chips}</div>`;
     m.appendChild(row);
   });
@@ -829,6 +830,7 @@ function buildBrowse(){
     const body=document.createElement("div"); body.className="pbody";
     SUBS[p].forEach(sc=>{
       const h=document.createElement("div"); h.className="scat"; h.textContent=sc; body.appendChild(h);
+      if(CRATIONALE[sc]){ const def=document.createElement("div"); def.className="sdef"; def.textContent=CRATIONALE[sc]; body.appendChild(def); }
       items.filter(d=>d.subcat===sc).forEach(d=>{
         const row=document.createElement("div"); row.className="std";
         row.innerHTML=`<span class="c">${d.code}</span><span class="t">${d.text}</span>`;
