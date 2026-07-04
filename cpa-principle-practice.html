@@ -229,6 +229,12 @@ kbd{font-family:var(--sans);font-size:10.5px;background:var(--soft);border:1px s
 .mcq{font-size:17px;line-height:1.4;font-weight:500;margin-bottom:16px}
 .mcexpl{font-size:13.5px;line-height:1.6;color:var(--ink)}
 .mcexpl b{font-weight:600}
+.mcdone{text-align:center;padding:40px 24px}
+.mcbig{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+.mcbignum{font-family:var(--sans);font-size:46px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.mcbignum span{color:var(--muted);font-weight:600;font-size:30px}
+.mcbigpct{font-size:14px;color:var(--muted);margin-top:6px}
+.mcmsg{font-size:14px;margin:16px 0 22px;line-height:1.5}
 @media(max-width:560px){ .mcq{font-size:15.5px} }
 @media(max-width:560px){
   body{padding:16px 12px 56px}
@@ -355,7 +361,7 @@ const SUBS = {};
 let state = {mode:"practice", diff:"principle", pick:{I:true,II:true,III:true,IV:true},
   deck:[], i:0, cur:null, phase:"principle", pRight:true, cRight:null, pPick:null, cPick:null,
   correct:0, seen:0, streak:0, bestStreak:0,
-  pStats:{I:{a:0,c:0},II:{a:0,c:0},III:{a:0,c:0},IV:{a:0,c:0}}, cStats:{}, missMap:{}, missSeq:0, saved:{}, dilIdx:0, dilAnswers:{}, dilBuilt:false, mcBuilt:false, mcTopics:{}, mcDeck:[], mcI:0, mcCur:null, mcDone:false, mcCorrect:0, mcSeen:0, mcStreak:0};
+  pStats:{I:{a:0,c:0},II:{a:0,c:0},III:{a:0,c:0},IV:{a:0,c:0}}, cStats:{}, missMap:{}, missSeq:0, saved:{}, dilIdx:0, dilAnswers:{}, dilBuilt:false, mcBuilt:false, mcTopics:{}, mcDeck:[], mcI:0, mcCur:null, mcDone:false, mcCorrect:0, mcSeen:0, mcStreak:0, mcPassCorrect:0, mcPassTotal:0};
 const $ = id => document.getElementById(id);
 
 /* ---------- helpers ---------- */
@@ -917,7 +923,8 @@ function buildMC(){
         `<button class="btn ghost" id="mcRevealBtn">Reveal answer</button>`+
         `<span class="hint"><kbd>1</kbd>&ndash;<kbd>4</kbd> answer &middot; <kbd>N</kbd> next</span>`+
       `</div>`+
-    `</div>`;
+    `</div>`+
+    `<div id="mcComplete" style="display:none"></div>`;
   const chips=$("mcChips");
   Object.keys(state.mcTopics).forEach(t=>{
     const b=document.createElement("button"); b.className="tchip on"; b.textContent=t;
@@ -937,11 +944,31 @@ function mcScore(){
   $("mcScore").innerHTML=`<b>${state.mcCorrect}</b> correct of <b>${state.mcSeen}</b> &middot; ${pct}% &middot; streak <b>${state.mcStreak}</b>`;
 }
 function mcPool(){ return MCQ.filter(m=>state.mcTopics[m.t]); }
-function mcBuildDeck(){ state.mcDeck=shuffle(mcPool().slice()); state.mcI=0; }
+function mcBuildDeck(){ state.mcDeck=shuffle(mcPool().slice()); state.mcI=0; state.mcPassCorrect=0; state.mcPassTotal=state.mcDeck.length; }
+function mcShowQuiz(){ $("mcScore").style.display=""; $("mcChips").style.display=""; $("mcCard").style.display=""; const el=$("mcComplete"); if(el) el.style.display="none"; }
+function mcShowComplete(){ $("mcScore").style.display="none"; $("mcChips").style.display="none"; $("mcCard").style.display="none"; $("mcComplete").style.display=""; }
 function mcNext(){
-  if(!state.mcDeck.length||state.mcI>=state.mcDeck.length) mcBuildDeck();
-  state.mcCur = state.mcDeck.length ? state.mcDeck[state.mcI++] : null;
-  state.mcDone=false; mcRender();
+  if(!state.mcDeck.length){ mcShowQuiz(); state.mcCur=null; mcRender(); return; }
+  if(state.mcI>=state.mcDeck.length){ mcComplete(); return; }
+  mcShowQuiz();
+  state.mcCur=state.mcDeck[state.mcI++]; state.mcDone=false; mcRender();
+}
+function mcComplete(){
+  mcShowComplete();
+  const total=state.mcPassTotal, correct=state.mcPassCorrect, pct=total?Math.round(100*correct/total):0;
+  const msg = pct>=90 ? "Outstanding \u2014 you know this cold."
+            : pct>=75 ? "Solid. Review the few you missed and you're set."
+            : pct>=50 ? "Good progress \u2014 another pass will lock it in."
+            : "Keep going \u2014 revisit the misses and run it again.";
+  $("mcComplete").innerHTML =
+    `<div class="card mcdone">`+
+      `<div class="mcbig">&#127881; Quiz complete</div>`+
+      `<div class="mcbignum">${correct} <span>/ ${total}</span></div>`+
+      `<div class="mcbigpct">${pct}% correct this round</div>`+
+      `<div class="mcmsg">${msg}</div>`+
+      `<button class="btn primary" id="mcRestart">Restart quiz</button>`+
+    `</div>`;
+  $("mcRestart").onclick=()=>{ mcBuildDeck(); mcNext(); };
 }
 function mcRender(){
   const c=state.mcCur, card=$("mcCard");
@@ -961,7 +988,7 @@ function mcAnswer(idx,btn){
   const c=state.mcCur, ok=idx===c.a;
   [...$("mcOpts").children].forEach((b,i)=>{ b.disabled=true;
     if(i===c.a) b.classList.add("correct"); else if(b===btn) b.classList.add("wrong"); else b.classList.add("dim"); });
-  state.mcDone=true; state.mcSeen++; if(ok){state.mcCorrect++;state.mcStreak++;} else state.mcStreak=0;
+  state.mcDone=true; state.mcSeen++; state.mcPassCorrect+=ok?1:0; if(ok){state.mcCorrect++;state.mcStreak++;} else state.mcStreak=0;
   mcScore(); mcShow(ok?"correct":"wrong");
 }
 function mcRevealSkip(){
