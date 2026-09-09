@@ -96,3 +96,60 @@
     init();
   }
 })();
+
+/* ---------------------------------------------------------------------------
+   Site-wide nav add-on: places "每日導讀 · Daily Reading" (→ /book/) into the
+   PSYCHOLOGY dropdown and the mobile menu on every page that loads this file,
+   and removes the old "Clinical Practice" placeholder. Idempotent and safe:
+   it never adds a duplicate, and runs on both desktop and mobile (this is a
+   separate block from the cursor code above, which exits early on touch).
+--------------------------------------------------------------------------- */
+(function () {
+  function injectBookLink() {
+    try {
+      // --- desktop dropdown under Psychology ---
+      var menu = document.querySelector('.nav-dropdown .nav-dropdown-menu');
+      if (menu) {
+        // remove the old "Clinical Practice" item (it just linked back to the page itself)
+        menu.querySelectorAll('li').forEach(function (li) {
+          var a = li.querySelector('a');
+          if (a && /clinical practice|臨床實務/i.test(a.textContent || '')) li.remove();
+        });
+        // add the Daily Reading item if it isn't already there
+        if (!menu.querySelector('a[href="book/"]')) {
+          var li = document.createElement('li');
+          li.innerHTML = '<a href="book/" data-en="Daily Reading · 每日導讀" data-zh="每日導讀 · Daily Reading">Daily Reading · 每日導讀</a>';
+          menu.appendChild(li);
+        }
+      }
+
+      // --- mobile menu ---
+      var mobile = document.querySelector('#mobileMenu ul');
+      if (mobile && !mobile.querySelector('a[href="book/"]')) {
+        var psychLink = null;
+        mobile.querySelectorAll('a').forEach(function (a) {
+          if (a.getAttribute('href') === 'psychology.html') psychLink = a;
+        });
+        var mli = document.createElement('li');
+        mli.innerHTML = '<a href="book/" data-en="— Daily Reading 每日導讀" data-zh="— 每日導讀 Daily Reading">— Daily Reading 每日導讀</a>';
+        if (psychLink && psychLink.parentNode) {
+          psychLink.parentNode.insertAdjacentElement('afterend', mli);
+        } else {
+          mobile.appendChild(mli);
+        }
+      }
+
+      // if the language switcher is available, re-apply so the new links translate
+      if (typeof window.setSiteLang === 'function') {
+        var lang = document.documentElement.lang === 'zh-Hant' ? 'zh' : 'en';
+        window.setSiteLang(lang);
+      }
+    } catch (e) { /* never break the page over a nav tweak */ }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectBookLink);
+  } else {
+    injectBookLink();
+  }
+})();
