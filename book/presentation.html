@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>簡報全覽 · 萬有引力與信念創造實相</title>
+<meta name="description" content="《萬有引力與信念創造實相》完整簡報 — 全部投影片。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="topnav"><div class="inner">
+  <span class="logo">萬有引力與信念創造實相</span>
+  <a class="nav" href="index.html">每日導讀</a>
+  <a class="nav active" href="presentation.html">簡報全覽</a>
+</div></div>
+
+<div class="gwrap">
+  <div class="ghead">
+    <h1>簡報全覽</h1>
+    <span class="count"><span id="count">…</span> 張投影片</span>
+  </div>
+  <div class="gtools">
+    <span class="hint">跳至投影片：</span>
+    <input id="jump" type="number" min="1" placeholder="頁碼" inputmode="numeric">
+    <span class="hint">點任一張可放大；放大後用 ← → 或滑動翻頁。</span>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<div class="lbox" id="lbox">
+  <button class="x" id="lx" aria-label="關閉">×</button>
+  <button class="arw prev" id="lprev" aria-label="上一張">‹</button>
+  <img id="limg" alt="">
+  <button class="arw next" id="lnext" aria-label="下一張">›</button>
+  <div class="cap" id="lcap"></div>
+</div>
+
+<script src="assets/gallery.js"></script>
+</body>
+</html>
