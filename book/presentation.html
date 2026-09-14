@@ -11,24 +11,52 @@
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<header class="bookhead">
-<div class="sitebar"><div class="sitebar-inner">
-  <a class="sitebar-brand" href="/">Stephy <em>Hsu</em></a>
-  <nav class="sitebar-links">
-    <a href="/index.html">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/artworks.html">Artworks</a>
-    <a href="/workshops.html">Workshops</a>
-    <a href="/psychology.html">Psychology</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="/" class="nav-mark"><img src="/images/logo.png" alt="" class="nav-mark-logo"><span>Stephy <em>Hsu</em></span></a>
+    <ul class="nav-links">
+      <li><a href="/index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="/about.html" data-en="About" data-zh="關於">About</a></li>
+      <li><a href="/artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+      <li><a href="/workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+      <li class="nav-dropdown">
+        <a href="/psychology.html" class="active" data-en="Psychology" data-zh="心理治療">Psychology</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/psychology.html" data-en="Clinical Practice" data-zh="臨床實務">Clinical Practice</a></li>
+          <li><a href="/book/" class="active" data-en="Daily Reading · 每日導讀" data-zh="每日導讀 · Daily Reading">Daily Reading · 每日導讀</a></li>
+        </ul>
+      </li>
+      <li><a href="/contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中</button>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="/index.html" data-en="Home" data-zh="首頁">Home</a></li>
+    <li><a href="/about.html" data-en="About" data-zh="關於">About</a></li>
+    <li><a href="/artworks.html" data-en="Artworks" data-zh="作品">Artworks</a></li>
+    <li><a href="/workshops.html" data-en="Workshops" data-zh="工作坊">Workshops</a></li>
+    <li><a href="/psychology.html" data-en="Psychology" data-zh="心理治療">Psychology</a></li>
+    <li class="mobile-sub-item"><a href="/book/" data-en="— Daily Reading 每日導讀" data-zh="— 每日導讀 Daily Reading">— Daily Reading 每日導讀</a></li>
+    <li><a href="/contact.html" data-en="Contact" data-zh="聯繫">Contact</a></li>
+  </ul>
+</div>
+
+<div class="bookbar"><div class="bookbar-inner">
+  <span class="bookbar-logo">萬有引力與信念創造實相</span>
+  <a class="bookbar-tab" href="index.html">每日導讀</a>
+  <a class="bookbar-tab active" href="presentation.html">簡報全覽</a>
 </div></div>
-<div class="topnav"><div class="inner">
-  <span class="logo">萬有引力與信念創造實相</span>
-  <a class="nav" href="index.html">每日導讀</a>
-  <a class="nav active" href="presentation.html">簡報全覽</a>
-</div></div>
-</header>
 
 <div class="gwrap">
   <div class="ghead">
@@ -51,6 +79,7 @@
   <div class="cap" id="lcap"></div>
 </div>
 
+<script src="/i18n.js"></script>
 <script src="assets/gallery.js"></script>
 </body>
 </html>
